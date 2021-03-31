@@ -8,7 +8,21 @@ from torchvision.models.detection import fasterrcnn_resnet50_fpn as fasterrcnn
 from typing import List
 
 from common import COCO_INSTANCE_CATEGORY_NAMES
-from common import QaObject, torchvision_bbox_to_coco_bbox
+from common import QaObject, GroundingBox
+
+
+def torchvision_bbox_to_coco_bbox(img_id, bbox: List[float], label) -> GroundingBox:
+    x0 = bbox[0]
+    y0 = bbox[1]
+    x1 = bbox[2]
+    y1 = bbox[3]
+
+    tl_x = int(min(x0, x1))
+    tl_y = int(min(y0, y1))
+    width = int(abs(x1 - x0))
+    height = int(abs(y1 - y0))
+
+    return GroundingBox(img_id, tl_x, tl_y, width, height, label)
 
 
 class ObjectDetector:
@@ -47,7 +61,7 @@ class ObjectDetector:
                 score = scores[i].item()
                 if score >= threshold:
                     obj_class = COCO_INSTANCE_CATEGORY_NAMES[labels[i].item()]
-                    box = torchvision_bbox_to_coco_bbox(boxes[i].tolist())
+                    box = torchvision_bbox_to_coco_bbox(image_name, boxes[i].tolist(), obj_class)
                     rcnn_obj = QaObject(obj_class, box, score, folder_path, image_name)
 
                     detected_objs.append(rcnn_obj)

@@ -20,10 +20,37 @@ COCO_INSTANCE_CATEGORY_NAMES = [
 
 @dataclass
 class GroundingBox:
+    img_id: int
     tl_x: int
     tl_y: int
     width: int
     height: int
+    label: str
+
+    def get_coords(self):
+        x0 = self.tl_x
+        x1 = x0 + self.width
+        y0 = self.tl_y
+        y1 = y0 + self.height
+
+        return x0, y0, x1, y1
+
+    def get_area(self):
+        return self.height * self.width
+
+    def get_intersection_area(self, b2) -> float:
+        b1_x0, b1_y0, b1_x1, b1_y1 = self.get_coords()
+        b2_x0, b2_y0, b2_x1, b2_y1 = b2.get_coords()
+
+        inter_x1 = max(b1_x0, b2_x0)
+        inter_x2 = min(b1_x1, b2_x1)
+        inter_y1 = max(b1_y0, b2_y0)
+        inter_y2 = min(b1_y1, b2_y1)
+
+        return max(0, inter_x2 - inter_x1 + 1) * max(0, inter_y2 - inter_y1 + 1)
+
+    def gen_pred(self):
+        return F'bbox({self.img_id}, {self.label}, {self.tl_x}, {self.tl_y}, {self.width}, {self.height})'
 
 
 @dataclass
@@ -48,15 +75,24 @@ class ActionPred:
         return self.gen_pred()
 
 
-def torchvision_bbox_to_coco_bbox(bbox: List[float]) -> GroundingBox:
-    x0 = bbox[0]
-    y0 = bbox[1]
-    x1 = bbox[2]
-    y1 = bbox[3]
+@dataclass
+class Example:
+    qid: int
+    vid_name: str
 
-    tl_x = int(min(x0, x1))
-    tl_y = int(min(y0, y1))
-    width = int(abs(x1 - x0))
-    height = int(abs(y1 - y0))
 
-    return GroundingBox(tl_x, tl_y, width, height)
+@dataclass
+class PositiveExample(Example):
+    curr_time: int
+    facts: list
+
+    def gen_example(self):
+        eg_id = F'p_{self.qid}_{self.curr_time}'
+        facts_list = '\n'.join(map(lambda f: F'    {f}', self.facts))
+        return F'#pos({eg_id}@10, {{}}, {{}}, {{\n' + facts_list + '\n}).'
+
+
+@dataclass
+class NegativeExample(Example):
+    curr_time: int
+    facts: list
