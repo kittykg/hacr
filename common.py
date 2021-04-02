@@ -54,12 +54,23 @@ class GroundingBox:
 
 
 @dataclass
+class BBoxIntersectionPred:
+    frame_id: int
+    b1_label: str
+    b2_label: str
+    frac_wrt_b1: int
+
+    def gen_pred(self):
+        return F'bbox_intersec({self.frame_id}, {self.b1_label}, {self.b2_label}, {self.frac_wrt_b1})'
+
+
+@dataclass
 class QaObject:
     obj_class: str
     bbox: GroundingBox
     score: float
     sample_name: str
-    img_id: str
+    timestamp: int
 
 
 @dataclass
@@ -84,7 +95,7 @@ class Example:
 @dataclass
 class PositiveExample(Example):
     curr_time: int
-    facts: list
+    facts: List[str]
 
     def gen_example(self):
         eg_id = F'p_{self.qid}_{self.curr_time}'
@@ -95,4 +106,4 @@ class PositiveExample(Example):
 @dataclass
 class NegativeExample(Example):
     curr_time: int
-    facts: list
+    facts: List[str]

@@ -1,24 +1,13 @@
-from dataclasses import dataclass
-import itertools
 import json
 import logging
 from typing import List, Union, Set
+
+from utils import get_all_intersections
 
 import language_processing as lp
 from common import PositiveExample, GroundingBox, ActionPred
 
 PEOPLE_NAMES = {'penny', 'sheldon', 'leonard', 'howard', 'raj', 'amy'}
-
-
-@dataclass
-class BBoxIntersectionPred:
-    frame_id: int
-    b1_label: str
-    b2_label: str
-    frac_wrt_b1: int
-
-    def gen_pred(self):
-        return F'bbox_intersec({self.frame_id}, {self.b1_label}, {self.b2_label}, {self.frac_wrt_b1})'
 
 
 class Parser:
@@ -110,7 +99,7 @@ class Parser:
                 continue
 
             action_pred = self.get_goal_action_pred(data, obj_set)
-            intersections = Parser.get_all_intersections(boxes)
+            intersections = get_all_intersections(boxes)
 
             # Cannot generate positive example if we can't get goal action predicate, or
             # there is no intersection
@@ -127,25 +116,3 @@ class Parser:
             pos_eg_list.append(PositiveExample(qid, vid_name, id, facts))
 
         return pos_eg_list
-
-    @staticmethod
-    def get_all_intersections(boxes: List[GroundingBox]) -> List[BBoxIntersectionPred]:
-        intersections = []
-        for b1, b2 in itertools.combinations(boxes, 2):
-            if b1.img_id != b2.img_id:
-                continue
-
-            intersection_area = b1.get_intersection_area(b2)
-            b1_area = b1.get_area()
-            b2_area = b2.get_area()
-
-            frac_wrt_b1 = min(100, int(intersection_area / b1_area * 100))
-            frac_wrt_b2 = min(100, int(intersection_area / b2_area * 100))
-
-            if frac_wrt_b1 > 0:
-                intersections.append(BBoxIntersectionPred(b1.img_id, b1.label, b2.label, frac_wrt_b1))
-
-            if frac_wrt_b2 > 0:
-                intersections.append(BBoxIntersectionPred(b2.img_id, b2.label, b1.label, frac_wrt_b2))
-
-        return intersections
