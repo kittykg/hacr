@@ -5,6 +5,9 @@ import re
 import numpy as np
 
 import cv2
+from dlib import face_recognition_model_v1
+from face_recognition_models import face_recognition_model_location
+from sklearn.cluster import MiniBatchKMeans
 import torch
 import torchvision.transforms as T
 from torchvision.models.detection import fasterrcnn_resnet50_fpn as fasterrcnn
@@ -101,7 +104,7 @@ class ObjectDetector:
         return detected_objs
 
     def get_rcnn_human_faces(self, folder_path: str, detect_threshold: float = 0.7,
-                             target_size: Tuple[int, int] = (50, 50)) -> List[np.ndarray]:
+                             target_size: Tuple[int, int] = (64, 64)) -> List[np.ndarray]:
         qa_objects = self.get_rcnn_qa_object_outs(folder_path, detect_threshold)
 
         human_faces = []
@@ -115,13 +118,45 @@ class ObjectDetector:
             x0, y0, x1, y1 = bbox_to_xy_coordinates(obj.bbox)
             person_bgr = cv2.imread(obj.sample_name)[y0: y1, x0: x1]
             person_gray = cv2.cvtColor(person_bgr, cv2.COLOR_BGR2GRAY)
+            person_rgb = cv2.cvtColor(person_bgr, cv2.COLOR_BGR2RGB)
 
             # Detect faces on the person region and extract faces
             faces = self.face_cascade.detectMultiScale(person_gray, 1.1, 4)
             for (x, y, w, h) in faces:
-                human_faces.append(person_gray[y:y + h, x:x + w])
+                human_faces.append(person_rgb[y:y + h, x:x + w])
 
         # Resample the image to the same size
         resized_faces = [np.array(Image.fromarray(face).resize(target_size)) for face in human_faces]
 
         return resized_faces
+
+
+class FaceCluster:
+    def __init__(self, num_cluster: int, fit_threshold: int = 20):
+        self.num_cluster = num_cluster
+        self.kmeans = MiniBatchKMeans(n_clusters=self.num_cluster, random_state=np.random.RandomState(0))
+        self.face_encoder = face_recognition_model_v1(face_recognition_model_location())
+        self.buffer = None
+        self.fit_threshold = fit_threshold
+
+    def _add_to_buffer(self, enc: np.ndarray):
+        if self.buffer is None:
+            self.buffer = enc
+        else:
+            self.buffer = np.concatenate((self.buffer, enc))
+
+    def _encode(self, faces: List[np.ndarray]) -> np.ndarray:
+        return np.array(self.face_encoder.compute_face_descriptor(faces))
+
+    def _partial_fit(self):
+        if self.buffer.shape[0] >= self.fit_threshold:
+            self.kmeans.partial_fit(self.buffer)
+            self.buffer = None
+
+    def encode_and_partial_fit(self, faces: List[np.ndarray]):
+        self._add_to_buffer(self._encode(faces))
+        self._partial_fit()
+
+    def end_fitting(self):
+        self._partial_fit()
+        self.buffer = None
