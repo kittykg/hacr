@@ -1,6 +1,5 @@
 import os
 from PIL import Image
-import pickle
 import re
 
 import numpy as np
@@ -116,8 +115,8 @@ class ObjectDetector:
     def get_rcnn_human_faces(self,
                              folder_path: str,
                              detect_threshold: float = 0.7,
-                             target_size: Tuple[int, int] = (64, 64)) -> List[
-        np.ndarray]:
+                             target_size: Tuple[int, int] = (150, 150)) \
+            -> List[np.ndarray]:
         qa_objects = self.get_rcnn_qa_object_outs(folder_path, detect_threshold)
 
         human_faces = []
@@ -165,6 +164,8 @@ class FaceCluster:
         return np.array(self.face_encoder.compute_face_descriptor(faces))
 
     def _partial_fit(self):
+        if self.buffer is None:
+            return
         if self.buffer.shape[0] >= self.fit_threshold:
             self.kmeans.partial_fit(self.buffer)
             self.buffer = None
