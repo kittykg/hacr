@@ -1,0 +1,11 @@
+dlib
+face-recognition-models
+matplotlib
+nltk
+numpy
+opencv-python
+pyinflect
+scikit-learn
+spacy
+torch
+torchvision
