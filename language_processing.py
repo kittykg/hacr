@@ -49,7 +49,8 @@ def check_hypernyms(s1: str, s2: str, pos=None) -> bool:
     return _check_nyms(s1, s2, HYPERNYMS, pos)
 
 
-def _check_nyms(s1: str, s2: str, func: str, pos: Union[str, None] = None) -> bool:
+def _check_nyms(s1: str, s2: str, func: str,
+                pos: Union[str, None] = None) -> bool:
     assert func in NYMS_FUNC
 
     if s1 == s2:

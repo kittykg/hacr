@@ -1,5 +1,6 @@
 import os
 from PIL import Image
+import pickle
 import re
 
 import numpy as np
@@ -17,7 +18,9 @@ from common import COCO_INSTANCE_CATEGORY_NAMES
 from common import QaObject, GroundingBox
 
 
-def torchvision_bbox_to_coco_bbox(img_id, bbox: List[float], label) -> GroundingBox:
+def torchvision_bbox_to_coco_bbox(img_id,
+                                  bbox: List[float],
+                                  label: str) -> GroundingBox:
     x0 = bbox[0]
     y0 = bbox[1]
     x1 = bbox[2]
@@ -57,9 +60,11 @@ class ObjectDetector:
 
         self.transforms = T.Compose([T.ToTensor()])
 
-        self.face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+        self.face_cascade = cv2.CascadeClassifier(
+            cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
-    def get_rcnn_qa_object_outs(self, folder_path: str, threshold: float, transforms=None) -> List[QaObject]:
+    def get_rcnn_qa_object_outs(self, folder_path: str, threshold: float,
+                                transforms=None) -> List[QaObject]:
         if transforms is None:
             transforms = self.transforms
 
@@ -69,7 +74,8 @@ class ObjectDetector:
         l.sort(key=lambda f: int(re.sub('\D', '', f)))
 
         # Open the images and transform them
-        imgs = [transforms(Image.open(folder_path + f).convert('RGB')).to(self.device) for f in l]
+        imgs = [transforms(Image.open(folder_path + f)
+                           .convert('RGB')).to(self.device) for f in l]
 
         # Feed to the model
         self.frcnn_model.eval()
@@ -94,17 +100,24 @@ class ObjectDetector:
                         seen_classes[obj_class] = 1
                     else:
                         seen_classes[obj_class] += 1
-                    obj_label = F'{obj_class}{seen_classes[obj_class]}'.replace(' ', '_')
+                    obj_label = F'{obj_class}{seen_classes[obj_class]}' \
+                        .replace(' ', '_')
                     timestamp = int(re.sub('[^0-9]', '', image_name))
-                    box = torchvision_bbox_to_coco_bbox(timestamp, boxes[i].tolist(), obj_label)
-                    rcnn_obj = QaObject(obj_class, box, score, folder_path + image_name, timestamp)
+                    box = torchvision_bbox_to_coco_bbox(timestamp,
+                                                        boxes[i].tolist(),
+                                                        obj_label)
+                    rcnn_obj = QaObject(obj_class, box, score,
+                                        folder_path + image_name, timestamp)
 
                     detected_objs.append(rcnn_obj)
 
         return detected_objs
 
-    def get_rcnn_human_faces(self, folder_path: str, detect_threshold: float = 0.7,
-                             target_size: Tuple[int, int] = (64, 64)) -> List[np.ndarray]:
+    def get_rcnn_human_faces(self,
+                             folder_path: str,
+                             detect_threshold: float = 0.7,
+                             target_size: Tuple[int, int] = (64, 64)) -> List[
+        np.ndarray]:
         qa_objects = self.get_rcnn_qa_object_outs(folder_path, detect_threshold)
 
         human_faces = []
@@ -126,7 +139,8 @@ class ObjectDetector:
                 human_faces.append(person_rgb[y:y + h, x:x + w])
 
         # Resample the image to the same size
-        resized_faces = [np.array(Image.fromarray(face).resize(target_size)) for face in human_faces]
+        resized_faces = [np.array(Image.fromarray(face).resize(target_size)) for
+                         face in human_faces]
 
         return resized_faces
 
@@ -134,8 +148,10 @@ class ObjectDetector:
 class FaceCluster:
     def __init__(self, num_cluster: int, fit_threshold: int = 20):
         self.num_cluster = num_cluster
-        self.kmeans = MiniBatchKMeans(n_clusters=self.num_cluster, random_state=np.random.RandomState(0))
-        self.face_encoder = face_recognition_model_v1(face_recognition_model_location())
+        self.kmeans = MiniBatchKMeans(n_clusters=self.num_cluster,
+                                      random_state=np.random.RandomState(0))
+        self.face_encoder = face_recognition_model_v1(
+            face_recognition_model_location())
         self.buffer = None
         self.fit_threshold = fit_threshold
 

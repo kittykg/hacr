@@ -17,7 +17,8 @@ class Parser:
             'remote': 'tv'
         }
 
-    def match_ans_obj_with_bbox_obj(self, ans_obj: str, bbox_obj_set: Set[str]) -> Union[str, None]:
+    def match_ans_obj_with_bbox_obj(self, ans_obj: str,
+                                    bbox_obj_set: Set[str]) -> Union[str, None]:
         for bbox_obj in bbox_obj_set:
             noun_tag = 'NOUN'
             if lp.check_synonyms(ans_obj, bbox_obj, noun_tag) or \
@@ -45,7 +46,8 @@ class Parser:
 
         return obj
 
-    def get_goal_action_pred(self, data: dict, bbox_obj_set: Set[str]) -> Union[ActionPred, None]:
+    def get_goal_action_pred(self, data: dict, bbox_obj_set: Set[str]) -> Union[
+        ActionPred, None]:
         question = data['q']
         action_pred = lp.get_action_pred(question)
 
@@ -63,7 +65,8 @@ class Parser:
 
         obj = self.match_ans_obj_with_bbox_obj(ans_obj, bbox_obj_set)
 
-        # Stop if we can't match the object in the correct answer with an object in our grounding box
+        # Stop if we can't match the object in the correct answer with
+        # an object in our grounding box
         if obj is None:
             return None
 
@@ -92,7 +95,8 @@ class Parser:
                 else:
                     obj_set.add(label)
 
-                box = GroundingBox(id, box['top'], box['left'], box['width'], box['height'], label)
+                box = GroundingBox(id, box['top'], box['left'], box['width'],
+                                   box['height'], label)
                 boxes.append(box)
 
             if obj_set == set():
@@ -101,8 +105,8 @@ class Parser:
             action_pred = self.get_goal_action_pred(data, obj_set)
             intersections = get_all_intersections(boxes)
 
-            # Cannot generate positive example if we can't get goal action predicate, or
-            # there is no intersection
+            # Cannot generate positive example if we can't get goal action
+            # predicate, or there is no intersection
             if action_pred is None or len(intersections) == 0:
                 continue
 
