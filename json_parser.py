@@ -5,9 +5,13 @@ from typing import List, Union, Set
 from utils import get_all_intersections
 
 import language_processing as lp
-from common import PositiveExample, GroundingBox, ActionPred
+from common import PositiveExample, BoundingBox, ActionPred, BBT_PEOPLE
 
-PEOPLE_NAMES = {'penny', 'sheldon', 'leonard', 'howard', 'raj', 'amy'}
+
+
+
+def get_img_ids(data: dict) -> Set[int]:
+    return set([int(k) for k in data['bbox'].keys()])
 
 
 class Parser:
@@ -46,8 +50,8 @@ class Parser:
 
         return obj
 
-    def get_goal_action_pred(self, data: dict, bbox_obj_set: Set[str]) -> Union[
-        ActionPred, None]:
+    def get_goal_action_pred(self, data: dict, bbox_obj_set: Set[str]) -> \
+            Union[ActionPred, None]:
         question = data['q']
         action_pred = lp.get_action_pred(question)
 
@@ -90,13 +94,13 @@ class Parser:
             for box in frame:
                 label = box['label'].lower()
 
-                if label in PEOPLE_NAMES:
+                if label in BBT_PEOPLE:
                     ppl_set.add(label)
                 else:
                     obj_set.add(label)
 
-                box = GroundingBox(id, box['top'], box['left'], box['width'],
-                                   box['height'], label)
+                box = BoundingBox(id, box['left'], box['top'], box['width'],
+                                  box['height'], label)
                 boxes.append(box)
 
             if obj_set == set():

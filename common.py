@@ -21,10 +21,10 @@ COCO_INSTANCE_CATEGORY_NAMES = [
 
 
 @dataclass
-class GroundingBox:
+class BoundingBox:
     img_id: int
-    tl_x: int
-    tl_y: int
+    tl_x: int  # 'left' in TVQA+ annotation
+    tl_y: int  # 'top' in TVQA+ annotation
     width: int
     height: int
     label: str
@@ -51,6 +51,11 @@ class GroundingBox:
 
         return max(0, inter_x2 - inter_x1 + 1) * max(0, inter_y2 - inter_y1 + 1)
 
+    def get_iou_score(self, b2) -> float:
+        intersection_area = self.get_intersection_area(b2)
+        union_area = self.get_area() + b2.get_area() - intersection_area
+        return intersection_area / union_area
+
     def gen_pred(self):
         return F'bbox({self.img_id}, {self.label}, {self.tl_x}, ' \
                F'{self.tl_y}, {self.width}, {self.height})'
@@ -71,7 +76,7 @@ class BBoxIntersectionPred:
 @dataclass
 class QaObject:
     obj_class: str
-    bbox: GroundingBox
+    bbox: BoundingBox
     score: float
     sample_name: str
     timestamp: int
@@ -111,3 +116,7 @@ class PositiveExample(Example):
 class NegativeExample(Example):
     curr_time: int
     facts: List[str]
+
+
+BBT_PEOPLE = {'penny', 'sheldon', 'leonard', 'howard', 'raj', 'amy',
+              'bernadette', 'stuart', 'emily', 'barry', 'zack', 'wil'}

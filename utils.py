@@ -1,10 +1,10 @@
 import itertools
 from typing import List
 
-from common import GroundingBox, BBoxIntersectionPred
+from common import BoundingBox, BBoxIntersectionPred
 
 
-def get_all_intersections(boxes: List[GroundingBox]) \
+def get_all_intersections(boxes: List[BoundingBox]) \
         -> List[BBoxIntersectionPred]:
     intersections = []
     for b1, b2 in itertools.combinations(boxes, 2):
