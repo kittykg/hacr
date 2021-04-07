@@ -8,7 +8,6 @@ from json_parser import get_img_ids
 
 if __name__ == '__main__':
     od_threshold = 0.7
-    train_subset_size = 10
 
     root_folder = '../TVQA_frames/frames_hq/bbt_frames/'
     train_json_file_path = '../tvqa_plus_train_prettified.json'
@@ -22,7 +21,9 @@ if __name__ == '__main__':
     with open(train_json_file_path) as f:
         all_json_data = json.load(f)
 
-    for i in range(train_subset_size):
+    train_subset_size = len(all_json_data)
+
+    for i in tqdm(range(train_subset_size)):
         data = all_json_data[i]
         vid_folder = root_folder + data['vid_name'] + '/'
 
@@ -55,4 +56,6 @@ if __name__ == '__main__':
         else:
             labels = np.concatenate((labels, qa_labels))
 
+    print(F'Len encoded faces: {len(encoded_faces)}')
+    print(F'Len labels:        {len(labels)}')
     np.savez_compressed(npz_file_path, faces=encoded_faces, labels=labels)
