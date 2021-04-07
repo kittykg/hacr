@@ -9,3 +9,4 @@ scikit-learn
 spacy
 torch
 torchvision
+tqdm

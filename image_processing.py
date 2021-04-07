@@ -12,7 +12,7 @@ from sklearn.cluster import MiniBatchKMeans
 import torch
 import torchvision.transforms as T
 from torchvision.models.detection import fasterrcnn_resnet50_fpn as fasterrcnn
-from typing import List, Set
+from typing import List, Set, Tuple
 
 from common import COCO_INSTANCE_CATEGORY_NAMES, BBT_PEOPLE
 from common import QaObject, BoundingBox
@@ -53,26 +53,34 @@ def json_to_bounding_box(bbox: dict) -> BoundingBox:
     return BoundingBox(img_id, tl_x, tl_y, width, height, label)
 
 
-def match_person_grounding_boxes(qa_objects: List[QaObject], data: dict):
+def match_person_bounding_boxes(qa_objects: List[QaObject], data: dict) \
+        -> List[Tuple[QaObject, str, float]]:
     matched_tuple = []
     for img_id in data['bbox']:
-        targets = [q.bbox for q in qa_objects if
+        targets = [(idx, q.bbox) for idx, q in enumerate(qa_objects) if
                    q.bbox.img_id == int(img_id) and 'person' in q.bbox.label]
+        target_indices = [idx for idx, _ in targets]
+        target_bboxes = [b for _, b in targets]
+
         gt_bboxes = [json_to_bounding_box(f) for f in data['bbox'][img_id] if
                      f['label'].lower() in BBT_PEOPLE]
 
         # Construct IOU matrix
-        targets_len = len(targets)
+        targets_len = len(target_bboxes)
         gt_len = len(gt_bboxes)
         iou_matrix = np.zeros((targets_len, gt_len))
         for i in range(targets_len):
             for j in range(gt_len):
-                iou_matrix[i, j] = targets[i].get_iou_score(gt_bboxes[j])
+                iou_matrix[i, j] = target_bboxes[i].get_iou_score(gt_bboxes[j])
 
+        # Compute assignment that max the overall IOU score
         row_idx, col_idx = linear_sum_assignment(iou_matrix, maximize=True)
 
-        matched_tuple += [(targets[i], gt_bboxes[j].label, iou_matrix[i, j])
-                          for i, j in zip(row_idx, col_idx)]
+        matched_tuple += [
+            (qa_objects[target_indices[i]],
+             gt_bboxes[j].label,
+             iou_matrix[i, j])
+            for i, j in zip(row_idx, col_idx)]
 
     return matched_tuple
 
@@ -92,6 +100,8 @@ class ObjectDetector:
 
         self.face_cascade = cv2.CascadeClassifier(
             cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+        self.face_encoder = face_recognition_model_v1(
+            face_recognition_model_location())
 
     def get_rcnn_qa_objects(self,
                             folder_path: str,
@@ -166,14 +176,12 @@ class ObjectDetector:
 
         return detected_objs
 
-    def get_human_faces(self,
-                        qa_objects: List[QaObject],
-                        json_data: dict = None) \
-            -> List[np.ndarray]:
-
+    def get_human_faces(self, qa_objects: List[QaObject]) -> \
+            Tuple[List[np.ndarray], List[int]]:
         human_faces = []
+        valid_qa_objects_idx = []
 
-        for obj in qa_objects:
+        for i, obj in enumerate(qa_objects):
             # Ignore non-person objects
             if obj.obj_class != 'person':
                 continue
@@ -186,15 +194,21 @@ class ObjectDetector:
 
             # Detect faces on the person region and extract faces
             faces = self.face_cascade.detectMultiScale(person_gray, 1.1, 4)
-            for (x, y, w, h) in faces:
-                human_faces.append(person_rgb[y:y + h, x:x + w])
+            if len(faces) < 1:
+                continue
+            (x, y, w, h) = faces[0]
+            human_faces.append(person_rgb[y:y + h, x:x + w])
+            valid_qa_objects_idx.append(i)
 
         # Resample the image to the same size
         target_size = (150, 150)
         resized_faces = [np.array(Image.fromarray(face).resize(target_size))
                          for face in human_faces]
 
-        return resized_faces
+        return resized_faces, valid_qa_objects_idx
+
+    def encode_faces(self, faces: List[np.ndarray]) -> np.ndarray:
+        return np.array(self.face_encoder.compute_face_descriptor(faces))
 
 
 class FaceCluster:
@@ -202,33 +216,31 @@ class FaceCluster:
         self.num_cluster = num_cluster
         self.kmeans = MiniBatchKMeans(n_clusters=self.num_cluster,
                                       random_state=np.random.RandomState(0))
-        self.face_encoder = face_recognition_model_v1(
-            face_recognition_model_location())
         self.buffer = None
         self.fit_threshold = fit_threshold
 
-    def _add_to_buffer(self, enc: np.ndarray):
+    def _add_to_buffer(self, enc: np.ndarray) -> None:
         if self.buffer is None:
             self.buffer = enc
         else:
             self.buffer = np.concatenate((self.buffer, enc))
 
-    def _encode(self, faces: List[np.ndarray]) -> np.ndarray:
-        return np.array(self.face_encoder.compute_face_descriptor(faces))
-
-    def _partial_fit(self):
+    def _partial_fit(self) -> None:
         if self.buffer is None:
             return
         if self.buffer.shape[0] >= self.fit_threshold:
             self.kmeans.partial_fit(self.buffer)
             self.buffer = None
 
-    def encode_and_partial_fit(self, faces: List[np.ndarray]):
-        if len(faces) == 0:
-            return
-        self._add_to_buffer(self._encode(faces))
+    def partial_fit(self, encoded_faces: np.ndarray) -> None:
+        self._add_to_buffer(encoded_faces)
         self._partial_fit()
 
-    def end_fitting(self):
+    def end_fitting(self) -> None:
+        rest = 0 if self.buffer is None else len(self.buffer)
+        print(F'Buffer has {rest} sample(s) left')
         self._partial_fit()
         self.buffer = None
+
+    def predict(self, encoded_faces: np.ndarray) -> np.ndarray:
+        return self.kmeans.predict(encoded_faces)
