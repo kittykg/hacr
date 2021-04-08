@@ -1,4 +1,5 @@
 import json
+import time
 
 import numpy as np
 from tqdm import tqdm
@@ -7,23 +8,37 @@ from image_processing import ObjectDetector, match_person_bounding_boxes
 from json_parser import get_img_ids
 
 if __name__ == '__main__':
+    start_time = time.time()
+
+    # Some parameters
     od_threshold = 0.7
 
     root_folder = '../TVQA_frames/frames_hq/bbt_frames/'
     train_json_file_path = '../tvqa_plus_train_prettified.json'
-    npz_file_path = './face_collection.npz'
+    npz_file_path = './face_collection_v2.npz'
 
-    od = ObjectDetector()
-
-    encoded_faces = None
-    labels = None
+    tqdm_enabled = False
 
     with open(train_json_file_path) as f:
         all_json_data = json.load(f)
 
-    train_subset_size = len(all_json_data)
+    train_subset_size = 20  # len(all_json_data)
+    iterator = tqdm(range(train_subset_size)) if tqdm_enabled else \
+        range(train_subset_size)
 
-    for i in tqdm(range(train_subset_size)):
+    # Print parameters
+    print(F'Object detection threshold: {od_threshold}')
+    print(F'Training set size:          {train_subset_size}')
+    print(F'Frames folder:              {root_folder}')
+    print(F'Json file path:             {train_json_file_path}')
+    print(F'NPZ file path:              {npz_file_path}')
+
+    encoded_faces = None
+    labels = None
+    all_faces = []
+    od = ObjectDetector()
+
+    for i in iterator:
         data = all_json_data[i]
         vid_folder = root_folder + data['vid_name'] + '/'
 
@@ -44,6 +59,8 @@ if __name__ == '__main__':
         if len(faces) == 0:
             continue
 
+        all_faces += faces
+
         enc = od.encode_faces(faces)
         if encoded_faces is None:
             encoded_faces = enc
@@ -56,6 +73,11 @@ if __name__ == '__main__':
         else:
             labels = np.concatenate((labels, qa_labels))
 
+    print(F'Training time:     {time.time() - start_time}')
     print(F'Len encoded faces: {len(encoded_faces)}')
     print(F'Len labels:        {len(labels)}')
-    np.savez_compressed(npz_file_path, faces=encoded_faces, labels=labels)
+
+    np.savez_compressed(npz_file_path,
+                        faces=all_faces,
+                        encoded_faces=encoded_faces,
+                        labels=labels)
