@@ -209,38 +209,3 @@ class ObjectDetector:
 
     def encode_faces(self, faces: List[np.ndarray]) -> np.ndarray:
         return np.array(self.face_encoder.compute_face_descriptor(faces))
-
-
-class FaceCluster:
-    def __init__(self, num_cluster: int, fit_threshold: int = 20):
-        self.num_cluster = num_cluster
-        self.kmeans = MiniBatchKMeans(n_clusters=self.num_cluster,
-                                      random_state=np.random.RandomState(0))
-        self.buffer = None
-        self.fit_threshold = fit_threshold
-
-    def _add_to_buffer(self, enc: np.ndarray) -> None:
-        if self.buffer is None:
-            self.buffer = enc
-        else:
-            self.buffer = np.concatenate((self.buffer, enc))
-
-    def _partial_fit(self) -> None:
-        if self.buffer is None:
-            return
-        if self.buffer.shape[0] >= self.fit_threshold:
-            self.kmeans.partial_fit(self.buffer)
-            self.buffer = None
-
-    def partial_fit(self, encoded_faces: np.ndarray) -> None:
-        self._add_to_buffer(encoded_faces)
-        self._partial_fit()
-
-    def end_fitting(self) -> None:
-        rest = 0 if self.buffer is None else len(self.buffer)
-        print(F'Buffer has {rest} sample(s) left')
-        self._partial_fit()
-        self.buffer = None
-
-    def predict(self, encoded_faces: np.ndarray) -> np.ndarray:
-        return self.kmeans.predict(encoded_faces)

@@ -11,3 +11,18 @@ Tool stack:
   `scikit-learn`
 - Language processing: `nltk`, `spacy`, `pyinflect`
 - Logic based learning: `ILASP`
+
+## Collected data
+
+- `face_collection.npz`: Collected faces from all video frames. Includes 2
+  arrays. This file is a lot smaller, so good for re-train face k-means cluster.
+    * `faces`: Face encoding of all faces.
+    * `labels`: Label for each face.
+- `face_collection_v2.npz`: Collected faces from all video frames. Includes 3
+  arrays. This file is 3GB and will take a long time to load. But it includes
+  all the faces so it's useful to see the faces and their corresponding labels.
+    * `faces`: All faces in 150 x 150. Could be plotted.
+    * `encoded_faces`: Face encoding of all faces. This is equivalent to `faces`
+      in `face_collection.npz`, although there's numerical difference.
+    * `labels`: Label for each face.
+  
