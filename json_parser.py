@@ -44,17 +44,11 @@ class Parser:
                 return self.relational_object_pairs[ans_obj]
             elif bbox_obj in self.relational_object_pairs:
                 return self.relational_object_pairs[bbox_obj]
-        logging.warning(F'Cannot match {ans_obj} with set {bbox_obj_set}')
         return None
 
-    def get_goal_action_pred(self, data: dict, bbox_obj_set: Set[str]) -> \
-            Union[ActionPred, None]:
-        question = data['q']
-        action_pred = lp.get_action_pred(question)
-
-        # Stop if we can't parse the question
-        if action_pred is None:
-            return None
+    def get_goal_action_obj(self, data: dict, bbox_obj_set: Set[str],
+                            log: bool = False) -> \
+            Union[str, None]:
 
         answer_idx = data['answer_idx']
         ans_text = data['a' + answer_idx]
@@ -62,6 +56,8 @@ class Parser:
 
         # Stop if we can't parse the correct answer
         if ans_obj is None:
+            if log:
+                logging.warning(F'Cannot parse correct answer {ans_text}')
             return None
 
         obj = self.match_ans_obj_with_bbox_obj(ans_obj, bbox_obj_set)
@@ -69,16 +65,28 @@ class Parser:
         # Stop if we can't match the object in the correct answer with
         # an object in our grounding box
         if obj is None:
-            return None
+            if log:
+                logging.warning(
+                    F'Cannot match {ans_obj} with set {bbox_obj_set}')
 
-        action_pred.obj = obj
-        return action_pred
+        return obj
 
     def get_pos_example(self, data: dict) -> List[PositiveExample]:
+        question = data['q']
+        action_pred = lp.get_action_pred(question)
+
+        # Stop if we can't parse the question
+        if action_pred is None:
+            logging.warning(
+                F'{data["qid"]}: Cannot parse question {question}')
+            return []
+
+        action_subj = action_pred.subj
         pos_eg_list = []
 
         qid = data['qid']
         vid_name = data['vid_name']
+
         bbox_list = data['bbox']
         for id in bbox_list:
             frame = bbox_list[id]
@@ -100,24 +108,38 @@ class Parser:
                                   box['height'], label)
                 boxes.append(box)
 
-            if obj_set == set():
-                continue
-
-            action_pred = self.get_goal_action_pred(data, obj_set)
+            action_obj = self.get_goal_action_obj(data, obj_set)
             intersections = get_all_intersections(boxes)
 
             # Cannot generate positive example if we can't get goal action
             # predicate, or there is no intersection
-            if action_pred is None or len(intersections) == 0:
+            if action_obj is None or len(intersections) == 0:
+                logging.warning(
+                    F'{data["qid"]}: Cannot get positive example at frame {id}')
                 continue
 
-            facts = [F'goal(holdsAt({action_pred.gen_pred()}, {id + 1})).']
-            facts += [F'current_time({id}).']
-            facts += list(map(lambda p: F'person({p}).', ppl_set))
-            facts += list(map(lambda o: F'object({o}).', obj_set))
-            facts += list(map(lambda b: b.gen_pred() + '.', boxes))
-            facts += list(map(lambda i: i.gen_pred() + '.', intersections))
+            action_pred.obj = action_obj
+            inclusion = [F'goal(holdsAt({action_pred.gen_pred()}, {id + 1})).']
+            exclusion = []
+            for p in ppl_set:
+                if p.lower() != action_subj.lower():
+                    exclude_action = ActionPred(action_pred.action,
+                                                p,
+                                                action_obj)
+                    exclusion += [
+                        F'goal(holdsAt({exclude_action.gen_pred()}, {id + 1})).'
+                    ]
+            context = [F'current_time({id}).']
+            context += list(map(lambda p: F'person({p}).', ppl_set))
+            context += list(map(lambda o: F'object({o}).', obj_set))
+            context += list(map(lambda b: b.gen_pred() + '.', boxes))
+            context += list(map(lambda i: i.gen_pred() + '.', intersections))
 
-            pos_eg_list.append(PositiveExample(qid, vid_name, id, facts))
+            pos_eg_list.append(
+                PositiveExample(qid, vid_name, id, context, inclusion,
+                                exclusion))
+
+        if len(pos_eg_list) == 0:
+            logging.warning(F'{data["qid"]}: No example from this question')
 
         return pos_eg_list

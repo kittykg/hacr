@@ -87,13 +87,13 @@ def _check_nyms(s1: str, s2: str, func: str,
 def valid_obj_word(t) -> bool:
     pos = t.pos_
     dep = t.dep_
-    return pos in [NOUN_TAG, PRON_TAG] and (dep == N_SUBJ or dep == D_OBJ)
+    return pos in [NOUN_TAG, PRON_TAG] and dep == D_OBJ
 
 
 def valid_subj_word(t) -> bool:
     pos = t.pos_
     dep = t.dep_
-    return pos in [PROPN_TAG] and (dep == N_SUBJ or dep == D_OBJ)
+    return pos in [PROPN_TAG] and dep == N_SUBJ
 
 
 def _get_action_pred(doc) -> Union[ActionPred, None]:
@@ -105,23 +105,14 @@ def _get_action_pred(doc) -> Union[ActionPred, None]:
         # Process the ROOT of the dependency tree
         if dep == ROOT_TAG and pos == VERB_TAG:
             pred_subj = None
-            pred_obj = None
 
             for l in token.lefts:
-                if pred_obj is None and valid_obj_word(l):
-                    pred_obj = PLACE_HOLDER
-                elif pred_subj is None and valid_subj_word(l):
+                if pred_subj is None and valid_subj_word(l):
                     pred_subj = l.lemma_
 
-            for r in token.rights:
-                if pred_obj is None and valid_obj_word(r):
-                    pred_obj = PLACE_HOLDER
-                elif pred_subj is None and valid_subj_word(r):
-                    pred_subj = r.lemma_
-
-            if pred_subj is not None and pred_obj is not None:
+            if pred_subj is not None:
                 action_g = getInflection(lemma, 'VBG')[0]
-                return ActionPred(action_g, pred_subj, pred_obj)
+                return ActionPred(action_g, pred_subj, PLACE_HOLDER)
             else:
                 return None
 

@@ -107,12 +107,21 @@ class Example:
 @dataclass
 class PositiveExample(Example):
     curr_time: int
-    facts: List[str]
+    context: List[str]
+    inclusions: List[str]
+    exclusions: List[str]
 
-    def gen_example(self):
+    def gen_example(self, penalty=10):
         eg_id = F'p_{self.qid}_{self.curr_time}'
-        facts_list = '\n'.join(map(lambda f: F'    {f}', self.facts))
-        return F'#pos({eg_id}@10, {{}}, {{}}, {{\n' + facts_list + '\n}).'
+        context_list = '\n'.join(map(lambda f: F'    {f}', self.context))
+        inclusion_list = '\n'.join(map(lambda f: F'    {f}', self.inclusions))
+        exclusion_list = '\n'.join(map(lambda f: F'    {f}', self.exclusions))
+        return F'#pos({eg_id}@{penalty}, {{\n' + \
+               inclusion_list + \
+               '\n}, {\n' + \
+               exclusion_list + \
+               '\n}, {\n' + \
+               context_list + '\n}).'
 
 
 @dataclass
