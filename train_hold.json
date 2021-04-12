@@ -1,0 +1,7563 @@
+[
+  {
+    "a0": "A bowl of popcorn .",
+    "a1": "A glass of red wine .",
+    "a2": "A light saber .",
+    "a3": "His laptop computer .",
+    "a4": "The tv remote .",
+    "answer_idx": "4",
+    "bbox": {
+      "40": [],
+      "46": [
+        {
+          "height": 166,
+          "img_id": 46,
+          "label": "Leonard",
+          "left": 156,
+          "top": 50,
+          "width": 145
+        },
+        {
+          "height": 252,
+          "img_id": 46,
+          "label": "Penny",
+          "left": 400,
+          "top": 65,
+          "width": 137
+        },
+        {
+          "height": 152,
+          "img_id": 46,
+          "label": "remote",
+          "left": 76,
+          "top": 207,
+          "width": 366
+        }
+      ],
+      "52": [
+        {
+          "height": 214,
+          "img_id": 52,
+          "label": "Leonard",
+          "left": 142,
+          "top": 55,
+          "width": 157
+        },
+        {
+          "height": 179,
+          "img_id": 52,
+          "label": "Penny",
+          "left": 381,
+          "top": 68,
+          "width": 135
+        },
+        {
+          "height": 126,
+          "img_id": 52,
+          "label": "remote",
+          "left": 220,
+          "top": 234,
+          "width": 414
+        }
+      ],
+      "58": [
+        {
+          "height": 230,
+          "img_id": 58,
+          "label": "Leonard",
+          "left": 138,
+          "top": 39,
+          "width": 168
+        },
+        {
+          "height": 188,
+          "img_id": 58,
+          "label": "Penny",
+          "left": 377,
+          "top": 64,
+          "width": 135
+        },
+        {
+          "height": 116,
+          "img_id": 58,
+          "label": "remote",
+          "left": 342,
+          "top": 244,
+          "width": 298
+        }
+      ],
+      "64": [
+        {
+          "height": 328,
+          "img_id": 64,
+          "label": "Leonard",
+          "left": 54,
+          "top": 32,
+          "width": 324
+        },
+        {
+          "height": 322,
+          "img_id": 64,
+          "label": "Penny",
+          "left": 304,
+          "top": 38,
+          "width": 334
+        }
+      ]
+    },
+    "q": "What object is Leonard holding when he is asking Penny how much she loved the movie ?",
+    "qid": 59566,
+    "ts": [
+      14.43,
+      20.39
+    ],
+    "vid_name": "s06e21_seg02_clip_05"
+  },
+  {
+    "a0": "A laptop",
+    "a1": "A stethoscope",
+    "a2": "A bottle of juice",
+    "a3": "A teddy bear",
+    "a4": "A balloon",
+    "answer_idx": "2",
+    "bbox": {
+      "1": [],
+      "13": [
+        {
+          "height": 323,
+          "img_id": 13,
+          "label": "Howard",
+          "left": 393,
+          "top": 37,
+          "width": 143
+        },
+        {
+          "height": 282,
+          "img_id": 13,
+          "label": "Raj",
+          "left": 93,
+          "top": 34,
+          "width": 219
+        },
+        {
+          "height": 70,
+          "img_id": 13,
+          "label": "bottle",
+          "left": 448,
+          "top": 181,
+          "width": 28
+        }
+      ],
+      "7": [
+        {
+          "height": 262,
+          "img_id": 7,
+          "label": "Howard",
+          "left": 203,
+          "top": 50,
+          "width": 130
+        },
+        {
+          "height": 281,
+          "img_id": 7,
+          "label": "Raj",
+          "left": 171,
+          "top": 34,
+          "width": 87
+        },
+        {
+          "height": 69,
+          "img_id": 7,
+          "label": "bottle",
+          "left": 283,
+          "top": 137,
+          "width": 37
+        }
+      ]
+    },
+    "q": "What is Howard holding when Raj said he appreciates the apology ?",
+    "qid": 12972,
+    "ts": [
+      0.94,
+      4.4
+    ],
+    "vid_name": "s09e20_seg02_clip_12"
+  },
+  {
+    "a0": "Action figures .",
+    "a1": "Roast beef sandwiches .",
+    "a2": "Each others hands .",
+    "a3": "Pictures to autograph .",
+    "a4": "Coffee cups .",
+    "answer_idx": "4",
+    "bbox": {
+      "1": [
+        {
+          "height": 310,
+          "img_id": 1,
+          "label": "Raj",
+          "left": 62,
+          "top": 48,
+          "width": 257
+        },
+        {
+          "height": 300,
+          "img_id": 1,
+          "label": "Howard",
+          "left": 295,
+          "top": 52,
+          "width": 215
+        },
+        {
+          "height": 65,
+          "img_id": 1,
+          "label": "Coffee",
+          "left": 356,
+          "top": 239,
+          "width": 53
+        },
+        {
+          "height": 64,
+          "img_id": 1,
+          "label": "cups",
+          "left": 359,
+          "top": 241,
+          "width": 46
+        }
+      ],
+      "13": [
+        {
+          "height": 298,
+          "img_id": 13,
+          "label": "Raj",
+          "left": 88,
+          "top": 57,
+          "width": 232
+        },
+        {
+          "height": 283,
+          "img_id": 13,
+          "label": "Howard",
+          "left": 301,
+          "top": 62,
+          "width": 173
+        },
+        {
+          "height": 59,
+          "img_id": 13,
+          "label": "Coffee",
+          "left": 220,
+          "top": 266,
+          "width": 48
+        },
+        {
+          "height": 68,
+          "img_id": 13,
+          "label": "cups",
+          "left": 220,
+          "top": 262,
+          "width": 41
+        }
+      ],
+      "19": [
+        {
+          "height": 295,
+          "img_id": 19,
+          "label": "Raj",
+          "left": 77,
+          "top": 54,
+          "width": 196
+        },
+        {
+          "height": 272,
+          "img_id": 19,
+          "label": "Howard",
+          "left": 287,
+          "top": 78,
+          "width": 200
+        },
+        {
+          "height": 79,
+          "img_id": 19,
+          "label": "Coffee",
+          "left": 210,
+          "top": 265,
+          "width": 52
+        },
+        {
+          "height": 91,
+          "img_id": 19,
+          "label": "cups",
+          "left": 214,
+          "top": 261,
+          "width": 38
+        }
+      ],
+      "25": [
+        {
+          "height": 303,
+          "img_id": 25,
+          "label": "Raj",
+          "left": 89,
+          "top": 51,
+          "width": 215
+        },
+        {
+          "height": 266,
+          "img_id": 25,
+          "label": "Howard",
+          "left": 322,
+          "top": 61,
+          "width": 174
+        },
+        {
+          "height": 77,
+          "img_id": 25,
+          "label": "Coffee",
+          "left": 214,
+          "top": 230,
+          "width": 46
+        },
+        {
+          "height": 64,
+          "img_id": 25,
+          "label": "cups",
+          "left": 213,
+          "top": 239,
+          "width": 45
+        }
+      ],
+      "7": [
+        {
+          "height": 305,
+          "img_id": 7,
+          "label": "someone",
+          "left": 271,
+          "top": 35,
+          "width": 200
+        },
+        {
+          "height": 48,
+          "img_id": 7,
+          "label": "headphones",
+          "left": 304,
+          "top": 77,
+          "width": 112
+        }
+      ]
+    },
+    "q": "What do Raj and Howard hold when discussing someone with headphones ?",
+    "qid": 53382,
+    "ts": [
+      0,
+      9
+    ],
+    "vid_name": "s09e10_seg02_clip_13"
+  },
+  {
+    "a0": "Raj is holding a bag of chips .",
+    "a1": "Raj is holding an ice cream cone .",
+    "a2": "Raj is holding a bottle of water .",
+    "a3": "Raj is holding a toy saber tooth tiger .",
+    "a4": "Raj is holding a sandwich .",
+    "answer_idx": "3",
+    "bbox": {
+      "132": [
+        {
+          "height": 169,
+          "img_id": 132,
+          "label": "Raj",
+          "left": 291,
+          "top": 79,
+          "width": 99
+        },
+        {
+          "height": 150,
+          "img_id": 132,
+          "label": "Howard",
+          "left": 238,
+          "top": 84,
+          "width": 67
+        },
+        {
+          "height": 114,
+          "img_id": 132,
+          "label": "bench",
+          "left": 170,
+          "top": 111,
+          "width": 234
+        }
+      ],
+      "138": [],
+      "144": [
+        {
+          "height": 347,
+          "img_id": 144,
+          "label": "Raj",
+          "left": 279,
+          "top": 13,
+          "width": 298
+        },
+        {
+          "height": 344,
+          "img_id": 144,
+          "label": "Howard",
+          "left": 91,
+          "top": 16,
+          "width": 231
+        },
+        {
+          "height": 172,
+          "img_id": 144,
+          "label": "bench",
+          "left": 2,
+          "top": 188,
+          "width": 638
+        },
+        {
+          "height": 115,
+          "img_id": 144,
+          "label": "toy",
+          "left": 398,
+          "top": 130,
+          "width": 113
+        },
+        {
+          "height": 86,
+          "img_id": 144,
+          "label": "tiger",
+          "left": 397,
+          "top": 148,
+          "width": 105
+        }
+      ],
+      "150": [
+        {
+          "height": 325,
+          "img_id": 150,
+          "label": "Raj",
+          "left": 327,
+          "top": 35,
+          "width": 282
+        },
+        {
+          "height": 325,
+          "img_id": 150,
+          "label": "Howard",
+          "left": 125,
+          "top": 35,
+          "width": 217
+        },
+        {
+          "height": 187,
+          "img_id": 150,
+          "label": "toy",
+          "left": 331,
+          "top": 170,
+          "width": 88
+        },
+        {
+          "height": 185,
+          "img_id": 150,
+          "label": "tiger",
+          "left": 336,
+          "top": 166,
+          "width": 81
+        }
+      ]
+    },
+    "q": "What is Raj holding when he and Howard are sitting on the park bench together ?",
+    "qid": 69808,
+    "ts": [
+      45.18,
+      50.03
+    ],
+    "vid_name": "s03e06_seg02_clip_15"
+  },
+  {
+    "a0": "A spoon .",
+    "a1": "A fork .",
+    "a2": "A knife .",
+    "a3": "A bottle .",
+    "a4": "An ice cream cone .",
+    "answer_idx": "1",
+    "bbox": {
+      "1": [
+        {
+          "height": 292,
+          "img_id": 1,
+          "label": "Howard",
+          "left": 551,
+          "top": 63,
+          "width": 80
+        },
+        {
+          "height": 92,
+          "img_id": 1,
+          "label": "table",
+          "left": 145,
+          "top": 264,
+          "width": 352
+        },
+        {
+          "height": 73,
+          "img_id": 1,
+          "label": "table",
+          "left": 0,
+          "top": 187,
+          "width": 75
+        },
+        {
+          "height": 21,
+          "img_id": 1,
+          "label": "fork",
+          "left": 468,
+          "top": 262,
+          "width": 74
+        }
+      ],
+      "7": [
+        {
+          "height": 273,
+          "img_id": 7,
+          "label": "Howard",
+          "left": 563,
+          "top": 82,
+          "width": 76
+        },
+        {
+          "height": 118,
+          "img_id": 7,
+          "label": "table",
+          "left": 119,
+          "top": 242,
+          "width": 463
+        },
+        {
+          "height": 73,
+          "img_id": 7,
+          "label": "table",
+          "left": 0,
+          "top": 185,
+          "width": 91
+        },
+        {
+          "height": 29,
+          "img_id": 7,
+          "label": "fork",
+          "left": 470,
+          "top": 260,
+          "width": 85
+        }
+      ]
+    },
+    "q": "What is Howard holding when he is sitting at the table in the cafeteria ?",
+    "qid": 18350,
+    "ts": [
+      0,
+      2.14
+    ],
+    "vid_name": "s04e15_seg01_clip_01"
+  },
+  {
+    "a0": "A puppy .",
+    "a1": "A cat .",
+    "a2": "A card .",
+    "a3": "A mug .",
+    "a4": "A phone .",
+    "answer_idx": "3",
+    "bbox": {
+      "49": [
+        {
+          "height": 301,
+          "img_id": 49,
+          "label": "Amy",
+          "left": 375,
+          "top": 59,
+          "width": 265
+        },
+        {
+          "height": 53,
+          "img_id": 49,
+          "label": "hand",
+          "left": 371,
+          "top": 307,
+          "width": 92
+        },
+        {
+          "height": 201,
+          "img_id": 49,
+          "label": "couch",
+          "left": 103,
+          "top": 159,
+          "width": 537
+        },
+        {
+          "height": 339,
+          "img_id": 49,
+          "label": "Sheldon",
+          "left": 138,
+          "top": 21,
+          "width": 287
+        },
+        {
+          "height": 64,
+          "img_id": 49,
+          "label": "mug",
+          "left": 350,
+          "top": 296,
+          "width": 111
+        }
+      ],
+      "55": [
+        {
+          "height": 318,
+          "img_id": 55,
+          "label": "Amy",
+          "left": 296,
+          "top": 42,
+          "width": 235
+        },
+        {
+          "height": 40,
+          "img_id": 55,
+          "label": "hand",
+          "left": 428,
+          "top": 258,
+          "width": 45
+        },
+        {
+          "height": 37,
+          "img_id": 55,
+          "label": "hand",
+          "left": 386,
+          "top": 323,
+          "width": 67
+        },
+        {
+          "height": 197,
+          "img_id": 55,
+          "label": "couch",
+          "left": 1,
+          "top": 163,
+          "width": 555
+        },
+        {
+          "height": 350,
+          "img_id": 55,
+          "label": "Sheldon",
+          "left": 59,
+          "top": 10,
+          "width": 241
+        },
+        {
+          "height": 80,
+          "img_id": 55,
+          "label": "mug",
+          "left": 402,
+          "top": 250,
+          "width": 69
+        }
+      ],
+      "61": [
+        {
+          "height": 283,
+          "img_id": 61,
+          "label": "Amy",
+          "left": 401,
+          "top": 77,
+          "width": 239
+        },
+        {
+          "height": 43,
+          "img_id": 61,
+          "label": "hand",
+          "left": 388,
+          "top": 315,
+          "width": 62
+        },
+        {
+          "height": 204,
+          "img_id": 61,
+          "label": "couch",
+          "left": 89,
+          "top": 156,
+          "width": 551
+        },
+        {
+          "height": 329,
+          "img_id": 61,
+          "label": "Sheldon",
+          "left": 118,
+          "top": 31,
+          "width": 287
+        },
+        {
+          "height": 56,
+          "img_id": 61,
+          "label": "mug",
+          "left": 369,
+          "top": 304,
+          "width": 88
+        }
+      ],
+      "67": [
+        {
+          "height": 298,
+          "img_id": 67,
+          "label": "Amy",
+          "left": 294,
+          "top": 62,
+          "width": 223
+        },
+        {
+          "height": 44,
+          "img_id": 67,
+          "label": "hand",
+          "left": 385,
+          "top": 316,
+          "width": 69
+        },
+        {
+          "height": 41,
+          "img_id": 67,
+          "label": "hand",
+          "left": 441,
+          "top": 258,
+          "width": 40
+        },
+        {
+          "height": 216,
+          "img_id": 67,
+          "label": "couch",
+          "left": 1,
+          "top": 144,
+          "width": 569
+        },
+        {
+          "height": 355,
+          "img_id": 67,
+          "label": "Sheldon",
+          "left": 61,
+          "top": 5,
+          "width": 226
+        },
+        {
+          "height": 89,
+          "img_id": 67,
+          "label": "mug",
+          "left": 414,
+          "top": 242,
+          "width": 60
+        }
+      ]
+    },
+    "q": "What is Amy holding in her hand when she is sitting on the couch with Sheldon ?",
+    "qid": 11924,
+    "ts": [
+      17.41,
+      21.91
+    ],
+    "vid_name": "s07e08_seg02_clip_11"
+  },
+  {
+    "a0": "Pretzels .",
+    "a1": "A coke .",
+    "a2": "A cellphone .",
+    "a3": "A comic book .",
+    "a4": "A batman toy .",
+    "answer_idx": "3",
+    "bbox": {
+      "120": [
+        {
+          "height": 319,
+          "img_id": 120,
+          "label": "Raj",
+          "left": 298,
+          "top": 41,
+          "width": 294
+        },
+        {
+          "height": 322,
+          "img_id": 120,
+          "label": "Howard",
+          "left": 106,
+          "top": 36,
+          "width": 201
+        },
+        {
+          "height": 134,
+          "img_id": 120,
+          "label": "book",
+          "left": 225,
+          "top": 191,
+          "width": 166
+        }
+      ],
+      "126": [
+        {
+          "height": 327,
+          "img_id": 126,
+          "label": "Raj",
+          "left": 290,
+          "top": 33,
+          "width": 315
+        },
+        {
+          "height": 297,
+          "img_id": 126,
+          "label": "Howard",
+          "left": 90,
+          "top": 41,
+          "width": 235
+        },
+        {
+          "height": 145,
+          "img_id": 126,
+          "label": "book",
+          "left": 310,
+          "top": 199,
+          "width": 102
+        }
+      ],
+      "132": [
+        {
+          "height": 290,
+          "img_id": 132,
+          "label": "Raj",
+          "left": 349,
+          "top": 70,
+          "width": 291
+        }
+      ],
+      "138": [
+        {
+          "height": 319,
+          "img_id": 138,
+          "label": "Raj",
+          "left": 221,
+          "top": 41,
+          "width": 364
+        }
+      ]
+    },
+    "q": "What was Raj holding when Howard said this is n't complicated ?",
+    "qid": 77658,
+    "ts": [
+      41.2,
+      46.04
+    ],
+    "vid_name": "s10e07_seg02_clip_14"
+  },
+  {
+    "a0": "He is holding a white cup",
+    "a1": "He is holding a red napkin",
+    "a2": "He is holding a bottle of orange juice",
+    "a3": "He is holding a can of coca cola",
+    "a4": "He is holding a plate of food",
+    "answer_idx": "0",
+    "bbox": {
+      "1": [
+        {
+          "height": 301,
+          "img_id": 1,
+          "label": "Howard",
+          "left": 272,
+          "top": 59,
+          "width": 157
+        },
+        {
+          "height": 51,
+          "img_id": 1,
+          "label": "hand",
+          "left": 263,
+          "top": 309,
+          "width": 37
+        },
+        {
+          "height": 66,
+          "img_id": 1,
+          "label": "cup",
+          "left": 260,
+          "top": 281,
+          "width": 57
+        }
+      ],
+      "13": [
+        {
+          "height": 302,
+          "img_id": 13,
+          "label": "Howard",
+          "left": 139,
+          "top": 58,
+          "width": 157
+        },
+        {
+          "height": 46,
+          "img_id": 13,
+          "label": "hand",
+          "left": 240,
+          "top": 271,
+          "width": 51
+        },
+        {
+          "height": 30,
+          "img_id": 13,
+          "label": "cup",
+          "left": 246,
+          "top": 247,
+          "width": 49
+        }
+      ],
+      "19": [
+        {
+          "height": 310,
+          "img_id": 19,
+          "label": "Howard",
+          "left": 128,
+          "top": 50,
+          "width": 177
+        },
+        {
+          "height": 51,
+          "img_id": 19,
+          "label": "hand",
+          "left": 216,
+          "top": 275,
+          "width": 61
+        },
+        {
+          "height": 24,
+          "img_id": 19,
+          "label": "cup",
+          "left": 224,
+          "top": 258,
+          "width": 55
+        }
+      ],
+      "25": [
+        {
+          "height": 304,
+          "img_id": 25,
+          "label": "Howard",
+          "left": 313,
+          "top": 56,
+          "width": 141
+        },
+        {
+          "height": 51,
+          "img_id": 25,
+          "label": "hand",
+          "left": 324,
+          "top": 307,
+          "width": 41
+        },
+        {
+          "height": 66,
+          "img_id": 25,
+          "label": "cup",
+          "left": 341,
+          "top": 289,
+          "width": 42
+        }
+      ],
+      "31": [
+        {
+          "height": 318,
+          "img_id": 31,
+          "label": "Howard",
+          "left": 314,
+          "top": 42,
+          "width": 145
+        },
+        {
+          "height": 49,
+          "img_id": 31,
+          "label": "hand",
+          "left": 333,
+          "top": 302,
+          "width": 44
+        },
+        {
+          "height": 63,
+          "img_id": 31,
+          "label": "cup",
+          "left": 344,
+          "top": 290,
+          "width": 48
+        }
+      ],
+      "37": [
+        {
+          "height": 315,
+          "img_id": 37,
+          "label": "Howard",
+          "left": 262,
+          "top": 45,
+          "width": 122
+        },
+        {
+          "height": 29,
+          "img_id": 37,
+          "label": "hand",
+          "left": 280,
+          "top": 214,
+          "width": 34
+        },
+        {
+          "height": 49,
+          "img_id": 37,
+          "label": "cup",
+          "left": 292,
+          "top": 191,
+          "width": 33
+        }
+      ],
+      "43": [
+        {
+          "height": 316,
+          "img_id": 43,
+          "label": "Howard",
+          "left": 258,
+          "top": 44,
+          "width": 141
+        },
+        {
+          "height": 37,
+          "img_id": 43,
+          "label": "hand",
+          "left": 288,
+          "top": 219,
+          "width": 31
+        },
+        {
+          "height": 31,
+          "img_id": 43,
+          "label": "cup",
+          "left": 298,
+          "top": 210,
+          "width": 26
+        }
+      ],
+      "7": [
+        {
+          "height": 303,
+          "img_id": 7,
+          "label": "Howard",
+          "left": 274,
+          "top": 57,
+          "width": 143
+        },
+        {
+          "height": 53,
+          "img_id": 7,
+          "label": "hand",
+          "left": 268,
+          "top": 305,
+          "width": 37
+        },
+        {
+          "height": 71,
+          "img_id": 7,
+          "label": "cup",
+          "left": 272,
+          "top": 279,
+          "width": 54
+        }
+      ]
+    },
+    "q": "What is Howard holding in his hand before Sheldon walks up",
+    "qid": 119303,
+    "ts": [
+      0,
+      14.27
+    ],
+    "vid_name": "s01e12_seg02_clip_12"
+  },
+  {
+    "a0": "Howard is holding his pants",
+    "a1": "Howard is holding his laptop",
+    "a2": "Howard is holding nothing",
+    "a3": "Howard is holding a cup",
+    "a4": "Howard is holding a bottle",
+    "answer_idx": "3",
+    "bbox": {
+      "1": [
+        {
+          "height": 308,
+          "img_id": 1,
+          "label": "Howard",
+          "left": 235,
+          "top": 41,
+          "width": 162
+        },
+        {
+          "height": 42,
+          "img_id": 1,
+          "label": "hand",
+          "left": 256,
+          "top": 190,
+          "width": 28
+        },
+        {
+          "height": 341,
+          "img_id": 1,
+          "label": "Raj",
+          "left": 369,
+          "top": 19,
+          "width": 142
+        },
+        {
+          "height": 326,
+          "img_id": 1,
+          "label": "Leonard",
+          "left": 118,
+          "top": 34,
+          "width": 142
+        },
+        {
+          "height": 48,
+          "img_id": 1,
+          "label": "cup",
+          "left": 261,
+          "top": 175,
+          "width": 35
+        }
+      ],
+      "13": [],
+      "19": [
+        {
+          "height": 325,
+          "img_id": 19,
+          "label": "Howard",
+          "left": 349,
+          "top": 35,
+          "width": 211
+        },
+        {
+          "height": 66,
+          "img_id": 19,
+          "label": "hand",
+          "left": 367,
+          "top": 283,
+          "width": 63
+        },
+        {
+          "height": 339,
+          "img_id": 19,
+          "label": "Raj",
+          "left": 502,
+          "top": 21,
+          "width": 138
+        },
+        {
+          "height": 326,
+          "img_id": 19,
+          "label": "Leonard",
+          "left": 142,
+          "top": 34,
+          "width": 229
+        },
+        {
+          "height": 77,
+          "img_id": 19,
+          "label": "cup",
+          "left": 383,
+          "top": 266,
+          "width": 62
+        }
+      ],
+      "7": [
+        {
+          "height": 332,
+          "img_id": 7,
+          "label": "Howard",
+          "left": 241,
+          "top": 28,
+          "width": 151
+        },
+        {
+          "height": 43,
+          "img_id": 7,
+          "label": "hand",
+          "left": 247,
+          "top": 187,
+          "width": 42
+        },
+        {
+          "height": 349,
+          "img_id": 7,
+          "label": "Raj",
+          "left": 364,
+          "top": 11,
+          "width": 170
+        },
+        {
+          "height": 330,
+          "img_id": 7,
+          "label": "Leonard",
+          "left": 120,
+          "top": 27,
+          "width": 146
+        },
+        {
+          "height": 58,
+          "img_id": 7,
+          "label": "cup",
+          "left": 255,
+          "top": 172,
+          "width": 40
+        }
+      ]
+    },
+    "q": "What is Howard holding in his hand when he is talking to Raj and Leonard ?",
+    "qid": 43500,
+    "ts": [
+      0,
+      6.05
+    ],
+    "vid_name": "s01e12_seg02_clip_13"
+  },
+  {
+    "a0": "A bottle of water",
+    "a1": "A glass of wine",
+    "a2": "A newspaper",
+    "a3": "Her cellphone",
+    "a4": "Her purse",
+    "answer_idx": "1",
+    "bbox": {
+      "23": [
+        {
+          "height": 214,
+          "img_id": 23,
+          "label": "Penny",
+          "left": 5,
+          "top": 104,
+          "width": 70
+        },
+        {
+          "height": 174,
+          "img_id": 23,
+          "label": "glass",
+          "left": 14,
+          "top": 124,
+          "width": 69
+        },
+        {
+          "height": 175,
+          "img_id": 23,
+          "label": "wine",
+          "left": 6,
+          "top": 119,
+          "width": 64
+        }
+      ],
+      "29": [
+        {
+          "height": 340,
+          "img_id": 29,
+          "label": "Penny",
+          "left": 170,
+          "top": 20,
+          "width": 264
+        },
+        {
+          "height": 65,
+          "img_id": 29,
+          "label": "glass",
+          "left": 258,
+          "top": 295,
+          "width": 99
+        },
+        {
+          "height": 69,
+          "img_id": 29,
+          "label": "wine",
+          "left": 262,
+          "top": 291,
+          "width": 86
+        }
+      ],
+      "35": [
+        {
+          "height": 334,
+          "img_id": 35,
+          "label": "Penny",
+          "left": 124,
+          "top": 26,
+          "width": 136
+        },
+        {
+          "height": 146,
+          "img_id": 35,
+          "label": "chair",
+          "left": 140,
+          "top": 214,
+          "width": 95
+        },
+        {
+          "height": 76,
+          "img_id": 35,
+          "label": "glass",
+          "left": 137,
+          "top": 133,
+          "width": 46
+        },
+        {
+          "height": 74,
+          "img_id": 35,
+          "label": "wine",
+          "left": 128,
+          "top": 128,
+          "width": 47
+        },
+        {
+          "height": 83,
+          "img_id": 35,
+          "label": "wine",
+          "left": 43,
+          "top": 102,
+          "width": 44
+        }
+      ],
+      "41": []
+    },
+    "q": "What is Penny holding when she sits down in the chair ?",
+    "qid": 25720,
+    "ts": [
+      8.85,
+      13.73
+    ],
+    "vid_name": "s07e06_seg02_clip_04"
+  },
+  {
+    "a0": "Howard is n't holding anything",
+    "a1": "Howard is holding a plate",
+    "a2": "Howard is holding a video camera",
+    "a3": "Howard is holding a phone",
+    "a4": "Howard is holding a white cup",
+    "answer_idx": "4",
+    "bbox": {
+      "1": [
+        {
+          "height": 68,
+          "img_id": 1,
+          "label": "Howard",
+          "left": 260,
+          "top": 278,
+          "width": 56
+        },
+        {
+          "height": 63,
+          "img_id": 1,
+          "label": "hand",
+          "left": 262,
+          "top": 282,
+          "width": 51
+        },
+        {
+          "height": 68,
+          "img_id": 1,
+          "label": "Leonard",
+          "left": 266,
+          "top": 283,
+          "width": 49
+        },
+        {
+          "height": 59,
+          "img_id": 1,
+          "label": "Raj",
+          "left": 260,
+          "top": 287,
+          "width": 55
+        },
+        {
+          "height": 68,
+          "img_id": 1,
+          "label": "cup",
+          "left": 266,
+          "top": 280,
+          "width": 46
+        }
+      ],
+      "13": [
+        {
+          "height": 65,
+          "img_id": 13,
+          "label": "Howard",
+          "left": 243,
+          "top": 250,
+          "width": 51
+        },
+        {
+          "height": 69,
+          "img_id": 13,
+          "label": "hand",
+          "left": 243,
+          "top": 246,
+          "width": 53
+        },
+        {
+          "height": 70,
+          "img_id": 13,
+          "label": "Leonard",
+          "left": 244,
+          "top": 247,
+          "width": 50
+        },
+        {
+          "height": 70,
+          "img_id": 13,
+          "label": "Raj",
+          "left": 247,
+          "top": 247,
+          "width": 46
+        },
+        {
+          "height": 77,
+          "img_id": 13,
+          "label": "cup",
+          "left": 246,
+          "top": 246,
+          "width": 47
+        }
+      ],
+      "19": [
+        {
+          "height": 72,
+          "img_id": 19,
+          "label": "Howard",
+          "left": 230,
+          "top": 252,
+          "width": 43
+        },
+        {
+          "height": 66,
+          "img_id": 19,
+          "label": "hand",
+          "left": 232,
+          "top": 256,
+          "width": 41
+        },
+        {
+          "height": 68,
+          "img_id": 19,
+          "label": "Leonard",
+          "left": 224,
+          "top": 254,
+          "width": 49
+        },
+        {
+          "height": 77,
+          "img_id": 19,
+          "label": "Raj",
+          "left": 224,
+          "top": 249,
+          "width": 51
+        },
+        {
+          "height": 71,
+          "img_id": 19,
+          "label": "cup",
+          "left": 224,
+          "top": 253,
+          "width": 50
+        }
+      ],
+      "7": [
+        {
+          "height": 69,
+          "img_id": 7,
+          "label": "Howard",
+          "left": 270,
+          "top": 278,
+          "width": 51
+        },
+        {
+          "height": 63,
+          "img_id": 7,
+          "label": "hand",
+          "left": 268,
+          "top": 282,
+          "width": 59
+        },
+        {
+          "height": 70,
+          "img_id": 7,
+          "label": "Leonard",
+          "left": 272,
+          "top": 279,
+          "width": 51
+        },
+        {
+          "height": 71,
+          "img_id": 7,
+          "label": "Raj",
+          "left": 268,
+          "top": 278,
+          "width": 54
+        },
+        {
+          "height": 65,
+          "img_id": 7,
+          "label": "cup",
+          "left": 270,
+          "top": 282,
+          "width": 53
+        }
+      ]
+    },
+    "q": "What is Howard holding in his hand when he is standing in between Leonard and Raj ?",
+    "qid": 98117,
+    "ts": [
+      0,
+      6.51
+    ],
+    "vid_name": "s01e12_seg02_clip_12"
+  },
+  {
+    "a0": "A blanket",
+    "a1": "A newspaper",
+    "a2": "A cellphone",
+    "a3": "A pillow",
+    "a4": "A cup of tea",
+    "answer_idx": "4",
+    "bbox": {
+      "35": [
+        {
+          "height": 342,
+          "img_id": 35,
+          "label": "Sheldon",
+          "left": 227,
+          "top": 18,
+          "width": 274
+        }
+      ],
+      "41": [],
+      "47": [
+        {
+          "height": 335,
+          "img_id": 47,
+          "label": "Leonard",
+          "left": 148,
+          "top": 25,
+          "width": 262
+        },
+        {
+          "height": 81,
+          "img_id": 47,
+          "label": "cup",
+          "left": 213,
+          "top": 279,
+          "width": 51
+        }
+      ],
+      "53": [
+        {
+          "height": 319,
+          "img_id": 53,
+          "label": "Leonard",
+          "left": 143,
+          "top": 41,
+          "width": 278
+        },
+        {
+          "height": 69,
+          "img_id": 53,
+          "label": "cup",
+          "left": 197,
+          "top": 274,
+          "width": 73
+        }
+      ]
+    },
+    "q": "What is Leonard holding when he said to Sheldon that he is not a whiner ?",
+    "qid": 11762,
+    "ts": [
+      12.92,
+      17.97
+    ],
+    "vid_name": "s08e24_seg02_clip_09"
+  },
+  {
+    "a0": "Howard is holding the phone .",
+    "a1": "Howard is holding a fork .",
+    "a2": "Howard is holding a napkin .",
+    "a3": "Howard is holding two bottles of water .",
+    "a4": "Howard is holding a plate .",
+    "answer_idx": "3",
+    "bbox": {
+      "1": [
+        {
+          "height": 315,
+          "img_id": 1,
+          "label": "Howard",
+          "left": 209,
+          "top": 45,
+          "width": 221
+        },
+        {
+          "height": 61,
+          "img_id": 1,
+          "label": "bottles",
+          "left": 239,
+          "top": 299,
+          "width": 67
+        },
+        {
+          "height": 65,
+          "img_id": 1,
+          "label": "bottles",
+          "left": 318,
+          "top": 289,
+          "width": 68
+        },
+        {
+          "height": 61,
+          "img_id": 1,
+          "label": "water",
+          "left": 238,
+          "top": 299,
+          "width": 73
+        },
+        {
+          "height": 76,
+          "img_id": 1,
+          "label": "water",
+          "left": 316,
+          "top": 281,
+          "width": 65
+        }
+      ],
+      "13": [
+        {
+          "height": 293,
+          "img_id": 13,
+          "label": "Howard",
+          "left": 331,
+          "top": 67,
+          "width": 248
+        },
+        {
+          "height": 76,
+          "img_id": 13,
+          "label": "bottles",
+          "left": 441,
+          "top": 202,
+          "width": 66
+        },
+        {
+          "height": 44,
+          "img_id": 13,
+          "label": "bottles",
+          "left": 321,
+          "top": 307,
+          "width": 46
+        },
+        {
+          "height": 29,
+          "img_id": 13,
+          "label": "water",
+          "left": 334,
+          "top": 319,
+          "width": 40
+        },
+        {
+          "height": 70,
+          "img_id": 13,
+          "label": "water",
+          "left": 436,
+          "top": 211,
+          "width": 78
+        }
+      ],
+      "19": [
+        {
+          "height": 309,
+          "img_id": 19,
+          "label": "Howard",
+          "left": 433,
+          "top": 51,
+          "width": 178
+        },
+        {
+          "height": 76,
+          "img_id": 19,
+          "label": "bottles",
+          "left": 471,
+          "top": 185,
+          "width": 53
+        },
+        {
+          "height": 31,
+          "img_id": 19,
+          "label": "bottles",
+          "left": 298,
+          "top": 219,
+          "width": 20
+        },
+        {
+          "height": 39,
+          "img_id": 19,
+          "label": "water",
+          "left": 298,
+          "top": 214,
+          "width": 27
+        },
+        {
+          "height": 60,
+          "img_id": 19,
+          "label": "water",
+          "left": 475,
+          "top": 197,
+          "width": 48
+        }
+      ],
+      "7": [
+        {
+          "height": 314,
+          "img_id": 7,
+          "label": "Howard",
+          "left": 238,
+          "top": 39,
+          "width": 252
+        },
+        {
+          "height": 72,
+          "img_id": 7,
+          "label": "bottles",
+          "left": 244,
+          "top": 287,
+          "width": 76
+        },
+        {
+          "height": 72,
+          "img_id": 7,
+          "label": "bottles",
+          "left": 313,
+          "top": 286,
+          "width": 41
+        },
+        {
+          "height": 68,
+          "img_id": 7,
+          "label": "water",
+          "left": 249,
+          "top": 292,
+          "width": 63
+        },
+        {
+          "height": 68,
+          "img_id": 7,
+          "label": "water",
+          "left": 318,
+          "top": 289,
+          "width": 37
+        }
+      ]
+    },
+    "q": "What is Howard holding when he comes into the living room ?",
+    "qid": 15309,
+    "ts": [
+      0,
+      5.45
+    ],
+    "vid_name": "s02e04_seg02_clip_13"
+  },
+  {
+    "a0": "A blanket",
+    "a1": "A banana",
+    "a2": "A juice box",
+    "a3": "A comic book",
+    "a4": "A cup of tea",
+    "answer_idx": "4",
+    "bbox": {
+      "15": [
+        {
+          "height": 337,
+          "img_id": 15,
+          "label": "Sheldon",
+          "left": 140,
+          "top": 23,
+          "width": 394
+        },
+        {
+          "height": 70,
+          "img_id": 15,
+          "label": "cup",
+          "left": 348,
+          "top": 219,
+          "width": 70
+        },
+        {
+          "height": 90,
+          "img_id": 15,
+          "label": "tea",
+          "left": 336,
+          "top": 209,
+          "width": 88
+        }
+      ],
+      "21": [
+        {
+          "height": 338,
+          "img_id": 21,
+          "label": "Sheldon",
+          "left": 148,
+          "top": 22,
+          "width": 385
+        },
+        {
+          "height": 70,
+          "img_id": 21,
+          "label": "cup",
+          "left": 339,
+          "top": 227,
+          "width": 74
+        },
+        {
+          "height": 88,
+          "img_id": 21,
+          "label": "tea",
+          "left": 336,
+          "top": 212,
+          "width": 82
+        }
+      ],
+      "27": [
+        {
+          "height": 153,
+          "img_id": 27,
+          "label": "Sheldon",
+          "left": 318,
+          "top": 207,
+          "width": 138
+        },
+        {
+          "height": 275,
+          "img_id": 27,
+          "label": "Penny",
+          "left": 181,
+          "top": 23,
+          "width": 230
+        }
+      ],
+      "3": [
+        {
+          "height": 331,
+          "img_id": 3,
+          "label": "Sheldon",
+          "left": 143,
+          "top": 29,
+          "width": 383
+        },
+        {
+          "height": 85,
+          "img_id": 3,
+          "label": "cup",
+          "left": 338,
+          "top": 206,
+          "width": 74
+        },
+        {
+          "height": 85,
+          "img_id": 3,
+          "label": "tea",
+          "left": 339,
+          "top": 215,
+          "width": 77
+        }
+      ],
+      "9": [
+        {
+          "height": 322,
+          "img_id": 9,
+          "label": "Sheldon",
+          "left": 146,
+          "top": 38,
+          "width": 386
+        },
+        {
+          "height": 87,
+          "img_id": 9,
+          "label": "cup",
+          "left": 330,
+          "top": 210,
+          "width": 87
+        },
+        {
+          "height": 82,
+          "img_id": 9,
+          "label": "tea",
+          "left": 337,
+          "top": 210,
+          "width": 65
+        }
+      ]
+    },
+    "q": "What is Sheldon holding when he said something to Penny about being dead in a hundred years ?",
+    "qid": 100083,
+    "ts": [
+      2.1,
+      8.4
+    ],
+    "vid_name": "s07e01_seg02_clip_10"
+  },
+  {
+    "a0": "A napkin .",
+    "a1": "A cheeseburger .",
+    "a2": "A bottle of water .",
+    "a3": "A pen .",
+    "a4": "A plastic fork .",
+    "answer_idx": "4",
+    "bbox": {
+      "79": [
+        {
+          "height": 311,
+          "img_id": 79,
+          "label": "Leonard",
+          "left": 274,
+          "top": 49,
+          "width": 305
+        },
+        {
+          "height": 52,
+          "img_id": 79,
+          "label": "hand",
+          "left": 262,
+          "top": 255,
+          "width": 59
+        },
+        {
+          "height": 68,
+          "img_id": 79,
+          "label": "fork",
+          "left": 289,
+          "top": 259,
+          "width": 29
+        }
+      ],
+      "85": [
+        {
+          "height": 304,
+          "img_id": 85,
+          "label": "Leonard",
+          "left": 275,
+          "top": 56,
+          "width": 316
+        },
+        {
+          "height": 73,
+          "img_id": 85,
+          "label": "hand",
+          "left": 254,
+          "top": 239,
+          "width": 65
+        },
+        {
+          "height": 70,
+          "img_id": 85,
+          "label": "Raj",
+          "left": 0,
+          "top": 170,
+          "width": 75
+        },
+        {
+          "height": 68,
+          "img_id": 85,
+          "label": "fork",
+          "left": 283,
+          "top": 253,
+          "width": 28
+        }
+      ]
+    },
+    "q": "What was Leonard holding in his right hand when he told Raj that he was on his own ?",
+    "qid": 20686,
+    "ts": [
+      27.61,
+      29.16
+    ],
+    "vid_name": "s03e21_seg01_clip_00"
+  },
+  {
+    "a0": "A cup",
+    "a1": "A spoon",
+    "a2": "A jug",
+    "a3": "A biro",
+    "a4": "A laptop",
+    "answer_idx": "1",
+    "bbox": {
+      "108": [
+        {
+          "height": 353,
+          "img_id": 108,
+          "label": "penny",
+          "left": 0,
+          "top": 7,
+          "width": 216
+        },
+        {
+          "height": 64,
+          "img_id": 108,
+          "label": "spoon",
+          "left": 253,
+          "top": 266,
+          "width": 70
+        }
+      ],
+      "114": [
+        {
+          "height": 338,
+          "img_id": 114,
+          "label": "penny",
+          "left": 145,
+          "top": 22,
+          "width": 260
+        }
+      ],
+      "120": [
+        {
+          "height": 288,
+          "img_id": 120,
+          "label": "penny",
+          "left": 41,
+          "top": 72,
+          "width": 225
+        },
+        {
+          "height": 34,
+          "img_id": 120,
+          "label": "spoon",
+          "left": 371,
+          "top": 197,
+          "width": 29
+        }
+      ]
+    },
+    "q": "What was Leonard holding when penny was trying to pick the envelope ?",
+    "qid": 13001,
+    "ts": [
+      37.11,
+      40.2
+    ],
+    "vid_name": "s08e06_seg02_clip_00"
+  },
+  {
+    "a0": "a bag",
+    "a1": "a file",
+    "a2": "his laptop",
+    "a3": "his aqua man figurine",
+    "a4": "a book",
+    "answer_idx": "4",
+    "bbox": {
+      "1": [
+        {
+          "height": 149,
+          "img_id": 1,
+          "label": "sheldon",
+          "left": 308,
+          "top": 36,
+          "width": 117
+        },
+        {
+          "height": 126,
+          "img_id": 1,
+          "label": "amy",
+          "left": 222,
+          "top": 77,
+          "width": 94
+        },
+        {
+          "height": 48,
+          "img_id": 1,
+          "label": "book",
+          "left": 336,
+          "top": 222,
+          "width": 58
+        }
+      ],
+      "13": [
+        {
+          "height": 118,
+          "img_id": 13,
+          "label": "sheldon",
+          "left": 310,
+          "top": 23,
+          "width": 127
+        },
+        {
+          "height": 123,
+          "img_id": 13,
+          "label": "amy",
+          "left": 199,
+          "top": 107,
+          "width": 119
+        },
+        {
+          "height": 48,
+          "img_id": 13,
+          "label": "book",
+          "left": 235,
+          "top": 221,
+          "width": 77
+        }
+      ],
+      "19": [
+        {
+          "height": 111,
+          "img_id": 19,
+          "label": "sheldon",
+          "left": 296,
+          "top": 83,
+          "width": 122
+        },
+        {
+          "height": 68,
+          "img_id": 19,
+          "label": "stairs",
+          "left": 54,
+          "top": 197,
+          "width": 98
+        },
+        {
+          "height": 77,
+          "img_id": 19,
+          "label": "book",
+          "left": 189,
+          "top": 231,
+          "width": 97
+        }
+      ],
+      "25": [
+        {
+          "height": 160,
+          "img_id": 25,
+          "label": "sheldon",
+          "left": 128,
+          "top": 69,
+          "width": 113
+        },
+        {
+          "height": 92,
+          "img_id": 25,
+          "label": "stairs",
+          "left": 258,
+          "top": 137,
+          "width": 67
+        },
+        {
+          "height": 162,
+          "img_id": 25,
+          "label": "amy",
+          "left": 317,
+          "top": 97,
+          "width": 108
+        }
+      ],
+      "7": [
+        {
+          "height": 117,
+          "img_id": 7,
+          "label": "sheldon",
+          "left": 350,
+          "top": 39,
+          "width": 88
+        },
+        {
+          "height": 99,
+          "img_id": 7,
+          "label": "amy",
+          "left": 239,
+          "top": 72,
+          "width": 103
+        },
+        {
+          "height": 55,
+          "img_id": 7,
+          "label": "book",
+          "left": 376,
+          "top": 193,
+          "width": 70
+        }
+      ]
+    },
+    "q": "what is sheldon holding in his hand when he is walking up the stairs with amy ?",
+    "qid": 52351,
+    "ts": [
+      0,
+      7.69
+    ],
+    "vid_name": "s08e02_seg02_clip_09"
+  },
+  {
+    "a0": "A sign .",
+    "a1": "A globe .",
+    "a2": "A beer bottle .",
+    "a3": "Car keys .",
+    "a4": "A bracelet .",
+    "answer_idx": "2",
+    "bbox": {
+      "1": [
+        {
+          "height": 329,
+          "img_id": 1,
+          "label": "Penny",
+          "left": 176,
+          "top": 31,
+          "width": 189
+        },
+        {
+          "height": 69,
+          "img_id": 1,
+          "label": "beer",
+          "left": 233,
+          "top": 162,
+          "width": 39
+        },
+        {
+          "height": 81,
+          "img_id": 1,
+          "label": "bottle",
+          "left": 232,
+          "top": 155,
+          "width": 42
+        }
+      ],
+      "13": [],
+      "7": [
+        {
+          "height": 358,
+          "img_id": 7,
+          "label": "Penny",
+          "left": 244,
+          "top": 2,
+          "width": 192
+        },
+        {
+          "height": 108,
+          "img_id": 7,
+          "label": "beer",
+          "left": 244,
+          "top": 3,
+          "width": 40
+        },
+        {
+          "height": 84,
+          "img_id": 7,
+          "label": "bottle",
+          "left": 244,
+          "top": 10,
+          "width": 37
+        }
+      ]
+    },
+    "q": "What does Penny hold up when she mentioned the future ?",
+    "qid": 64722,
+    "ts": [
+      0,
+      3.78
+    ],
+    "vid_name": "s07e18_seg02_clip_07"
+  },
+  {
+    "a0": "His breath .",
+    "a1": "A beer .",
+    "a2": "A novel .",
+    "a3": "Stuart 's hand .",
+    "a4": "A coffee cup and a comic book .",
+    "answer_idx": "4",
+    "bbox": {
+      "123": [],
+      "129": [
+        {
+          "height": 347,
+          "img_id": 129,
+          "label": "Sheldon",
+          "left": 163,
+          "top": 13,
+          "width": 108
+        },
+        {
+          "height": 51,
+          "img_id": 129,
+          "label": "hands",
+          "left": 227,
+          "top": 138,
+          "width": 38
+        },
+        {
+          "height": 208,
+          "img_id": 129,
+          "label": "Stuart",
+          "left": 352,
+          "top": 62,
+          "width": 147
+        },
+        {
+          "height": 39,
+          "img_id": 129,
+          "label": "cup",
+          "left": 246,
+          "top": 142,
+          "width": 26
+        },
+        {
+          "height": 62,
+          "img_id": 129,
+          "label": "book",
+          "left": 231,
+          "top": 126,
+          "width": 33
+        }
+      ],
+      "135": [
+        {
+          "height": 347,
+          "img_id": 135,
+          "label": "Sheldon",
+          "left": 132,
+          "top": 6,
+          "width": 116
+        },
+        {
+          "height": 39,
+          "img_id": 135,
+          "label": "hands",
+          "left": 211,
+          "top": 150,
+          "width": 32
+        },
+        {
+          "height": 230,
+          "img_id": 135,
+          "label": "Stuart",
+          "left": 327,
+          "top": 85,
+          "width": 177
+        },
+        {
+          "height": 40,
+          "img_id": 135,
+          "label": "cup",
+          "left": 227,
+          "top": 155,
+          "width": 31
+        },
+        {
+          "height": 62,
+          "img_id": 135,
+          "label": "book",
+          "left": 210,
+          "top": 137,
+          "width": 29
+        }
+      ],
+      "141": [
+        {
+          "height": 329,
+          "img_id": 141,
+          "label": "Sheldon",
+          "left": 136,
+          "top": 31,
+          "width": 268
+        },
+        {
+          "height": 50,
+          "img_id": 141,
+          "label": "hands",
+          "left": 222,
+          "top": 310,
+          "width": 53
+        },
+        {
+          "height": 52,
+          "img_id": 141,
+          "label": "hands",
+          "left": 347,
+          "top": 273,
+          "width": 52
+        },
+        {
+          "height": 53,
+          "img_id": 141,
+          "label": "cup",
+          "left": 255,
+          "top": 307,
+          "width": 57
+        },
+        {
+          "height": 84,
+          "img_id": 141,
+          "label": "book",
+          "left": 340,
+          "top": 226,
+          "width": 109
+        }
+      ],
+      "147": [
+        {
+          "height": 339,
+          "img_id": 147,
+          "label": "Sheldon",
+          "left": 147,
+          "top": 21,
+          "width": 264
+        },
+        {
+          "height": 54,
+          "img_id": 147,
+          "label": "hands",
+          "left": 235,
+          "top": 306,
+          "width": 56
+        },
+        {
+          "height": 63,
+          "img_id": 147,
+          "label": "hands",
+          "left": 340,
+          "top": 293,
+          "width": 63
+        },
+        {
+          "height": 47,
+          "img_id": 147,
+          "label": "cup",
+          "left": 278,
+          "top": 313,
+          "width": 48
+        },
+        {
+          "height": 54,
+          "img_id": 147,
+          "label": "book",
+          "left": 352,
+          "top": 306,
+          "width": 132
+        }
+      ],
+      "153": [
+        {
+          "height": 342,
+          "img_id": 153,
+          "label": "Sheldon",
+          "left": 140,
+          "top": 18,
+          "width": 259
+        },
+        {
+          "height": 49,
+          "img_id": 153,
+          "label": "hands",
+          "left": 247,
+          "top": 311,
+          "width": 39
+        },
+        {
+          "height": 54,
+          "img_id": 153,
+          "label": "hands",
+          "left": 346,
+          "top": 306,
+          "width": 47
+        },
+        {
+          "height": 50,
+          "img_id": 153,
+          "label": "cup",
+          "left": 267,
+          "top": 310,
+          "width": 60
+        },
+        {
+          "height": 46,
+          "img_id": 153,
+          "label": "book",
+          "left": 330,
+          "top": 314,
+          "width": 121
+        }
+      ],
+      "159": [
+        {
+          "height": 95,
+          "img_id": 159,
+          "label": "hands",
+          "left": 0,
+          "top": 231,
+          "width": 40
+        },
+        {
+          "height": 266,
+          "img_id": 159,
+          "label": "Stuart",
+          "left": 182,
+          "top": 67,
+          "width": 274
+        },
+        {
+          "height": 91,
+          "img_id": 159,
+          "label": "cup",
+          "left": 11,
+          "top": 230,
+          "width": 61
+        }
+      ],
+      "165": [
+        {
+          "height": 82,
+          "img_id": 165,
+          "label": "hands",
+          "left": 2,
+          "top": 238,
+          "width": 42
+        },
+        {
+          "height": 273,
+          "img_id": 165,
+          "label": "Stuart",
+          "left": 102,
+          "top": 62,
+          "width": 362
+        },
+        {
+          "height": 100,
+          "img_id": 165,
+          "label": "cup",
+          "left": 10,
+          "top": 225,
+          "width": 55
+        }
+      ],
+      "171": [
+        {
+          "height": 355,
+          "img_id": 171,
+          "label": "Sheldon",
+          "left": 127,
+          "top": 5,
+          "width": 262
+        },
+        {
+          "height": 82,
+          "img_id": 171,
+          "label": "hands",
+          "left": 231,
+          "top": 218,
+          "width": 50
+        },
+        {
+          "height": 50,
+          "img_id": 171,
+          "label": "hands",
+          "left": 323,
+          "top": 310,
+          "width": 59
+        },
+        {
+          "height": 69,
+          "img_id": 171,
+          "label": "cup",
+          "left": 262,
+          "top": 221,
+          "width": 60
+        },
+        {
+          "height": 46,
+          "img_id": 171,
+          "label": "book",
+          "left": 303,
+          "top": 314,
+          "width": 116
+        }
+      ],
+      "177": [
+        {
+          "height": 346,
+          "img_id": 177,
+          "label": "Sheldon",
+          "left": 134,
+          "top": 14,
+          "width": 126
+        },
+        {
+          "height": 53,
+          "img_id": 177,
+          "label": "hands",
+          "left": 218,
+          "top": 170,
+          "width": 36
+        },
+        {
+          "height": 51,
+          "img_id": 177,
+          "label": "hands",
+          "left": 210,
+          "top": 106,
+          "width": 46
+        },
+        {
+          "height": 244,
+          "img_id": 177,
+          "label": "Stuart",
+          "left": 384,
+          "top": 106,
+          "width": 144
+        },
+        {
+          "height": 49,
+          "img_id": 177,
+          "label": "cup",
+          "left": 231,
+          "top": 101,
+          "width": 41
+        },
+        {
+          "height": 42,
+          "img_id": 177,
+          "label": "book",
+          "left": 238,
+          "top": 178,
+          "width": 68
+        }
+      ]
+    },
+    "q": "What does Sheldon holding in his hands when he is talking to Stuart ?",
+    "qid": 94890,
+    "ts": [
+      42.2,
+      58.14
+    ],
+    "vid_name": "s02e20_seg02_clip_12"
+  },
+  {
+    "a0": "A cup of coffee",
+    "a1": "A bowl of food",
+    "a2": "His laptop",
+    "a3": "A comic book",
+    "a4": "A rubik 's cube",
+    "answer_idx": "1",
+    "bbox": {
+      "1": [
+        {
+          "height": 315,
+          "img_id": 1,
+          "label": "Sheldon",
+          "left": 204,
+          "top": 45,
+          "width": 106
+        },
+        {
+          "height": 358,
+          "img_id": 1,
+          "label": "room",
+          "left": 2,
+          "top": 2,
+          "width": 638
+        }
+      ],
+      "13": [
+        {
+          "height": 359,
+          "img_id": 13,
+          "label": "room",
+          "left": 2,
+          "top": 1,
+          "width": 638
+        }
+      ],
+      "19": [
+        {
+          "height": 321,
+          "img_id": 19,
+          "label": "Leonard",
+          "left": 198,
+          "top": 38,
+          "width": 274
+        },
+        {
+          "height": 359,
+          "img_id": 19,
+          "label": "room",
+          "left": 2,
+          "top": 1,
+          "width": 638
+        },
+        {
+          "height": 40,
+          "img_id": 19,
+          "label": "bowl",
+          "left": 274,
+          "top": 296,
+          "width": 98
+        },
+        {
+          "height": 12,
+          "img_id": 19,
+          "label": "food",
+          "left": 303,
+          "top": 302,
+          "width": 61
+        }
+      ],
+      "7": [
+        {
+          "height": 315,
+          "img_id": 7,
+          "label": "Leonard",
+          "left": 208,
+          "top": 45,
+          "width": 269
+        },
+        {
+          "height": 357,
+          "img_id": 7,
+          "label": "room",
+          "left": 0,
+          "top": 3,
+          "width": 640
+        },
+        {
+          "height": 46,
+          "img_id": 7,
+          "label": "bowl",
+          "left": 282,
+          "top": 298,
+          "width": 102
+        },
+        {
+          "height": 16,
+          "img_id": 7,
+          "label": "food",
+          "left": 292,
+          "top": 304,
+          "width": 80
+        }
+      ]
+    },
+    "q": "What is Leonard holding when Sheldon enters the room ?",
+    "qid": 24720,
+    "ts": [
+      0,
+      5.51
+    ],
+    "vid_name": "s05e15_seg02_clip_09"
+  },
+  {
+    "a0": "Water Bottle",
+    "a1": "Beer",
+    "a2": "Soda",
+    "a3": "Wine",
+    "a4": "Pizza",
+    "answer_idx": "0",
+    "bbox": {
+      "1": [
+        {
+          "height": 318,
+          "img_id": 1,
+          "label": "Raj",
+          "left": 32,
+          "top": 42,
+          "width": 342
+        },
+        {
+          "height": 328,
+          "img_id": 1,
+          "label": "Howard",
+          "left": 272,
+          "top": 32,
+          "width": 275
+        },
+        {
+          "height": 120,
+          "img_id": 1,
+          "label": "Bottle",
+          "left": 295,
+          "top": 235,
+          "width": 60
+        }
+      ],
+      "13": [
+        {
+          "height": 325,
+          "img_id": 13,
+          "label": "Raj",
+          "left": 112,
+          "top": 35,
+          "width": 251
+        },
+        {
+          "height": 309,
+          "img_id": 13,
+          "label": "Howard",
+          "left": 254,
+          "top": 51,
+          "width": 318
+        },
+        {
+          "height": 102,
+          "img_id": 13,
+          "label": "Bottle",
+          "left": 145,
+          "top": 213,
+          "width": 58
+        }
+      ],
+      "19": [
+        {
+          "height": 315,
+          "img_id": 19,
+          "label": "Raj",
+          "left": 96,
+          "top": 44,
+          "width": 265
+        },
+        {
+          "height": 303,
+          "img_id": 19,
+          "label": "Howard",
+          "left": 262,
+          "top": 57,
+          "width": 315
+        },
+        {
+          "height": 102,
+          "img_id": 19,
+          "label": "Bottle",
+          "left": 157,
+          "top": 223,
+          "width": 50
+        }
+      ],
+      "7": [
+        {
+          "height": 305,
+          "img_id": 7,
+          "label": "Raj",
+          "left": 23,
+          "top": 55,
+          "width": 334
+        },
+        {
+          "height": 323,
+          "img_id": 7,
+          "label": "Howard",
+          "left": 266,
+          "top": 37,
+          "width": 285
+        },
+        {
+          "height": 61,
+          "img_id": 7,
+          "label": "Bottle",
+          "left": 295,
+          "top": 260,
+          "width": 70
+        }
+      ]
+    },
+    "q": "What was Raj holding when he suggested the nickname Crash for Howard ?",
+    "qid": 116522,
+    "ts": [
+      0,
+      6.4
+    ],
+    "vid_name": "s05e15_seg02_clip_08"
+  },
+  {
+    "a0": "He is holding a laptop .",
+    "a1": "He is holding a drink",
+    "a2": "He is holding a lamp",
+    "a3": "He is holding a mouse",
+    "a4": "He is holding a ball",
+    "answer_idx": "0",
+    "bbox": {
+      "66": [
+        {
+          "height": 34,
+          "img_id": 66,
+          "label": "hands",
+          "left": 391,
+          "top": 230,
+          "width": 45
+        },
+        {
+          "height": 33,
+          "img_id": 66,
+          "label": "hands",
+          "left": 437,
+          "top": 250,
+          "width": 21
+        },
+        {
+          "height": 318,
+          "img_id": 66,
+          "label": "Sheldon",
+          "left": 273,
+          "top": 20,
+          "width": 193
+        }
+      ],
+      "72": [
+        {
+          "height": 301,
+          "img_id": 72,
+          "label": "Howard",
+          "left": 229,
+          "top": 59,
+          "width": 234
+        },
+        {
+          "height": 46,
+          "img_id": 72,
+          "label": "hands",
+          "left": 61,
+          "top": 314,
+          "width": 32
+        },
+        {
+          "height": 54,
+          "img_id": 72,
+          "label": "hands",
+          "left": 228,
+          "top": 296,
+          "width": 46
+        }
+      ],
+      "78": [
+        {
+          "height": 336,
+          "img_id": 78,
+          "label": "Howard",
+          "left": 184,
+          "top": 24,
+          "width": 285
+        },
+        {
+          "height": 48,
+          "img_id": 78,
+          "label": "hands",
+          "left": 311,
+          "top": 312,
+          "width": 74
+        },
+        {
+          "height": 44,
+          "img_id": 78,
+          "label": "hands",
+          "left": 179,
+          "top": 316,
+          "width": 59
+        },
+        {
+          "height": 72,
+          "img_id": 78,
+          "label": "laptop",
+          "left": 164,
+          "top": 288,
+          "width": 193
+        }
+      ],
+      "84": [
+        {
+          "height": 320,
+          "img_id": 84,
+          "label": "Howard",
+          "left": 193,
+          "top": 39,
+          "width": 282
+        },
+        {
+          "height": 58,
+          "img_id": 84,
+          "label": "hands",
+          "left": 174,
+          "top": 302,
+          "width": 55
+        },
+        {
+          "height": 55,
+          "img_id": 84,
+          "label": "hands",
+          "left": 85,
+          "top": 293,
+          "width": 39
+        },
+        {
+          "height": 68,
+          "img_id": 84,
+          "label": "hands",
+          "left": 301,
+          "top": 292,
+          "width": 69
+        },
+        {
+          "height": 74,
+          "img_id": 84,
+          "label": "laptop",
+          "left": 163,
+          "top": 286,
+          "width": 176
+        }
+      ],
+      "90": [
+        {
+          "height": 41,
+          "img_id": 90,
+          "label": "hands",
+          "left": 163,
+          "top": 255,
+          "width": 40
+        },
+        {
+          "height": 42,
+          "img_id": 90,
+          "label": "hands",
+          "left": 279,
+          "top": 267,
+          "width": 43
+        }
+      ],
+      "96": [
+        {
+          "height": 309,
+          "img_id": 96,
+          "label": "Howard",
+          "left": 296,
+          "top": 51,
+          "width": 150
+        },
+        {
+          "height": 36,
+          "img_id": 96,
+          "label": "hands",
+          "left": 297,
+          "top": 212,
+          "width": 27
+        },
+        {
+          "height": 42,
+          "img_id": 96,
+          "label": "hands",
+          "left": 380,
+          "top": 204,
+          "width": 35
+        },
+        {
+          "height": 44,
+          "img_id": 96,
+          "label": "hands",
+          "left": 262,
+          "top": 196,
+          "width": 40
+        },
+        {
+          "height": 40,
+          "img_id": 96,
+          "label": "hands",
+          "left": 169,
+          "top": 200,
+          "width": 25
+        },
+        {
+          "height": 71,
+          "img_id": 96,
+          "label": "laptop",
+          "left": 266,
+          "top": 197,
+          "width": 139
+        }
+      ]
+    },
+    "q": "What is Howard holding in his hands when he first speaks to Sheldon ?",
+    "qid": 24443,
+    "ts": [
+      23.18,
+      32.22
+    ],
+    "vid_name": "s01e09_seg02_clip_01"
+  },
+  {
+    "a0": "An armload of clothes .",
+    "a1": "A plate of food .",
+    "a2": "A puppy .",
+    "a3": "A big package .",
+    "a4": "A laptop .",
+    "answer_idx": "4",
+    "bbox": {
+      "121": [
+        {
+          "height": 306,
+          "img_id": 121,
+          "label": "door",
+          "left": 7,
+          "top": 9,
+          "width": 163
+        }
+      ],
+      "127": [
+        {
+          "height": 329,
+          "img_id": 127,
+          "label": "door",
+          "left": 0,
+          "top": 6,
+          "width": 170
+        }
+      ],
+      "133": [
+        {
+          "height": 328,
+          "img_id": 133,
+          "label": "Penny",
+          "left": 132,
+          "top": 32,
+          "width": 338
+        },
+        {
+          "height": 360,
+          "img_id": 133,
+          "label": "door",
+          "left": 363,
+          "top": 0,
+          "width": 147
+        },
+        {
+          "height": 178,
+          "img_id": 133,
+          "label": "laptop",
+          "left": 237,
+          "top": 127,
+          "width": 193
+        }
+      ],
+      "139": [
+        {
+          "height": 355,
+          "img_id": 139,
+          "label": "Penny",
+          "left": 156,
+          "top": 5,
+          "width": 304
+        },
+        {
+          "height": 359,
+          "img_id": 139,
+          "label": "door",
+          "left": 343,
+          "top": 1,
+          "width": 297
+        },
+        {
+          "height": 213,
+          "img_id": 139,
+          "label": "laptop",
+          "left": 297,
+          "top": 92,
+          "width": 209
+        }
+      ],
+      "145": [
+        {
+          "height": 344,
+          "img_id": 145,
+          "label": "Penny",
+          "left": 159,
+          "top": 16,
+          "width": 275
+        },
+        {
+          "height": 358,
+          "img_id": 145,
+          "label": "door",
+          "left": 339,
+          "top": 2,
+          "width": 301
+        },
+        {
+          "height": 217,
+          "img_id": 145,
+          "label": "laptop",
+          "left": 227,
+          "top": 91,
+          "width": 228
+        }
+      ]
+    },
+    "q": "What was Penny holding when she came in the door ?",
+    "qid": 63729,
+    "ts": [
+      41.57,
+      47.46
+    ],
+    "vid_name": "s01e13_seg01_clip_00"
+  },
+  {
+    "a0": "A fork",
+    "a1": "A spoon",
+    "a2": "A napkin",
+    "a3": "A pencil",
+    "a4": "A knife",
+    "answer_idx": "0",
+    "bbox": {
+      "131": [
+        {
+          "height": 310,
+          "img_id": 131,
+          "label": "Sheldon",
+          "left": 218,
+          "top": 21,
+          "width": 226
+        },
+        {
+          "height": 61,
+          "img_id": 131,
+          "label": "hand",
+          "left": 224,
+          "top": 290,
+          "width": 55
+        },
+        {
+          "height": 29,
+          "img_id": 131,
+          "label": "tables",
+          "left": 4,
+          "top": 331,
+          "width": 550
+        },
+        {
+          "height": 71,
+          "img_id": 131,
+          "label": "fork",
+          "left": 258,
+          "top": 231,
+          "width": 23
+        }
+      ],
+      "137": [
+        {
+          "height": 182,
+          "img_id": 137,
+          "label": "Sheldon",
+          "left": 315,
+          "top": 178,
+          "width": 206
+        },
+        {
+          "height": 315,
+          "img_id": 137,
+          "label": "Leonard",
+          "left": 171,
+          "top": 34,
+          "width": 166
+        }
+      ],
+      "143": [
+        {
+          "height": 205,
+          "img_id": 143,
+          "label": "Sheldon",
+          "left": 320,
+          "top": 155,
+          "width": 244
+        },
+        {
+          "height": 328,
+          "img_id": 143,
+          "label": "Leonard",
+          "left": 160,
+          "top": 31,
+          "width": 179
+        }
+      ],
+      "149": [
+        {
+          "height": 342,
+          "img_id": 149,
+          "label": "Sheldon",
+          "left": 220,
+          "top": 16,
+          "width": 256
+        },
+        {
+          "height": 74,
+          "img_id": 149,
+          "label": "hand",
+          "left": 246,
+          "top": 259,
+          "width": 44
+        },
+        {
+          "height": 28,
+          "img_id": 149,
+          "label": "tables",
+          "left": 3,
+          "top": 332,
+          "width": 637
+        }
+      ],
+      "155": [
+        {
+          "height": 317,
+          "img_id": 155,
+          "label": "Sheldon",
+          "left": 195,
+          "top": 15,
+          "width": 271
+        },
+        {
+          "height": 49,
+          "img_id": 155,
+          "label": "hand",
+          "left": 232,
+          "top": 291,
+          "width": 61
+        },
+        {
+          "height": 30,
+          "img_id": 155,
+          "label": "tables",
+          "left": 2,
+          "top": 330,
+          "width": 638
+        }
+      ]
+    },
+    "q": "What is Sheldon holding in his hand when he is talking to Leonard about moving tables",
+    "qid": 113244,
+    "ts": [
+      44.97,
+      52.51
+    ],
+    "vid_name": "s02e02_seg02_clip_11"
+  },
+  {
+    "a0": "a purse",
+    "a1": "a flower vase",
+    "a2": "a magazine",
+    "a3": "a bottle of water",
+    "a4": "a pizza",
+    "answer_idx": "3",
+    "bbox": {
+      "28": [
+        {
+          "height": 238,
+          "img_id": 28,
+          "label": "Penny",
+          "left": 0,
+          "top": 122,
+          "width": 262
+        },
+        {
+          "height": 325,
+          "img_id": 28,
+          "label": "mother",
+          "left": 154,
+          "top": 35,
+          "width": 302
+        }
+      ],
+      "34": [
+        {
+          "height": 235,
+          "img_id": 34,
+          "label": "Penny",
+          "left": 0,
+          "top": 125,
+          "width": 274
+        },
+        {
+          "height": 339,
+          "img_id": 34,
+          "label": "mother",
+          "left": 151,
+          "top": 21,
+          "width": 302
+        }
+      ],
+      "40": [
+        {
+          "height": 324,
+          "img_id": 40,
+          "label": "Penny",
+          "left": 121,
+          "top": 35,
+          "width": 287
+        },
+        {
+          "height": 141,
+          "img_id": 40,
+          "label": "mother",
+          "left": 540,
+          "top": 0,
+          "width": 100
+        },
+        {
+          "height": 152,
+          "img_id": 40,
+          "label": "bottle",
+          "left": 354,
+          "top": 191,
+          "width": 83
+        },
+        {
+          "height": 160,
+          "img_id": 40,
+          "label": "water",
+          "left": 355,
+          "top": 196,
+          "width": 80
+        }
+      ],
+      "46": [
+        {
+          "height": 333,
+          "img_id": 46,
+          "label": "mother",
+          "left": 334,
+          "top": 27,
+          "width": 274
+        },
+        {
+          "height": 103,
+          "img_id": 46,
+          "label": "bottle",
+          "left": 2,
+          "top": 257,
+          "width": 49
+        },
+        {
+          "height": 97,
+          "img_id": 46,
+          "label": "water",
+          "left": 10,
+          "top": 258,
+          "width": 37
+        }
+      ]
+    },
+    "q": "What is Penny holding when Sheldon's mother is talking to her ?",
+    "qid": 112447,
+    "ts": [
+      10.36,
+      14.57
+    ],
+    "vid_name": "s01e04_seg02_clip_10"
+  },
+  {
+    "a0": "His cell phone",
+    "a1": "Howard's laptop",
+    "a2": "A box of comic books",
+    "a3": "A plate of food",
+    "a4": "Two bottles of hot sauce",
+    "answer_idx": "4",
+    "bbox": {
+      "58": [
+        {
+          "height": 350,
+          "img_id": 58,
+          "label": "Raj",
+          "left": 371,
+          "top": 10,
+          "width": 150
+        },
+        {
+          "height": 66,
+          "img_id": 58,
+          "label": "bottles",
+          "left": 381,
+          "top": 136,
+          "width": 84
+        }
+      ],
+      "64": [
+        {
+          "height": 336,
+          "img_id": 64,
+          "label": "Raj",
+          "left": 362,
+          "top": 24,
+          "width": 171
+        },
+        {
+          "height": 79,
+          "img_id": 64,
+          "label": "bottles",
+          "left": 377,
+          "top": 102,
+          "width": 86
+        }
+      ],
+      "70": []
+    },
+    "q": "What was Raj holding after Sheldon said jealousy is illogical ?",
+    "qid": 75451,
+    "ts": [
+      20.38,
+      24.22
+    ],
+    "vid_name": "s10e09_seg02_clip_11"
+  },
+  {
+    "a0": "a dvd",
+    "a1": "a cup of coffee",
+    "a2": "a laptop",
+    "a3": "a video game controller",
+    "a4": "a bottle of water",
+    "answer_idx": "4",
+    "bbox": {
+      "1": [
+        {
+          "height": 341,
+          "img_id": 1,
+          "label": "Sheldon",
+          "left": 196,
+          "top": 19,
+          "width": 241
+        }
+      ],
+      "13": [
+        {
+          "height": 345,
+          "img_id": 13,
+          "label": "Leonard",
+          "left": 218,
+          "top": 15,
+          "width": 259
+        },
+        {
+          "height": 88,
+          "img_id": 13,
+          "label": "bottle",
+          "left": 372,
+          "top": 272,
+          "width": 50
+        },
+        {
+          "height": 92,
+          "img_id": 13,
+          "label": "water",
+          "left": 371,
+          "top": 268,
+          "width": 52
+        }
+      ],
+      "19": [],
+      "25": [],
+      "7": [
+        {
+          "height": 347,
+          "img_id": 7,
+          "label": "Sheldon",
+          "left": 190,
+          "top": 13,
+          "width": 222
+        }
+      ]
+    },
+    "q": "What is Leonard holding when Sheldon is talking about a besserwisser ?",
+    "qid": 7881,
+    "ts": [
+      0,
+      7.83
+    ],
+    "vid_name": "s10e02_seg02_clip_02"
+  },
+  {
+    "a0": "A toy train",
+    "a1": "A large balloon",
+    "a2": "A gift bag",
+    "a3": "A stuffed animal",
+    "a4": "A pink cup",
+    "answer_idx": "4",
+    "bbox": {
+      "134": [
+        {
+          "height": 248,
+          "img_id": 134,
+          "label": "Stuart",
+          "left": 3,
+          "top": 51,
+          "width": 146
+        },
+        {
+          "height": 256,
+          "img_id": 134,
+          "label": "Howard",
+          "left": 484,
+          "top": 103,
+          "width": 120
+        },
+        {
+          "height": 29,
+          "img_id": 134,
+          "label": "cup",
+          "left": 61,
+          "top": 121,
+          "width": 33
+        }
+      ],
+      "140": [
+        {
+          "height": 345,
+          "img_id": 140,
+          "label": "Howard",
+          "left": 332,
+          "top": 15,
+          "width": 225
+        }
+      ],
+      "146": [
+        {
+          "height": 305,
+          "img_id": 146,
+          "label": "Howard",
+          "left": 280,
+          "top": 55,
+          "width": 188
+        }
+      ]
+    },
+    "q": "What was Stuart holding when Howard said while you 're out there ?",
+    "qid": 104071,
+    "ts": [
+      45.96,
+      49.54
+    ],
+    "vid_name": "s10e11_seg02_clip_11"
+  },
+  {
+    "a0": "A fork .",
+    "a1": "A coke .",
+    "a2": "A roll .",
+    "a3": "A book .",
+    "a4": "Nothing .",
+    "answer_idx": "0",
+    "bbox": {
+      "116": [
+        {
+          "height": 327,
+          "img_id": 116,
+          "label": "Leonard",
+          "left": 332,
+          "top": 21,
+          "width": 259
+        },
+        {
+          "height": 56,
+          "img_id": 116,
+          "label": "fork",
+          "left": 80,
+          "top": 156,
+          "width": 54
+        }
+      ],
+      "122": [
+        {
+          "height": 332,
+          "img_id": 122,
+          "label": "Leonard",
+          "left": 359,
+          "top": 26,
+          "width": 231
+        },
+        {
+          "height": 53,
+          "img_id": 122,
+          "label": "fork",
+          "left": 215,
+          "top": 221,
+          "width": 55
+        }
+      ],
+      "128": [
+        {
+          "height": 331,
+          "img_id": 128,
+          "label": "Leonard",
+          "left": 354,
+          "top": 18,
+          "width": 235
+        },
+        {
+          "height": 48,
+          "img_id": 128,
+          "label": "fork",
+          "left": 195,
+          "top": 225,
+          "width": 73
+        }
+      ],
+      "134": [
+        {
+          "height": 49,
+          "img_id": 134,
+          "label": "fork",
+          "left": 457,
+          "top": 229,
+          "width": 69
+        }
+      ],
+      "140": [
+        {
+          "height": 292,
+          "img_id": 140,
+          "label": "Leonard",
+          "left": 405,
+          "top": 68,
+          "width": 233
+        }
+      ]
+    },
+    "q": "What is Leonard holding when he talks about Kryptonian ?",
+    "qid": 67705,
+    "ts": [
+      39.7,
+      46.84
+    ],
+    "vid_name": "s02e11_seg01_clip_00"
+  },
+  {
+    "a0": "A picture",
+    "a1": "A flower",
+    "a2": "A frying pan",
+    "a3": "A comic book",
+    "a4": "A measuring cup",
+    "answer_idx": "4",
+    "bbox": {
+      "169": [
+        {
+          "height": 284,
+          "img_id": 169,
+          "label": "Penny",
+          "left": 160,
+          "top": 38,
+          "width": 108
+        },
+        {
+          "height": 264,
+          "img_id": 169,
+          "label": "Amy",
+          "left": 327,
+          "top": 51,
+          "width": 153
+        }
+      ],
+      "175": [
+        {
+          "height": 245,
+          "img_id": 175,
+          "label": "Penny",
+          "left": 170,
+          "top": 76,
+          "width": 97
+        },
+        {
+          "height": 259,
+          "img_id": 175,
+          "label": "Amy",
+          "left": 318,
+          "top": 34,
+          "width": 134
+        }
+      ],
+      "181": [
+        {
+          "height": 170,
+          "img_id": 181,
+          "label": "Penny",
+          "left": 191,
+          "top": 101,
+          "width": 81
+        },
+        {
+          "height": 241,
+          "img_id": 181,
+          "label": "Amy",
+          "left": 334,
+          "top": 66,
+          "width": 155
+        },
+        {
+          "height": 79,
+          "img_id": 181,
+          "label": "cup",
+          "left": 280,
+          "top": 244,
+          "width": 71
+        }
+      ],
+      "187": [
+        {
+          "height": 195,
+          "img_id": 187,
+          "label": "Penny",
+          "left": 176,
+          "top": 56,
+          "width": 177
+        },
+        {
+          "height": 227,
+          "img_id": 187,
+          "label": "Amy",
+          "left": 546,
+          "top": 63,
+          "width": 73
+        },
+        {
+          "height": 62,
+          "img_id": 187,
+          "label": "cup",
+          "left": 256,
+          "top": 274,
+          "width": 85
+        }
+      ],
+      "193": []
+    },
+    "q": "What was Penny holding when Amy said something about her shagging an Indian boy ?",
+    "qid": 45415,
+    "ts": [
+      57.43,
+      63.73
+    ],
+    "vid_name": "s05e01_seg02_clip_03"
+  },
+  {
+    "a0": "A comic book",
+    "a1": "A laptop",
+    "a2": "A fork",
+    "a3": "An apple",
+    "a4": "An action figure",
+    "answer_idx": "2",
+    "bbox": {
+      "15": [
+        {
+          "height": 294,
+          "img_id": 15,
+          "label": "Sheldon",
+          "left": 382,
+          "top": 22,
+          "width": 205
+        },
+        {
+          "height": 203,
+          "img_id": 15,
+          "label": "Penny",
+          "left": 192,
+          "top": 74,
+          "width": 149
+        },
+        {
+          "height": 44,
+          "img_id": 15,
+          "label": "fork",
+          "left": 179,
+          "top": 266,
+          "width": 22
+        }
+      ],
+      "21": [
+        {
+          "height": 323,
+          "img_id": 21,
+          "label": "Sheldon",
+          "left": 389,
+          "top": 11,
+          "width": 208
+        },
+        {
+          "height": 240,
+          "img_id": 21,
+          "label": "Penny",
+          "left": 224,
+          "top": 49,
+          "width": 132
+        },
+        {
+          "height": 43,
+          "img_id": 21,
+          "label": "fork",
+          "left": 174,
+          "top": 269,
+          "width": 41
+        }
+      ],
+      "27": [
+        {
+          "height": 217,
+          "img_id": 27,
+          "label": "Sheldon",
+          "left": 334,
+          "top": 64,
+          "width": 192
+        },
+        {
+          "height": 274,
+          "img_id": 27,
+          "label": "Penny",
+          "left": 90,
+          "top": 80,
+          "width": 139
+        },
+        {
+          "height": 36,
+          "img_id": 27,
+          "label": "fork",
+          "left": 338,
+          "top": 239,
+          "width": 37
+        }
+      ],
+      "3": [
+        {
+          "height": 212,
+          "img_id": 3,
+          "label": "Sheldon",
+          "left": 347,
+          "top": 36,
+          "width": 151
+        },
+        {
+          "height": 252,
+          "img_id": 3,
+          "label": "Penny",
+          "left": 100,
+          "top": 63,
+          "width": 107
+        },
+        {
+          "height": 38,
+          "img_id": 3,
+          "label": "fork",
+          "left": 320,
+          "top": 237,
+          "width": 42
+        },
+        {
+          "height": 23,
+          "img_id": 3,
+          "label": "fork",
+          "left": 299,
+          "top": 310,
+          "width": 40
+        }
+      ],
+      "33": [
+        {
+          "height": 233,
+          "img_id": 33,
+          "label": "Sheldon",
+          "left": 357,
+          "top": 27,
+          "width": 169
+        },
+        {
+          "height": 279,
+          "img_id": 33,
+          "label": "Penny",
+          "left": 94,
+          "top": 77,
+          "width": 154
+        },
+        {
+          "height": 40,
+          "img_id": 33,
+          "label": "fork",
+          "left": 336,
+          "top": 240,
+          "width": 36
+        }
+      ],
+      "9": [
+        {
+          "height": 293,
+          "img_id": 9,
+          "label": "Sheldon",
+          "left": 390,
+          "top": 26,
+          "width": 195
+        },
+        {
+          "height": 240,
+          "img_id": 9,
+          "label": "Penny",
+          "left": 190,
+          "top": 43,
+          "width": 153
+        },
+        {
+          "height": 33,
+          "img_id": 9,
+          "label": "fork",
+          "left": 178,
+          "top": 265,
+          "width": 31
+        }
+      ]
+    },
+    "q": "What is Sheldon holding when he is trying to make small talk with Penny ?",
+    "qid": 32027,
+    "ts": [
+      2.21,
+      11.35
+    ],
+    "vid_name": "s02e21_seg02_clip_10"
+  },
+  {
+    "a0": "A motorcycle helmet .",
+    "a1": "A fan .",
+    "a2": "A laptop .",
+    "a3": "A magazine .",
+    "a4": "An apron .",
+    "answer_idx": "2",
+    "bbox": {
+      "159": [
+        {
+          "height": 350,
+          "img_id": 159,
+          "label": "Leonard",
+          "left": 173,
+          "top": 10,
+          "width": 267
+        },
+        {
+          "height": 121,
+          "img_id": 159,
+          "label": "laptop",
+          "left": 249,
+          "top": 239,
+          "width": 232
+        }
+      ],
+      "165": [
+        {
+          "height": 315,
+          "img_id": 165,
+          "label": "Leonard",
+          "left": 165,
+          "top": 45,
+          "width": 297
+        },
+        {
+          "height": 126,
+          "img_id": 165,
+          "label": "laptop",
+          "left": 184,
+          "top": 234,
+          "width": 201
+        }
+      ],
+      "171": [
+        {
+          "height": 350,
+          "img_id": 171,
+          "label": "Leonard",
+          "left": 255,
+          "top": 10,
+          "width": 270
+        },
+        {
+          "height": 114,
+          "img_id": 171,
+          "label": "laptop",
+          "left": 199,
+          "top": 246,
+          "width": 207
+        }
+      ]
+    },
+    "q": "What is Leonard holding when he said out of curiosity ?",
+    "qid": 18234,
+    "ts": [
+      54.28,
+      57.07
+    ],
+    "vid_name": "s01e17_seg02_clip_03"
+  },
+  {
+    "a0": "An action figure",
+    "a1": "A laptop",
+    "a2": "A comic book",
+    "a3": "A wallet",
+    "a4": "An umbrella",
+    "answer_idx": "2",
+    "bbox": {
+      "15": [
+        {
+          "height": 327,
+          "img_id": 15,
+          "label": "Stuart",
+          "left": 173,
+          "top": 33,
+          "width": 233
+        },
+        {
+          "height": 87,
+          "img_id": 15,
+          "label": "book",
+          "left": 135,
+          "top": 211,
+          "width": 122
+        }
+      ],
+      "21": [
+        {
+          "height": 334,
+          "img_id": 21,
+          "label": "Stuart",
+          "left": 223,
+          "top": 26,
+          "width": 199
+        },
+        {
+          "height": 124,
+          "img_id": 21,
+          "label": "book",
+          "left": 204,
+          "top": 190,
+          "width": 122
+        }
+      ],
+      "27": [
+        {
+          "height": 338,
+          "img_id": 27,
+          "label": "Sheldon",
+          "left": 252,
+          "top": 22,
+          "width": 288
+        }
+      ],
+      "3": [
+        {
+          "height": 341,
+          "img_id": 3,
+          "label": "Sheldon",
+          "left": 256,
+          "top": 19,
+          "width": 285
+        }
+      ],
+      "9": [
+        {
+          "height": 327,
+          "img_id": 9,
+          "label": "Stuart",
+          "left": 209,
+          "top": 33,
+          "width": 193
+        },
+        {
+          "height": 120,
+          "img_id": 9,
+          "label": "book",
+          "left": 192,
+          "top": 210,
+          "width": 93
+        }
+      ]
+    },
+    "q": "What is Stuart holding when he said to Sheldon that his life is falling apart ?",
+    "qid": 120933,
+    "ts": [
+      2.1,
+      8.7
+    ],
+    "vid_name": "s07e24_seg02_clip_12"
+  },
+  {
+    "a0": "An action figure",
+    "a1": "A comic book",
+    "a2": "Penny 's hand",
+    "a3": "Sheldon 's laptop",
+    "a4": "His fork",
+    "answer_idx": "4",
+    "bbox": {
+      "1": [
+        {
+          "height": 336,
+          "img_id": 1,
+          "label": "Leonard",
+          "left": 202,
+          "top": 24,
+          "width": 364
+        },
+        {
+          "height": 307,
+          "img_id": 1,
+          "label": "Raj",
+          "left": 70,
+          "top": 18,
+          "width": 310
+        },
+        {
+          "height": 51,
+          "img_id": 1,
+          "label": "fork",
+          "left": 89,
+          "top": 221,
+          "width": 50
+        }
+      ],
+      "13": [
+        {
+          "height": 341,
+          "img_id": 13,
+          "label": "Leonard",
+          "left": 216,
+          "top": 19,
+          "width": 370
+        },
+        {
+          "height": 291,
+          "img_id": 13,
+          "label": "Raj",
+          "left": 60,
+          "top": 19,
+          "width": 331
+        },
+        {
+          "height": 68,
+          "img_id": 13,
+          "label": "fork",
+          "left": 73,
+          "top": 201,
+          "width": 70
+        }
+      ],
+      "7": [
+        {
+          "height": 339,
+          "img_id": 7,
+          "label": "Leonard",
+          "left": 205,
+          "top": 21,
+          "width": 374
+        },
+        {
+          "height": 307,
+          "img_id": 7,
+          "label": "Raj",
+          "left": 58,
+          "top": 10,
+          "width": 319
+        },
+        {
+          "height": 68,
+          "img_id": 7,
+          "label": "fork",
+          "left": 76,
+          "top": 205,
+          "width": 63
+        }
+      ]
+    },
+    "q": "What was Leonard holding when Raj was saying something about a human chicken wing ?",
+    "qid": 15575,
+    "ts": [
+      0,
+      5.02
+    ],
+    "vid_name": "s03e05_seg02_clip_01"
+  },
+  {
+    "a0": "A water bottle",
+    "a1": "His cell phone",
+    "a2": "Amy 's hand",
+    "a3": "A cookie",
+    "a4": "A fork",
+    "answer_idx": "4",
+    "bbox": {
+      "1": [],
+      "13": [
+        {
+          "height": 235,
+          "img_id": 13,
+          "label": "Sheldon",
+          "left": 213,
+          "top": 94,
+          "width": 116
+        },
+        {
+          "height": 22,
+          "img_id": 13,
+          "label": "hand",
+          "left": 283,
+          "top": 169,
+          "width": 26
+        },
+        {
+          "height": 307,
+          "img_id": 13,
+          "label": "Raj",
+          "left": 94,
+          "top": 18,
+          "width": 104
+        }
+      ],
+      "19": [
+        {
+          "height": 199,
+          "img_id": 19,
+          "label": "Sheldon",
+          "left": 321,
+          "top": 161,
+          "width": 233
+        },
+        {
+          "height": 55,
+          "img_id": 19,
+          "label": "hand",
+          "left": 313,
+          "top": 170,
+          "width": 43
+        },
+        {
+          "height": 328,
+          "img_id": 19,
+          "label": "Raj",
+          "left": 78,
+          "top": 32,
+          "width": 231
+        },
+        {
+          "height": 26,
+          "img_id": 19,
+          "label": "fork",
+          "left": 318,
+          "top": 176,
+          "width": 15
+        }
+      ],
+      "25": [
+        {
+          "height": 342,
+          "img_id": 25,
+          "label": "Sheldon",
+          "left": 149,
+          "top": 18,
+          "width": 284
+        },
+        {
+          "height": 87,
+          "img_id": 25,
+          "label": "hand",
+          "left": 197,
+          "top": 24,
+          "width": 70
+        },
+        {
+          "height": 359,
+          "img_id": 25,
+          "label": "Raj",
+          "left": 0,
+          "top": 1,
+          "width": 175
+        },
+        {
+          "height": 53,
+          "img_id": 25,
+          "label": "fork",
+          "left": 228,
+          "top": 26,
+          "width": 58
+        }
+      ],
+      "31": [
+        {
+          "height": 188,
+          "img_id": 31,
+          "label": "Sheldon",
+          "left": 325,
+          "top": 172,
+          "width": 232
+        },
+        {
+          "height": 57,
+          "img_id": 31,
+          "label": "hand",
+          "left": 328,
+          "top": 174,
+          "width": 42
+        },
+        {
+          "height": 336,
+          "img_id": 31,
+          "label": "Raj",
+          "left": 80,
+          "top": 24,
+          "width": 221
+        },
+        {
+          "height": 14,
+          "img_id": 31,
+          "label": "fork",
+          "left": 344,
+          "top": 177,
+          "width": 14
+        }
+      ],
+      "37": [
+        {
+          "height": 332,
+          "img_id": 37,
+          "label": "Sheldon",
+          "left": 131,
+          "top": 28,
+          "width": 310
+        },
+        {
+          "height": 70,
+          "img_id": 37,
+          "label": "hand",
+          "left": 204,
+          "top": 63,
+          "width": 74
+        },
+        {
+          "height": 358,
+          "img_id": 37,
+          "label": "Raj",
+          "left": 0,
+          "top": 2,
+          "width": 200
+        },
+        {
+          "height": 55,
+          "img_id": 37,
+          "label": "fork",
+          "left": 234,
+          "top": 56,
+          "width": 66
+        }
+      ],
+      "43": [
+        {
+          "height": 334,
+          "img_id": 43,
+          "label": "Sheldon",
+          "left": 151,
+          "top": 26,
+          "width": 290
+        },
+        {
+          "height": 76,
+          "img_id": 43,
+          "label": "hand",
+          "left": 193,
+          "top": 54,
+          "width": 83
+        },
+        {
+          "height": 360,
+          "img_id": 43,
+          "label": "Raj",
+          "left": 0,
+          "top": 0,
+          "width": 204
+        },
+        {
+          "height": 66,
+          "img_id": 43,
+          "label": "fork",
+          "left": 225,
+          "top": 47,
+          "width": 68
+        }
+      ],
+      "49": [
+        {
+          "height": 343,
+          "img_id": 49,
+          "label": "Sheldon",
+          "left": 169,
+          "top": 17,
+          "width": 264
+        },
+        {
+          "height": 79,
+          "img_id": 49,
+          "label": "hand",
+          "left": 246,
+          "top": 88,
+          "width": 49
+        },
+        {
+          "height": 354,
+          "img_id": 49,
+          "label": "Raj",
+          "left": 0,
+          "top": 6,
+          "width": 212
+        },
+        {
+          "height": 41,
+          "img_id": 49,
+          "label": "fork",
+          "left": 260,
+          "top": 56,
+          "width": 33
+        }
+      ],
+      "7": []
+    },
+    "q": "What is Sheldon holding in his hand when he is questioning Raj ?",
+    "qid": 61212,
+    "ts": [
+      0,
+      17.06
+    ],
+    "vid_name": "s03e21_seg01_clip_00"
+  },
+  {
+    "a0": "his laptop",
+    "a1": "A cup of coffee",
+    "a2": "A remote for the tv",
+    "a3": "mouth wash",
+    "a4": "a chess game",
+    "answer_idx": "0",
+    "bbox": {
+      "100": [
+        {
+          "height": 318,
+          "img_id": 100,
+          "label": "Howard",
+          "left": 308,
+          "top": 42,
+          "width": 112
+        },
+        {
+          "height": 132,
+          "img_id": 100,
+          "label": "seat",
+          "left": 16,
+          "top": 223,
+          "width": 231
+        },
+        {
+          "height": 76,
+          "img_id": 100,
+          "label": "laptop",
+          "left": 292,
+          "top": 187,
+          "width": 81
+        }
+      ],
+      "106": [
+        {
+          "height": 335,
+          "img_id": 106,
+          "label": "Howard",
+          "left": 233,
+          "top": 25,
+          "width": 212
+        }
+      ],
+      "82": [
+        {
+          "height": 327,
+          "img_id": 82,
+          "label": "Howard",
+          "left": 238,
+          "top": 33,
+          "width": 219
+        },
+        {
+          "height": 65,
+          "img_id": 82,
+          "label": "laptop",
+          "left": 160,
+          "top": 295,
+          "width": 204
+        }
+      ],
+      "88": [
+        {
+          "height": 307,
+          "img_id": 88,
+          "label": "Howard",
+          "left": 264,
+          "top": 33,
+          "width": 198
+        },
+        {
+          "height": 61,
+          "img_id": 88,
+          "label": "laptop",
+          "left": 165,
+          "top": 299,
+          "width": 188
+        }
+      ],
+      "94": [
+        {
+          "height": 343,
+          "img_id": 94,
+          "label": "Howard",
+          "left": 287,
+          "top": 17,
+          "width": 96
+        },
+        {
+          "height": 134,
+          "img_id": 94,
+          "label": "seat",
+          "left": 13,
+          "top": 221,
+          "width": 196
+        },
+        {
+          "height": 94,
+          "img_id": 94,
+          "label": "laptop",
+          "left": 266,
+          "top": 172,
+          "width": 107
+        }
+      ]
+    },
+    "q": "what is Howard holding when he stands up from his seat ?",
+    "qid": 71391,
+    "ts": [
+      28.6,
+      36.13
+    ],
+    "vid_name": "s01e09_seg02_clip_01"
+  },
+  {
+    "a0": "A book .",
+    "a1": "A pen .",
+    "a2": "A contract .",
+    "a3": "A letter .",
+    "a4": "A note .",
+    "answer_idx": "0",
+    "bbox": {
+      "1": [],
+      "13": [
+        {
+          "height": 323,
+          "img_id": 13,
+          "label": "Sheldon",
+          "left": 272,
+          "top": 35,
+          "width": 210
+        },
+        {
+          "height": 23,
+          "img_id": 13,
+          "label": "book",
+          "left": 26,
+          "top": 173,
+          "width": 118
+        }
+      ],
+      "19": [
+        {
+          "height": 127,
+          "img_id": 19,
+          "label": "Raj",
+          "left": 113,
+          "top": 141,
+          "width": 185
+        },
+        {
+          "height": 140,
+          "img_id": 19,
+          "label": "Sheldon",
+          "left": 446,
+          "top": 36,
+          "width": 65
+        },
+        {
+          "height": 29,
+          "img_id": 19,
+          "label": "book",
+          "left": 175,
+          "top": 196,
+          "width": 36
+        }
+      ],
+      "7": [
+        {
+          "height": 127,
+          "img_id": 7,
+          "label": "Raj",
+          "left": 113,
+          "top": 142,
+          "width": 189
+        },
+        {
+          "height": 142,
+          "img_id": 7,
+          "label": "Sheldon",
+          "left": 446,
+          "top": 38,
+          "width": 67
+        },
+        {
+          "height": 27,
+          "img_id": 7,
+          "label": "book",
+          "left": 162,
+          "top": 203,
+          "width": 38
+        }
+      ]
+    },
+    "q": "What was Raj holding when he was talking to Sheldon ?",
+    "qid": 61032,
+    "ts": [
+      0.86,
+      7.19
+    ],
+    "vid_name": "s04e04_seg02_clip_08"
+  },
+  {
+    "a0": "Raj is holding a cellphone",
+    "a1": "Raj is holding a pen",
+    "a2": "Raj is holding the keyboard",
+    "a3": "Raj is holding a book",
+    "a4": "Raj is holding a pencil",
+    "answer_idx": "3",
+    "bbox": {
+      "102": [
+        {
+          "height": 325,
+          "img_id": 102,
+          "label": "Sheldon",
+          "left": 222,
+          "top": 35,
+          "width": 246
+        }
+      ],
+      "108": [
+        {
+          "height": 312,
+          "img_id": 108,
+          "label": "Sheldon",
+          "left": 193,
+          "top": 43,
+          "width": 235
+        }
+      ],
+      "90": [
+        {
+          "height": 243,
+          "img_id": 90,
+          "label": "Raj",
+          "left": 107,
+          "top": 93,
+          "width": 366
+        },
+        {
+          "height": 55,
+          "img_id": 90,
+          "label": "book",
+          "left": 241,
+          "top": 225,
+          "width": 137
+        }
+      ],
+      "96": [
+        {
+          "height": 243,
+          "img_id": 96,
+          "label": "Raj",
+          "left": 114,
+          "top": 91,
+          "width": 353
+        },
+        {
+          "height": 58,
+          "img_id": 96,
+          "label": "book",
+          "left": 238,
+          "top": 231,
+          "width": 144
+        }
+      ]
+    },
+    "q": "What is Raj holding when he is talking to Sheldon",
+    "qid": 13556,
+    "ts": [
+      31.32,
+      36.91
+    ],
+    "vid_name": "s04e04_seg02_clip_09"
+  },
+  {
+    "a0": "A candy bar .",
+    "a1": "Her cell phone .",
+    "a2": "A magazine .",
+    "a3": "A coffe cup .",
+    "a4": "A bag of potato chips .",
+    "answer_idx": "3",
+    "bbox": {
+      "161": [
+        {
+          "height": 231,
+          "img_id": 161,
+          "label": "Penny",
+          "left": 399,
+          "top": 37,
+          "width": 140
+        },
+        {
+          "height": 295,
+          "img_id": 161,
+          "label": "Leonard",
+          "left": 497,
+          "top": 40,
+          "width": 131
+        },
+        {
+          "height": 65,
+          "img_id": 161,
+          "label": "coffee",
+          "left": 414,
+          "top": 145,
+          "width": 42
+        },
+        {
+          "height": 52,
+          "img_id": 161,
+          "label": "cup",
+          "left": 416,
+          "top": 155,
+          "width": 40
+        },
+        {
+          "height": 55,
+          "img_id": 161,
+          "label": "coffee",
+          "left": 417,
+          "top": 155,
+          "width": 42
+        }
+      ],
+      "167": [],
+      "173": []
+    },
+    "q": "What was Penny holding in her right hand when Leonard picked up his coffee cup ?",
+    "qid": 87677,
+    "ts": [
+      54.76,
+      56.75
+    ],
+    "vid_name": "s10e11_seg02_clip_14"
+  },
+  {
+    "a0": "Howard is holding a laptop .",
+    "a1": "Howard is holding a robot .",
+    "a2": "Howard is holding a video game .",
+    "a3": "Howard is holding a comic book .",
+    "a4": "Howard is holding a sword .",
+    "answer_idx": "3",
+    "bbox": {
+      "1": [
+        {
+          "height": 340,
+          "img_id": 1,
+          "label": "Howard",
+          "left": 139,
+          "top": 20,
+          "width": 323
+        },
+        {
+          "height": 115,
+          "img_id": 1,
+          "label": "book",
+          "left": 147,
+          "top": 211,
+          "width": 208
+        }
+      ]
+    },
+    "q": "What is Howard holding when talking to Raj ?",
+    "qid": 79546,
+    "ts": [
+      0,
+      1.26
+    ],
+    "vid_name": "s07e14_seg02_clip_10"
+  },
+  {
+    "a0": "book and bottle",
+    "a1": "plate",
+    "a2": "basket",
+    "a3": "flowers",
+    "a4": "cupcakes",
+    "answer_idx": "0",
+    "bbox": {
+      "1": [
+        {
+          "height": 355,
+          "img_id": 1,
+          "label": "room",
+          "left": 4,
+          "top": 5,
+          "width": 636
+        }
+      ],
+      "13": [
+        {
+          "height": 355,
+          "img_id": 13,
+          "label": "room",
+          "left": 6,
+          "top": 5,
+          "width": 634
+        }
+      ],
+      "19": [
+        {
+          "height": 344,
+          "img_id": 19,
+          "label": "Bernadette",
+          "left": 109,
+          "top": 16,
+          "width": 305
+        },
+        {
+          "height": 355,
+          "img_id": 19,
+          "label": "room",
+          "left": 2,
+          "top": 5,
+          "width": 638
+        },
+        {
+          "height": 138,
+          "img_id": 19,
+          "label": "book",
+          "left": 279,
+          "top": 216,
+          "width": 81
+        },
+        {
+          "height": 118,
+          "img_id": 19,
+          "label": "bottle",
+          "left": 281,
+          "top": 199,
+          "width": 43
+        }
+      ],
+      "7": [
+        {
+          "height": 358,
+          "img_id": 7,
+          "label": "room",
+          "left": 5,
+          "top": 2,
+          "width": 635
+        }
+      ]
+    },
+    "q": "What is Bernadette holding when she walks through the door into the living room ?",
+    "qid": 121029,
+    "ts": [
+      0.89,
+      5.93
+    ],
+    "vid_name": "s09e21_seg02_clip_03"
+  },
+  {
+    "a0": "A bag",
+    "a1": "A plastic cup",
+    "a2": "A laptop",
+    "a3": "A bottle of wine",
+    "a4": "An umbrella",
+    "answer_idx": "1",
+    "bbox": {
+      "24": [
+        {
+          "height": 336,
+          "img_id": 24,
+          "label": "Raj",
+          "left": 162,
+          "top": 24,
+          "width": 135
+        }
+      ],
+      "30": [
+        {
+          "height": 315,
+          "img_id": 30,
+          "label": "Howard",
+          "left": 234,
+          "top": 45,
+          "width": 231
+        },
+        {
+          "height": 50,
+          "img_id": 30,
+          "label": "cup",
+          "left": 253,
+          "top": 284,
+          "width": 55
+        },
+        {
+          "height": 62,
+          "img_id": 30,
+          "label": "cup",
+          "left": 504,
+          "top": 222,
+          "width": 45
+        }
+      ],
+      "36": [
+        {
+          "height": 315,
+          "img_id": 36,
+          "label": "Howard",
+          "left": 351,
+          "top": 45,
+          "width": 259
+        },
+        {
+          "height": 342,
+          "img_id": 36,
+          "label": "Raj",
+          "left": 53,
+          "top": 18,
+          "width": 271
+        },
+        {
+          "height": 46,
+          "img_id": 36,
+          "label": "cup",
+          "left": 392,
+          "top": 313,
+          "width": 51
+        }
+      ],
+      "42": [
+        {
+          "height": 310,
+          "img_id": 42,
+          "label": "Howard",
+          "left": 424,
+          "top": 50,
+          "width": 208
+        },
+        {
+          "height": 335,
+          "img_id": 42,
+          "label": "Raj",
+          "left": 61,
+          "top": 25,
+          "width": 267
+        },
+        {
+          "height": 48,
+          "img_id": 42,
+          "label": "cup",
+          "left": 421,
+          "top": 295,
+          "width": 43
+        }
+      ],
+      "48": [
+        {
+          "height": 305,
+          "img_id": 48,
+          "label": "Howard",
+          "left": 433,
+          "top": 55,
+          "width": 203
+        },
+        {
+          "height": 332,
+          "img_id": 48,
+          "label": "Raj",
+          "left": 60,
+          "top": 28,
+          "width": 258
+        },
+        {
+          "height": 43,
+          "img_id": 48,
+          "label": "cup",
+          "left": 429,
+          "top": 302,
+          "width": 41
+        }
+      ],
+      "54": [
+        {
+          "height": 317,
+          "img_id": 54,
+          "label": "Howard",
+          "left": 357,
+          "top": 43,
+          "width": 202
+        },
+        {
+          "height": 349,
+          "img_id": 54,
+          "label": "Raj",
+          "left": 108,
+          "top": 11,
+          "width": 281
+        },
+        {
+          "height": 45,
+          "img_id": 54,
+          "label": "cup",
+          "left": 374,
+          "top": 281,
+          "width": 38
+        },
+        {
+          "height": 59,
+          "img_id": 54,
+          "label": "cup",
+          "left": 588,
+          "top": 241,
+          "width": 32
+        }
+      ]
+    },
+    "q": "What is Howard holding when he walks over to Raj and mentions the apology ?",
+    "qid": 45358,
+    "ts": [
+      9.3,
+      17.93
+    ],
+    "vid_name": "s07e01_seg02_clip_17"
+  },
+  {
+    "a0": "book",
+    "a1": "eraser",
+    "a2": "paper towel",
+    "a3": "bottle",
+    "a4": "glasses",
+    "answer_idx": "0",
+    "bbox": {
+      "55": [
+        {
+          "height": 306,
+          "img_id": 55,
+          "label": "Sheldon",
+          "left": 150,
+          "top": 48,
+          "width": 124
+        },
+        {
+          "height": 119,
+          "img_id": 55,
+          "label": "whiteboard",
+          "left": 10,
+          "top": 26,
+          "width": 65
+        }
+      ],
+      "61": [
+        {
+          "height": 331,
+          "img_id": 61,
+          "label": "Sheldon",
+          "left": 295,
+          "top": 22,
+          "width": 29
+        }
+      ],
+      "67": [
+        {
+          "height": 326,
+          "img_id": 67,
+          "label": "Sheldon",
+          "left": 123,
+          "top": 34,
+          "width": 127
+        },
+        {
+          "height": 263,
+          "img_id": 67,
+          "label": "whiteboard",
+          "left": 301,
+          "top": 27,
+          "width": 331
+        },
+        {
+          "height": 59,
+          "img_id": 67,
+          "label": "book",
+          "left": 209,
+          "top": 213,
+          "width": 86
+        }
+      ],
+      "73": [
+        {
+          "height": 261,
+          "img_id": 73,
+          "label": "Sheldon",
+          "left": 177,
+          "top": 99,
+          "width": 240
+        },
+        {
+          "height": 330,
+          "img_id": 73,
+          "label": "whiteboard",
+          "left": 132,
+          "top": 23,
+          "width": 332
+        },
+        {
+          "height": 99,
+          "img_id": 73,
+          "label": "book",
+          "left": 312,
+          "top": 261,
+          "width": 183
+        }
+      ]
+    },
+    "q": "What is Sheldon holding when he walks towards the whiteboard ?",
+    "qid": 42696,
+    "ts": [
+      19.54,
+      24.59
+    ],
+    "vid_name": "s07e10_seg01_clip_00"
+  },
+  {
+    "a0": "hairspray",
+    "a1": "gloves",
+    "a2": "toothbrushes",
+    "a3": "paint",
+    "a4": "spray bottle",
+    "answer_idx": "2",
+    "bbox": {
+      "156": [
+        {
+          "height": 268,
+          "img_id": 156,
+          "label": "Amy",
+          "left": 448,
+          "top": 86,
+          "width": 164
+        },
+        {
+          "height": 359,
+          "img_id": 156,
+          "label": "Sheldon",
+          "left": 246,
+          "top": 1,
+          "width": 183
+        },
+        {
+          "height": 69,
+          "img_id": 156,
+          "label": "toothbrushes",
+          "left": 389,
+          "top": 249,
+          "width": 31
+        },
+        {
+          "height": 85,
+          "img_id": 156,
+          "label": "toothbrushes",
+          "left": 442,
+          "top": 275,
+          "width": 31
+        }
+      ],
+      "162": [
+        {
+          "height": 285,
+          "img_id": 162,
+          "label": "Amy",
+          "left": 461,
+          "top": 75,
+          "width": 130
+        },
+        {
+          "height": 340,
+          "img_id": 162,
+          "label": "Sheldon",
+          "left": 265,
+          "top": 20,
+          "width": 175
+        },
+        {
+          "height": 74,
+          "img_id": 162,
+          "label": "toothbrushes",
+          "left": 332,
+          "top": 207,
+          "width": 47
+        },
+        {
+          "height": 84,
+          "img_id": 162,
+          "label": "toothbrushes",
+          "left": 383,
+          "top": 246,
+          "width": 37
+        }
+      ],
+      "168": [
+        {
+          "height": 265,
+          "img_id": 168,
+          "label": "Amy",
+          "left": 333,
+          "top": 95,
+          "width": 151
+        },
+        {
+          "height": 299,
+          "img_id": 168,
+          "label": "Sheldon",
+          "left": 231,
+          "top": 20,
+          "width": 143
+        },
+        {
+          "height": 46,
+          "img_id": 168,
+          "label": "toothbrushes",
+          "left": 94,
+          "top": 254,
+          "width": 30
+        },
+        {
+          "height": 29,
+          "img_id": 168,
+          "label": "toothbrushes",
+          "left": 105,
+          "top": 265,
+          "width": 57
+        }
+      ],
+      "174": [
+        {
+          "height": 238,
+          "img_id": 174,
+          "label": "Amy",
+          "left": 371,
+          "top": 114,
+          "width": 128
+        },
+        {
+          "height": 286,
+          "img_id": 174,
+          "label": "Sheldon",
+          "left": 269,
+          "top": 59,
+          "width": 174
+        },
+        {
+          "height": 28,
+          "img_id": 174,
+          "label": "toothbrushes",
+          "left": 89,
+          "top": 265,
+          "width": 29
+        },
+        {
+          "height": 46,
+          "img_id": 174,
+          "label": "toothbrushes",
+          "left": 109,
+          "top": 250,
+          "width": 35
+        }
+      ],
+      "180": [
+        {
+          "height": 241,
+          "img_id": 180,
+          "label": "Amy",
+          "left": 151,
+          "top": 113,
+          "width": 132
+        },
+        {
+          "height": 297,
+          "img_id": 180,
+          "label": "Sheldon",
+          "left": 63,
+          "top": 43,
+          "width": 150
+        }
+      ]
+    },
+    "q": "What are Amy and Sheldon holding when they are in the bathroom together ?",
+    "qid": 110880,
+    "ts": [
+      54.32,
+      62
+    ],
+    "vid_name": "s10e05_seg02_clip_16"
+  },
+  {
+    "a0": "A glass .",
+    "a1": "A knife .",
+    "a2": "A bowl .",
+    "a3": "A cup .",
+    "a4": "A fork .",
+    "answer_idx": "4",
+    "bbox": {
+      "64": [
+        {
+          "height": 336,
+          "img_id": 64,
+          "label": "Sheldon",
+          "left": 186,
+          "top": 24,
+          "width": 347
+        },
+        {
+          "height": 207,
+          "img_id": 64,
+          "label": "couch",
+          "left": 0,
+          "top": 153,
+          "width": 640
+        },
+        {
+          "height": 54,
+          "img_id": 64,
+          "label": "fork",
+          "left": 181,
+          "top": 306,
+          "width": 80
+        }
+      ],
+      "70": [
+        {
+          "height": 335,
+          "img_id": 70,
+          "label": "Sheldon",
+          "left": 170,
+          "top": 25,
+          "width": 357
+        },
+        {
+          "height": 218,
+          "img_id": 70,
+          "label": "couch",
+          "left": 0,
+          "top": 142,
+          "width": 638
+        },
+        {
+          "height": 109,
+          "img_id": 70,
+          "label": "fork",
+          "left": 214,
+          "top": 210,
+          "width": 98
+        }
+      ],
+      "76": [
+        {
+          "height": 344,
+          "img_id": 76,
+          "label": "Sheldon",
+          "left": 201,
+          "top": 16,
+          "width": 305
+        },
+        {
+          "height": 231,
+          "img_id": 76,
+          "label": "couch",
+          "left": 0,
+          "top": 129,
+          "width": 637
+        },
+        {
+          "height": 117,
+          "img_id": 76,
+          "label": "fork",
+          "left": 206,
+          "top": 204,
+          "width": 98
+        }
+      ]
+    },
+    "q": "What does Sheldon hold up when he is sitting on the couch ?",
+    "qid": 74893,
+    "ts": [
+      22.38,
+      25.22
+    ],
+    "vid_name": "s01e02_seg01_clip_00"
+  },
+  {
+    "a0": "a cell phone",
+    "a1": "a fork",
+    "a2": "a candy bar",
+    "a3": "a soda",
+    "a4": "a letter",
+    "answer_idx": "1",
+    "bbox": {
+      "112": [],
+      "118": [
+        {
+          "height": 295,
+          "img_id": 118,
+          "label": "Raj",
+          "left": 135,
+          "top": 65,
+          "width": 158
+        },
+        {
+          "height": 42,
+          "img_id": 118,
+          "label": "hand",
+          "left": 261,
+          "top": 147,
+          "width": 40
+        },
+        {
+          "height": 42,
+          "img_id": 118,
+          "label": "hand",
+          "left": 390,
+          "top": 170,
+          "width": 40
+        },
+        {
+          "height": 38,
+          "img_id": 118,
+          "label": "hand",
+          "left": 395,
+          "top": 139,
+          "width": 30
+        },
+        {
+          "height": 38,
+          "img_id": 118,
+          "label": "hand",
+          "left": 369,
+          "top": 110,
+          "width": 29
+        },
+        {
+          "height": 33,
+          "img_id": 118,
+          "label": "hand",
+          "left": 317,
+          "top": 101,
+          "width": 24
+        },
+        {
+          "height": 285,
+          "img_id": 118,
+          "label": "Howard",
+          "left": 379,
+          "top": 75,
+          "width": 159
+        },
+        {
+          "height": 43,
+          "img_id": 118,
+          "label": "fork",
+          "left": 392,
+          "top": 144,
+          "width": 35
+        },
+        {
+          "height": 37,
+          "img_id": 118,
+          "label": "fork",
+          "left": 376,
+          "top": 107,
+          "width": 26
+        },
+        {
+          "height": 25,
+          "img_id": 118,
+          "label": "fork",
+          "left": 263,
+          "top": 139,
+          "width": 52
+        }
+      ],
+      "124": [
+        {
+          "height": 301,
+          "img_id": 124,
+          "label": "Raj",
+          "left": 106,
+          "top": 59,
+          "width": 169
+        },
+        {
+          "height": 49,
+          "img_id": 124,
+          "label": "hand",
+          "left": 247,
+          "top": 145,
+          "width": 40
+        },
+        {
+          "height": 45,
+          "img_id": 124,
+          "label": "hand",
+          "left": 387,
+          "top": 135,
+          "width": 41
+        },
+        {
+          "height": 33,
+          "img_id": 124,
+          "label": "hand",
+          "left": 368,
+          "top": 111,
+          "width": 42
+        },
+        {
+          "height": 38,
+          "img_id": 124,
+          "label": "hand",
+          "left": 314,
+          "top": 82,
+          "width": 21
+        },
+        {
+          "height": 294,
+          "img_id": 124,
+          "label": "Howard",
+          "left": 382,
+          "top": 66,
+          "width": 143
+        },
+        {
+          "height": 43,
+          "img_id": 124,
+          "label": "fork",
+          "left": 388,
+          "top": 136,
+          "width": 26
+        },
+        {
+          "height": 43,
+          "img_id": 124,
+          "label": "fork",
+          "left": 380,
+          "top": 99,
+          "width": 24
+        }
+      ],
+      "130": [
+        {
+          "height": 279,
+          "img_id": 130,
+          "label": "Raj",
+          "left": 86,
+          "top": 40,
+          "width": 300
+        },
+        {
+          "height": 70,
+          "img_id": 130,
+          "label": "hand",
+          "left": 171,
+          "top": 235,
+          "width": 77
+        },
+        {
+          "height": 81,
+          "img_id": 130,
+          "label": "hand",
+          "left": 504,
+          "top": 75,
+          "width": 61
+        },
+        {
+          "height": 288,
+          "img_id": 130,
+          "label": "Howard",
+          "left": 285,
+          "top": 72,
+          "width": 355
+        },
+        {
+          "height": 71,
+          "img_id": 130,
+          "label": "fork",
+          "left": 212,
+          "top": 222,
+          "width": 61
+        }
+      ]
+    },
+    "q": "What is Raj holding in his hand when he tells Howard about a dream he had ?",
+    "qid": 78092,
+    "ts": [
+      38.36,
+      43.09
+    ],
+    "vid_name": "s04e12_seg02_clip_07"
+  },
+  {
+    "a0": "A bottle of champagne .",
+    "a1": "A bucket of ice .",
+    "a2": "A vase of flowers .",
+    "a3": "A blender .",
+    "a4": "A plunger .",
+    "answer_idx": "0",
+    "bbox": {
+      "136": [],
+      "142": [
+        {
+          "height": 315,
+          "img_id": 142,
+          "label": "Sheldon",
+          "left": 68,
+          "top": 44,
+          "width": 144
+        },
+        {
+          "height": 344,
+          "img_id": 142,
+          "label": "kitchen",
+          "left": 6,
+          "top": 13,
+          "width": 634
+        },
+        {
+          "height": 91,
+          "img_id": 142,
+          "label": "bottle",
+          "left": 99,
+          "top": 129,
+          "width": 42
+        },
+        {
+          "height": 104,
+          "img_id": 142,
+          "label": "champagne",
+          "left": 92,
+          "top": 120,
+          "width": 46
+        }
+      ],
+      "148": [
+        {
+          "height": 318,
+          "img_id": 148,
+          "label": "Sheldon",
+          "left": 125,
+          "top": 42,
+          "width": 327
+        },
+        {
+          "height": 323,
+          "img_id": 148,
+          "label": "kitchen",
+          "left": 15,
+          "top": 14,
+          "width": 625
+        },
+        {
+          "height": 152,
+          "img_id": 148,
+          "label": "bottle",
+          "left": 142,
+          "top": 162,
+          "width": 78
+        },
+        {
+          "height": 156,
+          "img_id": 148,
+          "label": "champagne",
+          "left": 150,
+          "top": 159,
+          "width": 67
+        }
+      ],
+      "154": [
+        {
+          "height": 320,
+          "img_id": 154,
+          "label": "Sheldon",
+          "left": 127,
+          "top": 40,
+          "width": 297
+        },
+        {
+          "height": 340,
+          "img_id": 154,
+          "label": "kitchen",
+          "left": 5,
+          "top": 9,
+          "width": 635
+        },
+        {
+          "height": 156,
+          "img_id": 154,
+          "label": "bottle",
+          "left": 154,
+          "top": 152,
+          "width": 63
+        },
+        {
+          "height": 150,
+          "img_id": 154,
+          "label": "champagne",
+          "left": 143,
+          "top": 156,
+          "width": 73
+        }
+      ],
+      "160": [
+        {
+          "height": 326,
+          "img_id": 160,
+          "label": "Sheldon",
+          "left": 109,
+          "top": 34,
+          "width": 326
+        },
+        {
+          "height": 347,
+          "img_id": 160,
+          "label": "kitchen",
+          "left": 11,
+          "top": 8,
+          "width": 629
+        },
+        {
+          "height": 147,
+          "img_id": 160,
+          "label": "bottle",
+          "left": 154,
+          "top": 155,
+          "width": 60
+        },
+        {
+          "height": 155,
+          "img_id": 160,
+          "label": "champagne",
+          "left": 151,
+          "top": 152,
+          "width": 64
+        }
+      ],
+      "166": [
+        {
+          "height": 326,
+          "img_id": 166,
+          "label": "Sheldon",
+          "left": 118,
+          "top": 34,
+          "width": 307
+        },
+        {
+          "height": 349,
+          "img_id": 166,
+          "label": "kitchen",
+          "left": 8,
+          "top": 11,
+          "width": 632
+        },
+        {
+          "height": 151,
+          "img_id": 166,
+          "label": "bottle",
+          "left": 152,
+          "top": 180,
+          "width": 69
+        },
+        {
+          "height": 157,
+          "img_id": 166,
+          "label": "champagne",
+          "left": 155,
+          "top": 178,
+          "width": 65
+        }
+      ],
+      "172": [
+        {
+          "height": 325,
+          "img_id": 172,
+          "label": "Sheldon",
+          "left": 89,
+          "top": 34,
+          "width": 127
+        },
+        {
+          "height": 351,
+          "img_id": 172,
+          "label": "kitchen",
+          "left": 3,
+          "top": 9,
+          "width": 457
+        },
+        {
+          "height": 89,
+          "img_id": 172,
+          "label": "bottle",
+          "left": 98,
+          "top": 99,
+          "width": 50
+        },
+        {
+          "height": 88,
+          "img_id": 172,
+          "label": "champagne",
+          "left": 104,
+          "top": 100,
+          "width": 44
+        }
+      ]
+    },
+    "q": "What does Sheldon hold when he is standing in the kitchen ?",
+    "qid": 43100,
+    "ts": [
+      46.52,
+      56.43
+    ],
+    "vid_name": "s10e06_seg02_clip_06"
+  },
+  {
+    "a0": "A helmet .",
+    "a1": "A fork .",
+    "a2": "A sword .",
+    "a3": "A Rubik cube .",
+    "a4": "A basketball .",
+    "answer_idx": "1",
+    "bbox": {
+      "12": [
+        {
+          "height": 344,
+          "img_id": 12,
+          "label": "Sheldon",
+          "left": 206,
+          "top": 16,
+          "width": 383
+        },
+        {
+          "height": 130,
+          "img_id": 12,
+          "label": "fork",
+          "left": 204,
+          "top": 230,
+          "width": 91
+        }
+      ],
+      "6": [
+        {
+          "height": 346,
+          "img_id": 6,
+          "label": "Sheldon",
+          "left": 186,
+          "top": 14,
+          "width": 425
+        },
+        {
+          "height": 134,
+          "img_id": 6,
+          "label": "fork",
+          "left": 198,
+          "top": 226,
+          "width": 86
+        }
+      ]
+    },
+    "q": "What is Sheldon holding when he said he was concerned about Amy ?",
+    "qid": 49279,
+    "ts": [
+      3.25,
+      4.73
+    ],
+    "vid_name": "s10e07_seg02_clip_02"
+  },
+  {
+    "a0": "A coffee mug .",
+    "a1": "A wine glass .",
+    "a2": "A glass of water .",
+    "a3": "A water bottle .",
+    "a4": "A cell phone .",
+    "answer_idx": "0",
+    "bbox": {
+      "11": [
+        {
+          "height": 318,
+          "img_id": 11,
+          "label": "Penny",
+          "left": 122,
+          "top": 42,
+          "width": 340
+        },
+        {
+          "height": 63,
+          "img_id": 11,
+          "label": "hand",
+          "left": 241,
+          "top": 297,
+          "width": 86
+        },
+        {
+          "height": 74,
+          "img_id": 11,
+          "label": "hand",
+          "left": 167,
+          "top": 260,
+          "width": 97
+        },
+        {
+          "height": 109,
+          "img_id": 11,
+          "label": "couch",
+          "left": 125,
+          "top": 251,
+          "width": 516
+        },
+        {
+          "height": 342,
+          "img_id": 11,
+          "label": "Sheldon",
+          "left": 488,
+          "top": 18,
+          "width": 153
+        },
+        {
+          "height": 79,
+          "img_id": 11,
+          "label": "coffee",
+          "left": 220,
+          "top": 281,
+          "width": 86
+        },
+        {
+          "height": 67,
+          "img_id": 11,
+          "label": "mug",
+          "left": 233,
+          "top": 293,
+          "width": 87
+        }
+      ],
+      "17": [
+        {
+          "height": 318,
+          "img_id": 17,
+          "label": "Penny",
+          "left": 140,
+          "top": 42,
+          "width": 328
+        },
+        {
+          "height": 69,
+          "img_id": 17,
+          "label": "hand",
+          "left": 218,
+          "top": 291,
+          "width": 93
+        },
+        {
+          "height": 107,
+          "img_id": 17,
+          "label": "hand",
+          "left": 172,
+          "top": 221,
+          "width": 86
+        },
+        {
+          "height": 112,
+          "img_id": 17,
+          "label": "couch",
+          "left": 119,
+          "top": 248,
+          "width": 522
+        },
+        {
+          "height": 123,
+          "img_id": 17,
+          "label": "Sheldon",
+          "left": 539,
+          "top": 237,
+          "width": 102
+        },
+        {
+          "height": 66,
+          "img_id": 17,
+          "label": "coffee",
+          "left": 199,
+          "top": 294,
+          "width": 86
+        },
+        {
+          "height": 75,
+          "img_id": 17,
+          "label": "mug",
+          "left": 202,
+          "top": 285,
+          "width": 91
+        }
+      ],
+      "5": [
+        {
+          "height": 321,
+          "img_id": 5,
+          "label": "Penny",
+          "left": 121,
+          "top": 39,
+          "width": 350
+        },
+        {
+          "height": 73,
+          "img_id": 5,
+          "label": "hand",
+          "left": 239,
+          "top": 287,
+          "width": 88
+        },
+        {
+          "height": 80,
+          "img_id": 5,
+          "label": "hand",
+          "left": 176,
+          "top": 257,
+          "width": 76
+        },
+        {
+          "height": 93,
+          "img_id": 5,
+          "label": "couch",
+          "left": 112,
+          "top": 267,
+          "width": 526
+        },
+        {
+          "height": 345,
+          "img_id": 5,
+          "label": "Sheldon",
+          "left": 491,
+          "top": 15,
+          "width": 150
+        },
+        {
+          "height": 70,
+          "img_id": 5,
+          "label": "coffee",
+          "left": 224,
+          "top": 290,
+          "width": 88
+        },
+        {
+          "height": 63,
+          "img_id": 5,
+          "label": "mug",
+          "left": 232,
+          "top": 297,
+          "width": 103
+        }
+      ]
+    },
+    "q": "What is Penny holding in her hand when she is sitting on the couch with Sheldon ?",
+    "qid": 70204,
+    "ts": [
+      2.68,
+      6.25
+    ],
+    "vid_name": "s09e01_seg02_clip_13"
+  },
+  {
+    "a0": "Her hair brush",
+    "a1": "a puppy",
+    "a2": "a ball",
+    "a3": "her laundry basket",
+    "a4": "Her laptop",
+    "answer_idx": "4",
+    "bbox": {
+      "161": [
+        {
+          "height": 350,
+          "img_id": 161,
+          "label": "room",
+          "left": 14,
+          "top": 10,
+          "width": 626
+        }
+      ],
+      "167": [
+        {
+          "height": 354,
+          "img_id": 167,
+          "label": "room",
+          "left": 13,
+          "top": 6,
+          "width": 626
+        }
+      ],
+      "173": [
+        {
+          "height": 330,
+          "img_id": 173,
+          "label": "Penny",
+          "left": 174,
+          "top": 30,
+          "width": 241
+        },
+        {
+          "height": 346,
+          "img_id": 173,
+          "label": "room",
+          "left": 10,
+          "top": 14,
+          "width": 630
+        },
+        {
+          "height": 155,
+          "img_id": 173,
+          "label": "laptop",
+          "left": 206,
+          "top": 130,
+          "width": 183
+        }
+      ],
+      "179": [
+        {
+          "height": 349,
+          "img_id": 179,
+          "label": "room",
+          "left": 13,
+          "top": 11,
+          "width": 548
+        }
+      ],
+      "185": [
+        {
+          "height": 355,
+          "img_id": 185,
+          "label": "room",
+          "left": 8,
+          "top": 5,
+          "width": 604
+        }
+      ]
+    },
+    "q": "What is Penny holding when she walks into the room ?",
+    "qid": 27659,
+    "ts": [
+      54.9,
+      62.03
+    ],
+    "vid_name": "s04e24_seg02_clip_09"
+  },
+  {
+    "a0": "A cup .",
+    "a1": "A towel .",
+    "a2": "A hairdryer .",
+    "a3": "Salad .",
+    "a4": "A magazine .",
+    "answer_idx": "0",
+    "bbox": {
+      "1": [
+        {
+          "height": 297,
+          "img_id": 1,
+          "label": "Penny",
+          "left": 588,
+          "top": 63,
+          "width": 52
+        },
+        {
+          "height": 330,
+          "img_id": 1,
+          "label": "Sheldon",
+          "left": 168,
+          "top": 30,
+          "width": 261
+        }
+      ],
+      "13": [
+        {
+          "height": 325,
+          "img_id": 13,
+          "label": "Penny",
+          "left": 209,
+          "top": 35,
+          "width": 257
+        },
+        {
+          "height": 49,
+          "img_id": 13,
+          "label": "cup",
+          "left": 303,
+          "top": 278,
+          "width": 73
+        }
+      ],
+      "19": [
+        {
+          "height": 326,
+          "img_id": 19,
+          "label": "Penny",
+          "left": 209,
+          "top": 34,
+          "width": 272
+        },
+        {
+          "height": 50,
+          "img_id": 19,
+          "label": "cup",
+          "left": 303,
+          "top": 278,
+          "width": 71
+        }
+      ],
+      "7": [
+        {
+          "height": 318,
+          "img_id": 7,
+          "label": "Penny",
+          "left": 210,
+          "top": 42,
+          "width": 294
+        },
+        {
+          "height": 49,
+          "img_id": 7,
+          "label": "cup",
+          "left": 302,
+          "top": 278,
+          "width": 74
+        }
+      ]
+    },
+    "q": "What was Penny holding when she talked to Sheldon about string theory ?",
+    "qid": 24350,
+    "ts": [
+      0,
+      6.53
+    ],
+    "vid_name": "s07e20_seg02_clip_01"
+  },
+  {
+    "a0": "Raj was holding a basket",
+    "a1": "Raj was holding a plate",
+    "a2": "Raj was not holding anything",
+    "a3": "Raj was holding a cup",
+    "a4": "Raj was holding a bouquet of roses",
+    "answer_idx": "3",
+    "bbox": {
+      "1": [
+        {
+          "height": 165,
+          "img_id": 1,
+          "label": "Raj",
+          "left": 352,
+          "top": 34,
+          "width": 76
+        },
+        {
+          "height": 26,
+          "img_id": 1,
+          "label": "hand",
+          "left": 369,
+          "top": 119,
+          "width": 47
+        },
+        {
+          "height": 29,
+          "img_id": 1,
+          "label": "cup",
+          "left": 405,
+          "top": 113,
+          "width": 20
+        }
+      ],
+      "13": [
+        {
+          "height": 224,
+          "img_id": 13,
+          "label": "Raj",
+          "left": 162,
+          "top": 42,
+          "width": 165
+        },
+        {
+          "height": 50,
+          "img_id": 13,
+          "label": "hand",
+          "left": 237,
+          "top": 244,
+          "width": 58
+        },
+        {
+          "height": 291,
+          "img_id": 13,
+          "label": "Leonard",
+          "left": 301,
+          "top": 16,
+          "width": 174
+        },
+        {
+          "height": 37,
+          "img_id": 13,
+          "label": "cup",
+          "left": 280,
+          "top": 292,
+          "width": 48
+        }
+      ],
+      "19": [
+        {
+          "height": 189,
+          "img_id": 19,
+          "label": "Raj",
+          "left": 195,
+          "top": 61,
+          "width": 148
+        },
+        {
+          "height": 47,
+          "img_id": 19,
+          "label": "hand",
+          "left": 161,
+          "top": 179,
+          "width": 50
+        },
+        {
+          "height": 266,
+          "img_id": 19,
+          "label": "Leonard",
+          "left": 388,
+          "top": 37,
+          "width": 148
+        },
+        {
+          "height": 50,
+          "img_id": 19,
+          "label": "cup",
+          "left": 270,
+          "top": 281,
+          "width": 62
+        }
+      ],
+      "25": [
+        {
+          "height": 185,
+          "img_id": 25,
+          "label": "Raj",
+          "left": 173,
+          "top": 55,
+          "width": 170
+        },
+        {
+          "height": 43,
+          "img_id": 25,
+          "label": "hand",
+          "left": 146,
+          "top": 266,
+          "width": 62
+        },
+        {
+          "height": 221,
+          "img_id": 25,
+          "label": "Leonard",
+          "left": 367,
+          "top": 55,
+          "width": 170
+        },
+        {
+          "height": 43,
+          "img_id": 25,
+          "label": "cup",
+          "left": 248,
+          "top": 279,
+          "width": 61
+        }
+      ],
+      "7": [
+        {
+          "height": 134,
+          "img_id": 7,
+          "label": "Raj",
+          "left": 337,
+          "top": 80,
+          "width": 69
+        },
+        {
+          "height": 33,
+          "img_id": 7,
+          "label": "hand",
+          "left": 398,
+          "top": 138,
+          "width": 42
+        },
+        {
+          "height": 175,
+          "img_id": 7,
+          "label": "Leonard",
+          "left": 556,
+          "top": 71,
+          "width": 72
+        },
+        {
+          "height": 38,
+          "img_id": 7,
+          "label": "cup",
+          "left": 401,
+          "top": 130,
+          "width": 34
+        }
+      ]
+    },
+    "q": "What was Raj holding in his hand when he was talking to Leonard ?",
+    "qid": 93144,
+    "ts": [
+      0,
+      7.92
+    ],
+    "vid_name": "s05e05_seg02_clip_14"
+  },
+  {
+    "a0": "Sheldon holds a carpet .",
+    "a1": "Sheldon holds a bottle of water .",
+    "a2": "Sheldon holds a laptop .",
+    "a3": "Sheldon holds a broom",
+    "a4": "Sheldon holded a cup of chocolate .",
+    "answer_idx": "4",
+    "bbox": {
+      "1": [
+        {
+          "height": 194,
+          "img_id": 1,
+          "label": "Sheldon",
+          "left": 133,
+          "top": 166,
+          "width": 92
+        },
+        {
+          "height": 309,
+          "img_id": 1,
+          "label": "Leonard",
+          "left": 347,
+          "top": 42,
+          "width": 78
+        },
+        {
+          "height": 49,
+          "img_id": 1,
+          "label": "cup",
+          "left": 276,
+          "top": 267,
+          "width": 38
+        }
+      ],
+      "13": [],
+      "19": [],
+      "25": [],
+      "31": [],
+      "37": [
+        {
+          "height": 292,
+          "img_id": 37,
+          "label": "Leonard",
+          "left": 228,
+          "top": 66,
+          "width": 89
+        }
+      ],
+      "43": [
+        {
+          "height": 303,
+          "img_id": 43,
+          "label": "Leonard",
+          "left": 409,
+          "top": 57,
+          "width": 87
+        }
+      ],
+      "49": [
+        {
+          "height": 310,
+          "img_id": 49,
+          "label": "Leonard",
+          "left": 323,
+          "top": 50,
+          "width": 127
+        }
+      ],
+      "55": [
+        {
+          "height": 270,
+          "img_id": 55,
+          "label": "Leonard",
+          "left": 401,
+          "top": 90,
+          "width": 123
+        }
+      ],
+      "7": [
+        {
+          "height": 310,
+          "img_id": 7,
+          "label": "Sheldon",
+          "left": 197,
+          "top": 50,
+          "width": 104
+        },
+        {
+          "height": 353,
+          "img_id": 7,
+          "label": "Leonard",
+          "left": 424,
+          "top": 1,
+          "width": 174
+        },
+        {
+          "height": 69,
+          "img_id": 7,
+          "label": "cup",
+          "left": 271,
+          "top": 207,
+          "width": 41
+        }
+      ]
+    },
+    "q": "What was Sheldon holding when he was talking to Leonard .",
+    "qid": 94489,
+    "ts": [
+      0,
+      17.41
+    ],
+    "vid_name": "s05e11_seg02_clip_10"
+  },
+  {
+    "a0": "A cup",
+    "a1": "A plate",
+    "a2": "A small notepad",
+    "a3": "A clipboard",
+    "a4": "A laptop",
+    "answer_idx": "0",
+    "bbox": {
+      "11": [
+        {
+          "height": 308,
+          "img_id": 11,
+          "label": "Howard",
+          "left": 0,
+          "top": 52,
+          "width": 214
+        },
+        {
+          "height": 348,
+          "img_id": 11,
+          "label": "Raj",
+          "left": 179,
+          "top": 12,
+          "width": 341
+        }
+      ],
+      "17": [
+        {
+          "height": 343,
+          "img_id": 17,
+          "label": "Howard",
+          "left": 0,
+          "top": 17,
+          "width": 173
+        },
+        {
+          "height": 340,
+          "img_id": 17,
+          "label": "Raj",
+          "left": 148,
+          "top": 20,
+          "width": 360
+        }
+      ],
+      "23": [
+        {
+          "height": 331,
+          "img_id": 23,
+          "label": "Howard",
+          "left": 341,
+          "top": 29,
+          "width": 272
+        },
+        {
+          "height": 342,
+          "img_id": 23,
+          "label": "Leonard",
+          "left": 92,
+          "top": 18,
+          "width": 278
+        },
+        {
+          "height": 355,
+          "img_id": 23,
+          "label": "Raj",
+          "left": 554,
+          "top": 5,
+          "width": 86
+        },
+        {
+          "height": 93,
+          "img_id": 23,
+          "label": "cup",
+          "left": 362,
+          "top": 267,
+          "width": 100
+        }
+      ],
+      "29": [
+        {
+          "height": 339,
+          "img_id": 29,
+          "label": "Howard",
+          "left": 113,
+          "top": 21,
+          "width": 203
+        },
+        {
+          "height": 325,
+          "img_id": 29,
+          "label": "Leonard",
+          "left": 0,
+          "top": 35,
+          "width": 246
+        },
+        {
+          "height": 347,
+          "img_id": 29,
+          "label": "Raj",
+          "left": 246,
+          "top": 13,
+          "width": 315
+        },
+        {
+          "height": 103,
+          "img_id": 29,
+          "label": "cup",
+          "left": 234,
+          "top": 257,
+          "width": 100
+        }
+      ],
+      "35": [
+        {
+          "height": 314,
+          "img_id": 35,
+          "label": "Howard",
+          "left": 135,
+          "top": 46,
+          "width": 172
+        },
+        {
+          "height": 332,
+          "img_id": 35,
+          "label": "Leonard",
+          "left": 0,
+          "top": 28,
+          "width": 219
+        },
+        {
+          "height": 335,
+          "img_id": 35,
+          "label": "Raj",
+          "left": 243,
+          "top": 25,
+          "width": 271
+        },
+        {
+          "height": 76,
+          "img_id": 35,
+          "label": "cup",
+          "left": 231,
+          "top": 284,
+          "width": 94
+        }
+      ],
+      "5": [
+        {
+          "height": 348,
+          "img_id": 5,
+          "label": "Howard",
+          "left": 306,
+          "top": 12,
+          "width": 301
+        },
+        {
+          "height": 341,
+          "img_id": 5,
+          "label": "Leonard",
+          "left": 117,
+          "top": 19,
+          "width": 302
+        },
+        {
+          "height": 352,
+          "img_id": 5,
+          "label": "Raj",
+          "left": 515,
+          "top": 8,
+          "width": 125
+        },
+        {
+          "height": 60,
+          "img_id": 5,
+          "label": "cup",
+          "left": 343,
+          "top": 300,
+          "width": 111
+        }
+      ]
+    },
+    "q": "What was Howard holding when he was standing in the middle of Leonard and Raj ?",
+    "qid": 109603,
+    "ts": [
+      2.75,
+      11.9
+    ],
+    "vid_name": "s01e12_seg02_clip_14"
+  },
+  {
+    "a0": "A bottle of water",
+    "a1": "A comic book",
+    "a2": "A football helmet",
+    "a3": "A rubber ball",
+    "a4": "A sword",
+    "answer_idx": "1",
+    "bbox": {
+      "161": [
+        {
+          "height": 138,
+          "img_id": 161,
+          "label": "Raj",
+          "left": 100,
+          "top": 131,
+          "width": 141
+        },
+        {
+          "height": 113,
+          "img_id": 161,
+          "label": "Leonard",
+          "left": 204,
+          "top": 127,
+          "width": 93
+        }
+      ],
+      "167": [
+        {
+          "height": 157,
+          "img_id": 167,
+          "label": "Raj",
+          "left": 67,
+          "top": 120,
+          "width": 171
+        },
+        {
+          "height": 123,
+          "img_id": 167,
+          "label": "Leonard",
+          "left": 206,
+          "top": 108,
+          "width": 98
+        },
+        {
+          "height": 277,
+          "img_id": 167,
+          "label": "Stuart",
+          "left": 521,
+          "top": 0,
+          "width": 119
+        }
+      ],
+      "173": [
+        {
+          "height": 340,
+          "img_id": 173,
+          "label": "Leonard",
+          "left": 169,
+          "top": 20,
+          "width": 323
+        }
+      ],
+      "179": [
+        {
+          "height": 333,
+          "img_id": 179,
+          "label": "Raj",
+          "left": 35,
+          "top": 27,
+          "width": 441
+        },
+        {
+          "height": 92,
+          "img_id": 179,
+          "label": "book",
+          "left": 225,
+          "top": 268,
+          "width": 191
+        }
+      ],
+      "185": [
+        {
+          "height": 320,
+          "img_id": 185,
+          "label": "Raj",
+          "left": 39,
+          "top": 40,
+          "width": 432
+        },
+        {
+          "height": 70,
+          "img_id": 185,
+          "label": "book",
+          "left": 249,
+          "top": 290,
+          "width": 174
+        }
+      ]
+    },
+    "q": "What was Raj holding after Leonard said something about giving a ticket to Stuart ?",
+    "qid": 16316,
+    "ts": [
+      54.87,
+      61.31
+    ],
+    "vid_name": "s09e11_seg02_clip_05"
+  },
+  {
+    "a0": "Raj is holding nothing",
+    "a1": "Raj is holding a bowl of food",
+    "a2": "Raj is holding his wallet",
+    "a3": "Raj is holding a bottle of water",
+    "a4": "Raj is holding Howard 's hand",
+    "answer_idx": "3",
+    "bbox": {
+      "1": [
+        {
+          "height": 310,
+          "img_id": 1,
+          "label": "Raj",
+          "left": 24,
+          "top": 50,
+          "width": 349
+        },
+        {
+          "height": 61,
+          "img_id": 1,
+          "label": "hand",
+          "left": 277,
+          "top": 281,
+          "width": 73
+        },
+        {
+          "height": 252,
+          "img_id": 1,
+          "label": "couch",
+          "left": 0,
+          "top": 108,
+          "width": 558
+        },
+        {
+          "height": 110,
+          "img_id": 1,
+          "label": "bottle",
+          "left": 296,
+          "top": 244,
+          "width": 56
+        },
+        {
+          "height": 116,
+          "img_id": 1,
+          "label": "water",
+          "left": 294,
+          "top": 242,
+          "width": 59
+        }
+      ],
+      "13": [
+        {
+          "height": 324,
+          "img_id": 13,
+          "label": "Raj",
+          "left": 107,
+          "top": 36,
+          "width": 255
+        },
+        {
+          "height": 53,
+          "img_id": 13,
+          "label": "hand",
+          "left": 142,
+          "top": 254,
+          "width": 62
+        },
+        {
+          "height": 229,
+          "img_id": 13,
+          "label": "couch",
+          "left": 110,
+          "top": 131,
+          "width": 530
+        },
+        {
+          "height": 101,
+          "img_id": 13,
+          "label": "bottle",
+          "left": 150,
+          "top": 214,
+          "width": 51
+        },
+        {
+          "height": 104,
+          "img_id": 13,
+          "label": "water",
+          "left": 151,
+          "top": 212,
+          "width": 49
+        }
+      ],
+      "19": [
+        {
+          "height": 318,
+          "img_id": 19,
+          "label": "Raj",
+          "left": 94,
+          "top": 42,
+          "width": 264
+        },
+        {
+          "height": 53,
+          "img_id": 19,
+          "label": "hand",
+          "left": 150,
+          "top": 263,
+          "width": 62
+        },
+        {
+          "height": 231,
+          "img_id": 19,
+          "label": "couch",
+          "left": 110,
+          "top": 129,
+          "width": 530
+        },
+        {
+          "height": 102,
+          "img_id": 19,
+          "label": "bottle",
+          "left": 164,
+          "top": 224,
+          "width": 44
+        },
+        {
+          "height": 101,
+          "img_id": 19,
+          "label": "water",
+          "left": 162,
+          "top": 224,
+          "width": 49
+        }
+      ],
+      "7": [
+        {
+          "height": 310,
+          "img_id": 7,
+          "label": "Raj",
+          "left": 14,
+          "top": 50,
+          "width": 341
+        },
+        {
+          "height": 82,
+          "img_id": 7,
+          "label": "hand",
+          "left": 276,
+          "top": 269,
+          "width": 71
+        },
+        {
+          "height": 249,
+          "img_id": 7,
+          "label": "couch",
+          "left": 2,
+          "top": 111,
+          "width": 558
+        },
+        {
+          "height": 60,
+          "img_id": 7,
+          "label": "bottle",
+          "left": 304,
+          "top": 265,
+          "width": 62
+        },
+        {
+          "height": 61,
+          "img_id": 7,
+          "label": "water",
+          "left": 301,
+          "top": 265,
+          "width": 63
+        }
+      ]
+    },
+    "q": "What is Raj holding in his hand when he is sitting on the couch ?",
+    "qid": 101817,
+    "ts": [
+      0,
+      5.76
+    ],
+    "vid_name": "s05e15_seg02_clip_08"
+  },
+  {
+    "a0": "laptop",
+    "a1": "book",
+    "a2": "phone",
+    "a3": "drink",
+    "a4": "baby",
+    "answer_idx": "2",
+    "bbox": {
+      "31": [
+        {
+          "height": 288,
+          "img_id": 31,
+          "label": "Howard",
+          "left": 128,
+          "top": 72,
+          "width": 118
+        },
+        {
+          "height": 76,
+          "img_id": 31,
+          "label": "arm",
+          "left": 134,
+          "top": 221,
+          "width": 81
+        },
+        {
+          "height": 174,
+          "img_id": 31,
+          "label": "chair",
+          "left": 0,
+          "top": 186,
+          "width": 212
+        }
+      ],
+      "37": [
+        {
+          "height": 251,
+          "img_id": 37,
+          "label": "Howard",
+          "left": 0,
+          "top": 109,
+          "width": 101
+        },
+        {
+          "height": 28,
+          "img_id": 37,
+          "label": "phone",
+          "left": 28,
+          "top": 304,
+          "width": 62
+        }
+      ],
+      "43": [
+        {
+          "height": 233,
+          "img_id": 43,
+          "label": "Howard",
+          "left": 0,
+          "top": 127,
+          "width": 112
+        },
+        {
+          "height": 40,
+          "img_id": 43,
+          "label": "phone",
+          "left": 61,
+          "top": 205,
+          "width": 27
+        }
+      ]
+    },
+    "q": "What is Howard holding when he is sitting on the arm of the chair ?",
+    "qid": 61564,
+    "ts": [
+      11.41,
+      15.31
+    ],
+    "vid_name": "s02e23_seg02_clip_12"
+  },
+  {
+    "a0": "A laptop",
+    "a1": "A glass",
+    "a2": "A fork",
+    "a3": "A balloon",
+    "a4": "A book",
+    "answer_idx": "2",
+    "bbox": {
+      "103": [
+        {
+          "height": 344,
+          "img_id": 103,
+          "label": "Raj",
+          "left": 88,
+          "top": 16,
+          "width": 432
+        },
+        {
+          "height": 90,
+          "img_id": 103,
+          "label": "fork",
+          "left": 303,
+          "top": 270,
+          "width": 82
+        }
+      ],
+      "109": [
+        {
+          "height": 345,
+          "img_id": 109,
+          "label": "Raj",
+          "left": 100,
+          "top": 15,
+          "width": 390
+        },
+        {
+          "height": 65,
+          "img_id": 109,
+          "label": "fork",
+          "left": 293,
+          "top": 285,
+          "width": 72
+        }
+      ],
+      "115": [
+        {
+          "height": 341,
+          "img_id": 115,
+          "label": "Raj",
+          "left": 108,
+          "top": 19,
+          "width": 396
+        },
+        {
+          "height": 57,
+          "img_id": 115,
+          "label": "fork",
+          "left": 295,
+          "top": 295,
+          "width": 85
+        }
+      ],
+      "79": [
+        {
+          "height": 281,
+          "img_id": 79,
+          "label": "Raj",
+          "left": 2,
+          "top": 79,
+          "width": 218
+        },
+        {
+          "height": 334,
+          "img_id": 79,
+          "label": "Howard",
+          "left": 218,
+          "top": 26,
+          "width": 272
+        },
+        {
+          "height": 61,
+          "img_id": 79,
+          "label": "food",
+          "left": 203,
+          "top": 299,
+          "width": 113
+        },
+        {
+          "height": 83,
+          "img_id": 79,
+          "label": "fork",
+          "left": 119,
+          "top": 276,
+          "width": 100
+        }
+      ],
+      "85": [
+        {
+          "height": 300,
+          "img_id": 85,
+          "label": "Raj",
+          "left": 0,
+          "top": 60,
+          "width": 214
+        },
+        {
+          "height": 334,
+          "img_id": 85,
+          "label": "Howard",
+          "left": 152,
+          "top": 26,
+          "width": 348
+        },
+        {
+          "height": 61,
+          "img_id": 85,
+          "label": "food",
+          "left": 203,
+          "top": 299,
+          "width": 123
+        },
+        {
+          "height": 111,
+          "img_id": 85,
+          "label": "fork",
+          "left": 142,
+          "top": 249,
+          "width": 61
+        }
+      ],
+      "91": [
+        {
+          "height": 311,
+          "img_id": 91,
+          "label": "Raj",
+          "left": 0,
+          "top": 49,
+          "width": 226
+        },
+        {
+          "height": 329,
+          "img_id": 91,
+          "label": "Howard",
+          "left": 144,
+          "top": 31,
+          "width": 357
+        },
+        {
+          "height": 55,
+          "img_id": 91,
+          "label": "food",
+          "left": 202,
+          "top": 305,
+          "width": 124
+        },
+        {
+          "height": 97,
+          "img_id": 91,
+          "label": "fork",
+          "left": 139,
+          "top": 263,
+          "width": 61
+        }
+      ],
+      "97": [
+        {
+          "height": 172,
+          "img_id": 97,
+          "label": "Raj",
+          "left": 2,
+          "top": 188,
+          "width": 218
+        },
+        {
+          "height": 316,
+          "img_id": 97,
+          "label": "Howard",
+          "left": 214,
+          "top": 44,
+          "width": 370
+        },
+        {
+          "height": 90,
+          "img_id": 97,
+          "label": "food",
+          "left": 258,
+          "top": 269,
+          "width": 131
+        },
+        {
+          "height": 61,
+          "img_id": 97,
+          "label": "food",
+          "left": 49,
+          "top": 299,
+          "width": 119
+        }
+      ]
+    },
+    "q": "What was Raj holding after Howard said Jews go with Chinese food ?",
+    "qid": 46906,
+    "ts": [
+      27.61,
+      37.52
+    ],
+    "vid_name": "s03e15_seg01_clip_01"
+  },
+  {
+    "a0": "A fork .",
+    "a1": "A stethoscope .",
+    "a2": "A scalpel .",
+    "a3": "A wig .",
+    "a4": "A cowboy hat .",
+    "answer_idx": "0",
+    "bbox": {
+      "100": [
+        {
+          "height": 293,
+          "img_id": 100,
+          "label": "Leonard",
+          "left": 3,
+          "top": 67,
+          "width": 313
+        },
+        {
+          "height": 66,
+          "img_id": 100,
+          "label": "fork",
+          "left": 237,
+          "top": 263,
+          "width": 60
+        }
+      ],
+      "106": [
+        {
+          "height": 357,
+          "img_id": 106,
+          "label": "Leonard",
+          "left": 354,
+          "top": 3,
+          "width": 286
+        },
+        {
+          "height": 57,
+          "img_id": 106,
+          "label": "fork",
+          "left": 251,
+          "top": 229,
+          "width": 60
+        }
+      ],
+      "112": [
+        {
+          "height": 357,
+          "img_id": 112,
+          "label": "Leonard",
+          "left": 348,
+          "top": 3,
+          "width": 292
+        },
+        {
+          "height": 88,
+          "img_id": 112,
+          "label": "fork",
+          "left": 250,
+          "top": 210,
+          "width": 57
+        }
+      ],
+      "118": [
+        {
+          "height": 1,
+          "img_id": 118,
+          "label": "Leonard",
+          "left": 531,
+          "top": 28,
+          "width": 1
+        },
+        {
+          "height": 339,
+          "img_id": 118,
+          "label": "Leonard",
+          "left": 251,
+          "top": 21,
+          "width": 265
+        },
+        {
+          "height": 60,
+          "img_id": 118,
+          "label": "fork",
+          "left": 244,
+          "top": 264,
+          "width": 71
+        }
+      ]
+    },
+    "q": "What was Leonard holding when he said something about Penny ?",
+    "qid": 82301,
+    "ts": [
+      34.65,
+      38.5
+    ],
+    "vid_name": "s02e22_seg02_clip_01"
+  },
+  {
+    "a0": "A bottle of water",
+    "a1": "A backpack",
+    "a2": "An action figure",
+    "a3": "A comic book",
+    "a4": "A candy bar",
+    "answer_idx": "3",
+    "bbox": {
+      "53": [
+        {
+          "height": 338,
+          "img_id": 53,
+          "label": "Raj",
+          "left": 78,
+          "top": 22,
+          "width": 196
+        }
+      ],
+      "59": [
+        {
+          "height": 342,
+          "img_id": 59,
+          "label": "Raj",
+          "left": 117,
+          "top": 18,
+          "width": 191
+        }
+      ],
+      "65": [
+        {
+          "height": 344,
+          "img_id": 65,
+          "label": "Raj",
+          "left": 113,
+          "top": 16,
+          "width": 226
+        }
+      ],
+      "71": [
+        {
+          "height": 343,
+          "img_id": 71,
+          "label": "Leonard",
+          "left": 106,
+          "top": 17,
+          "width": 294
+        },
+        {
+          "height": 80,
+          "img_id": 71,
+          "label": "book",
+          "left": 113,
+          "top": 255,
+          "width": 138
+        }
+      ]
+    },
+    "q": "What is Leonard holding when Raj said something about getting a van ?",
+    "qid": 121993,
+    "ts": [
+      18.8,
+      23.65
+    ],
+    "vid_name": "s08e04_seg02_clip_06"
+  }
+]

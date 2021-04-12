@@ -1,4 +1,3 @@
-import json
 import logging
 from typing import List, Union, Set
 
@@ -8,10 +7,22 @@ import language_processing as lp
 from common import PositiveExample, BoundingBox, ActionPred, BBT_PEOPLE
 
 
-
-
 def get_img_ids(data: dict) -> Set[int]:
     return set([int(k) for k in data['bbox'].keys()])
+
+
+def get_answer_obj(ans_text: str) -> Union[str, None]:
+    obj = None
+
+    ans_root = lp.get_root_obj_token(ans_text)
+    if ans_root is not None:
+        obj = ans_root.lemma_
+    else:
+        ans_act_obj = lp.get_action_obj_token(ans_text)
+        if ans_act_obj is not None:
+            obj = ans_act_obj.lemma_
+
+    return obj
 
 
 class Parser:
@@ -36,20 +47,6 @@ class Parser:
         logging.warning(F'Cannot match {ans_obj} with set {bbox_obj_set}')
         return None
 
-    @staticmethod
-    def get_answer_obj(ans_text: str) -> Union[str, None]:
-        obj = None
-
-        ans_root = lp.get_root_obj_token(ans_text)
-        if ans_root is not None:
-            obj = ans_root.lemma_
-        else:
-            ans_act_obj = lp.get_action_obj_token(ans_text)
-            if ans_act_obj is not None:
-                obj = ans_act_obj.lemma_
-
-        return obj
-
     def get_goal_action_pred(self, data: dict, bbox_obj_set: Set[str]) -> \
             Union[ActionPred, None]:
         question = data['q']
@@ -61,7 +58,7 @@ class Parser:
 
         answer_idx = data['answer_idx']
         ans_text = data['a' + answer_idx]
-        ans_obj = Parser.get_answer_obj(ans_text)
+        ans_obj = get_answer_obj(ans_text)
 
         # Stop if we can't parse the correct answer
         if ans_obj is None:

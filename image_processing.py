@@ -8,7 +8,6 @@ import cv2
 from dlib import face_recognition_model_v1
 from face_recognition_models import face_recognition_model_location
 from scipy.optimize import linear_sum_assignment
-from sklearn.cluster import MiniBatchKMeans
 import torch
 import torchvision.transforms as T
 from torchvision.models.detection import fasterrcnn_resnet50_fpn as fasterrcnn
@@ -16,6 +15,7 @@ from typing import List, Set, Tuple
 
 from common import COCO_INSTANCE_CATEGORY_NAMES, BBT_PEOPLE
 from common import QaObject, BoundingBox
+import utils
 
 
 def torchvision_bbox_to_coco_bbox(img_id,
@@ -43,16 +43,6 @@ def draw_bounding_box(img_path, bboxes: List[BoundingBox]):
     return image
 
 
-def json_to_bounding_box(bbox: dict) -> BoundingBox:
-    img_id = bbox['img_id']
-    tl_x = bbox['left']
-    tl_y = bbox['top']
-    width = bbox['width']
-    height = bbox['height']
-    label = bbox['label']
-    return BoundingBox(img_id, tl_x, tl_y, width, height, label)
-
-
 def match_person_bounding_boxes(qa_objects: List[QaObject], data: dict) \
         -> List[Tuple[QaObject, str, float]]:
     matched_tuple = []
@@ -62,8 +52,8 @@ def match_person_bounding_boxes(qa_objects: List[QaObject], data: dict) \
         target_indices = [idx for idx, _ in targets]
         target_bboxes = [b for _, b in targets]
 
-        gt_bboxes = [json_to_bounding_box(f) for f in data['bbox'][img_id] if
-                     f['label'].lower() in BBT_PEOPLE]
+        gt_bboxes = [utils.json_to_bounding_box(f) for f in data['bbox'][img_id]
+                     if f['label'].lower() in BBT_PEOPLE]
 
         # Construct IOU matrix
         targets_len = len(target_bboxes)
@@ -128,8 +118,8 @@ class ObjectDetector:
             for img_name in l:
                 # Open the img and transform
                 img = transforms(
-                    Image.open(folder_path + img_name).convert('RGB')).to(
-                    self.device).unsqueeze(0)
+                    Image.open(folder_path + img_name).convert('RGB')
+                ).to(self.device).unsqueeze(0)
 
                 # Feed to the model
                 outs = self.frcnn_model(img)

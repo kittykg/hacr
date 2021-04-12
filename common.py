@@ -19,6 +19,9 @@ COCO_INSTANCE_CATEGORY_NAMES = [
     'hair drier', 'toothbrush'
 ]
 
+BBT_PEOPLE = {'penny', 'sheldon', 'leonard', 'howard', 'raj', 'amy',
+              'bernadette', 'stuart', 'emily', 'barry', 'zack', 'wil'}
+
 
 @dataclass
 class BoundingBox:
@@ -116,7 +119,3 @@ class PositiveExample(Example):
 class NegativeExample(Example):
     curr_time: int
     facts: List[str]
-
-
-BBT_PEOPLE = {'penny', 'sheldon', 'leonard', 'howard', 'raj', 'amy',
-              'bernadette', 'stuart', 'emily', 'barry', 'zack', 'wil'}

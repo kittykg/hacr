@@ -31,3 +31,13 @@ def get_all_intersections(boxes: List[BoundingBox]) \
                                                       frac_wrt_b2))
 
     return intersections
+
+
+def json_to_bounding_box(bbox: dict) -> BoundingBox:
+    img_id = bbox['img_id']
+    tl_x = bbox['left']
+    tl_y = bbox['top']
+    width = bbox['width']
+    height = bbox['height']
+    label = bbox['label']
+    return BoundingBox(img_id, tl_x, tl_y, width, height, label)

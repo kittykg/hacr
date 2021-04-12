@@ -151,3 +151,13 @@ def get_action_obj_token(text: str):
                     return r
 
     return None
+
+
+def valid_hold_questions(text: str):
+    doc = nlp(text)
+    if doc[0].lemma_ != 'what':
+        return False
+    for token in doc:
+        if token.dep_ == ROOT_TAG and token.lemma_ == 'hold':
+            return True
+    return False
