@@ -119,7 +119,6 @@ class Parser:
                 continue
 
             action_pred.obj = action_obj
-            inclusion = [F'goal(holdsAt({action_pred.gen_pred()}, {id + 1})).']
             exclusion = []
             for p in ppl_set:
                 if p.lower() != action_subj.lower():
@@ -127,9 +126,11 @@ class Parser:
                                                 p,
                                                 action_obj)
                     exclusion += [
-                        F'goal(holdsAt({exclude_action.gen_pred()}, {id + 1})).'
+                        F'holdsAt({exclude_action.gen_pred()}, {id + 1})'
                     ]
-            context = [F'current_time({id}).']
+            inclusion = [F'holdsAt({action_pred.gen_pred()}, {id + 1})']
+            context = [F'goal(holdsAt({action_pred.gen_pred()}, {id + 1})).']
+            context += [F'current_time({id}).']
             context += list(map(lambda p: F'person({p}).', ppl_set))
             context += list(map(lambda o: F'object({o}).', obj_set))
             context += list(map(lambda b: b.gen_pred() + '.', boxes))

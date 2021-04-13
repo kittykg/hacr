@@ -113,9 +113,9 @@ class PositiveExample(Example):
 
     def gen_example(self, penalty=10):
         eg_id = F'p_{self.qid}_{self.curr_time}'
+        inclusion_list = ',\n'.join(map(lambda f: F'    {f}', self.inclusions))
+        exclusion_list = ',\n'.join(map(lambda f: F'    {f}', self.exclusions))
         context_list = '\n'.join(map(lambda f: F'    {f}', self.context))
-        inclusion_list = '\n'.join(map(lambda f: F'    {f}', self.inclusions))
-        exclusion_list = '\n'.join(map(lambda f: F'    {f}', self.exclusions))
         return F'#pos({eg_id}@{penalty}, {{\n' + \
                inclusion_list + \
                '\n}, {\n' + \
