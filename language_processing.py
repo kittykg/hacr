@@ -25,12 +25,12 @@ HYPERNYMS = 'HYPERNYMS'
 NYMS_FUNC = [SYNONYMS, HYPONYMS, HYPERNYMS]
 
 
-def _similar_lemmas(s1, s2) -> bool:
-    for ss in s1:
+def _similar_lemmas(synset1, synset2, s1: str, s2: str) -> bool:
+    for ss in synset1:
         for l in ss.lemmas():
             if l.name() == s2:
                 return True
-    for ss in s2:
+    for ss in synset2:
         for l in ss.lemmas():
             if l.name() == s1:
                 return True
@@ -38,7 +38,7 @@ def _similar_lemmas(s1, s2) -> bool:
 
 
 def check_synonyms(s1: str, s2: str, pos: Union[str, None] = None) -> bool:
-    return _similar_lemmas(wn.synsets(s1), wn.synsets(s2))
+    return _similar_lemmas(wn.synsets(s1), wn.synsets(s2), s1, s2)
 
 
 def check_hyponyms(s1: str, s2: str, pos: Union[str, None] = None) -> bool:
@@ -71,15 +71,15 @@ def _check_nyms(s1: str, s2: str, func: str,
         ss2 = wn.synsets(s2)
 
     if func == SYNONYMS:
-        return _similar_lemmas(ss1, ss2)
+        return _similar_lemmas(ss1, ss2, s1, s2)
 
     for ss in ss1:
         hyp = ss.hyponyms() if func == HYPONYMS else ss.hypernyms()
-        if _similar_lemmas(hyp, ss2):
+        if _similar_lemmas(hyp, ss2, s1, s2):
             return True
     for ss in ss2:
         hyp = ss.hyponyms() if func == HYPONYMS else ss.hypernyms()
-        if _similar_lemmas(hyp, ss1):
+        if _similar_lemmas(hyp, ss1, s1, s2):
             return True
     return False
 

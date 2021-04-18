@@ -1,3 +1,4 @@
+import logging
 import os
 from PIL import Image
 import re
@@ -92,6 +93,76 @@ class ObjectDetector:
             cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
         self.face_encoder = face_recognition_model_v1(
             face_recognition_model_location())
+
+    def get_frame_qa_objects(self,
+                             folder_path: str,
+                             threshold: float,
+                             timestamp: int,
+                             transforms=None) -> List[QaObject]:
+        if transforms is None:
+            transforms = self.transforms
+
+        image_list = list(
+            filter(lambda f: int(re.sub('\D', '', f)) == timestamp,
+                   os.listdir(folder_path))
+        )
+        if len(image_list) != 1:
+            logging.warning(
+                F'Try to find {timestamp} in {folder_path}, '
+                F'found {len(image_list)} img(s)')
+            return []
+
+        img_name = folder_path + image_list[0]
+        detected_objs = []
+
+        self.frcnn_model.eval()
+        with torch.no_grad():
+            img = transforms(Image.open(img_name).convert('RGB')).to(
+                self.device).unsqueeze(0)
+
+            # Feed to the model
+            outs = self.frcnn_model(img)
+
+            seen_classes = dict()
+            for out in outs:
+                boxes = out['boxes']
+                labels = out['labels']
+                scores = out['scores']
+
+                for i in range(len(boxes)):
+                    score = scores[i].item()
+
+                    # Filter out objects with low score
+                    if score < threshold:
+                        continue
+
+                    obj_class = COCO_INSTANCE_CATEGORY_NAMES[
+                        labels[i].item()]
+
+                    if obj_class == 'person':
+                        obj_label = 'person'
+                    else:
+                        if obj_class not in seen_classes:
+                            seen_classes[obj_class] = 1
+                        else:
+                            seen_classes[obj_class] += 1
+
+                        obj_label = \
+                            F'{obj_class}{seen_classes[obj_class]}'.replace(
+                                ' ', '_')
+
+                    box = torchvision_bbox_to_coco_bbox(timestamp,
+                                                        boxes[i].tolist(),
+                                                        obj_label)
+
+                    detected_objs.append(
+                        QaObject(obj_class, box, score, img_name, timestamp)
+                    )
+
+            # Clear CUDA cache after each frame
+            torch.cuda.empty_cache()
+
+        return detected_objs
 
     def get_rcnn_qa_objects(self,
                             folder_path: str,

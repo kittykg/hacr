@@ -1,15 +1,8 @@
 import json
-import random
 import time
 
 from json_parser import Parser
-
-
-def split_data_set(proportion: float, data: list):
-    random.shuffle(data)
-    train_size = int(len(data) * proportion)
-    return data[:train_size], data[train_size:]
-
+from utils import split_data_set
 
 if __name__ == '__main__':
     start_time = time.time()

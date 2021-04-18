@@ -1,4 +1,5 @@
 import itertools
+import random
 from typing import List
 
 from common import BoundingBox, BBoxIntersectionPred
@@ -41,3 +42,9 @@ def json_to_bounding_box(bbox: dict) -> BoundingBox:
     height = bbox['height']
     label = bbox['label']
     return BoundingBox(img_id, tl_x, tl_y, width, height, label)
+
+
+def split_data_set(proportion: float, data: list):
+    random.shuffle(data)
+    train_size = int(len(data) * proportion)
+    return data[:train_size], data[train_size:]
