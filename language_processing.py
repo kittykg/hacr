@@ -38,24 +38,45 @@ def _similar_lemmas(synset1, synset2, s1: str, s2: str) -> bool:
 
 
 def check_synonyms(s1: str, s2: str, pos: Union[str, None] = None) -> bool:
-    return _similar_lemmas(wn.synsets(s1), wn.synsets(s2), s1, s2)
-
-
-def check_hyponyms(s1: str, s2: str, pos: Union[str, None] = None) -> bool:
-    return _check_nyms(s1, s2, HYPONYMS, pos)
-
-
-def check_hypernyms(s1: str, s2: str, pos=None) -> bool:
-    return _check_nyms(s1, s2, HYPERNYMS, pos)
-
-
-def _check_nyms(s1: str, s2: str, func: str,
-                pos: Union[str, None] = None) -> bool:
-    assert func in NYMS_FUNC
-
     if s1 == s2:
         return True
 
+    synset1, synset2 = get_synset(s1, s2, pos)
+    for ss in synset1:
+        for l in ss.lemmas():
+            if l.name() == s2:
+                return True
+    for ss in synset2:
+        for l in ss.lemmas():
+            if l.name() == s1:
+                return True
+    return False
+
+
+def check_hyponyms(s1: str, s2: str, pos: Union[str, None] = None) -> bool:
+    # Check if s1 is s2's hyponym
+    synset1, synset2 = get_synset(s1, s2, pos)
+    for ss2 in synset2:
+        hyponyms = ss2.hyponyms()
+        for h in hyponyms:
+            for l in h.lemmas():
+                if l.name() == s1:
+                    return True
+    return False
+
+
+def check_hypernyms(s1: str, s2: str, pos=None) -> bool:
+    # Check if s1 is s2's hypernym
+    synset1, synset2 = get_synset(s1, s2, pos)
+    for ss2 in synset2:
+        hyponyms = ss2.hypernyms()
+        for h in hyponyms:
+            for l in h.lemmas():
+                if l.name() == s1:
+                    return True
+    return False
+
+def get_synset(s1: str, s2: str, pos: Union[str, None] = None):
     if pos is not None:
         pos_to_wn_pos = {
             'VERB': wn.VERB,
@@ -69,6 +90,17 @@ def _check_nyms(s1: str, s2: str, func: str,
     else:
         ss1 = wn.synsets(s1)
         ss2 = wn.synsets(s2)
+    return ss1, ss2
+
+
+def _check_nyms(s1: str, s2: str, func: str,
+                pos: Union[str, None] = None) -> bool:
+    assert func in NYMS_FUNC
+
+    if s1 == s2:
+        return True
+
+    ss1, ss2 = get_synset(s1, s2, pos)
 
     if func == SYNONYMS:
         return _similar_lemmas(ss1, ss2, s1, s2)
