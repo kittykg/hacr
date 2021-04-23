@@ -947,7 +947,7 @@
       3,
       5.7
     ],
-    "q": "What holds Penny when talking to Raj ?",
+    "q": "What is Penny holding when talking to Raj ?",
     "a0": "Dress .",
     "a3": "Dishes .",
     "a2": "Briefcase .",
@@ -3814,7 +3814,7 @@
       1.5,
       12.31
     ],
-    "q": "What holds Sheldon when talking to Leonard ?",
+    "q": "What is Sheldon holding when talking to Leonard ?",
     "a0": "Book .",
     "a3": "Phone .",
     "a2": "Fork .",
@@ -12892,7 +12892,7 @@
       4.06,
       8.41
     ],
-    "q": "What holds Leonard when Sheldon is talking to Kripke ?",
+    "q": "What is Leonard holding when Sheldon is talking to Kripke ?",
     "a0": "Bottle .",
     "a3": "dish .",
     "a2": "Paper .",
@@ -26521,7 +26521,7 @@
       28.04,
       35.12
     ],
-    "q": "what is penny holding when she is looking at robot sheldon ?",
+    "q": "What is Penny holding when she is looking at robot Sheldon ?",
     "a0": "a cup of water",
     "a3": "a vogue magazine",
     "a2": "a book",
@@ -29848,7 +29848,7 @@
       0,
       2.9
     ],
-    "q": "What holds Howard when Bernadette stand next to him ?",
+    "q": "What Howard is holding when Bernadette stand next to him ?",
     "a0": "A ring .",
     "a3": "A stroller .",
     "a2": "Two kids .",
@@ -35255,7 +35255,7 @@
       0,
       10.07
     ],
-    "q": "What holds Amy when talking to Sheldon .",
+    "q": "What is Amy holding when talking to Sheldon .",
     "a0": "A bootle .",
     "a3": "A chair .",
     "a2": "A banana .",
@@ -35928,7 +35928,7 @@
       45.58,
       48.93
     ],
-    "q": "What holds stuart when Raj invited him to go out ?",
+    "q": "What is Stuart holding when Raj invited him to go out ?",
     "a0": "Dress .",
     "a3": "Miniature car .",
     "a2": "Shirt .",
@@ -36388,7 +36388,7 @@
       7.56,
       13.17
     ],
-    "q": "What holds Penny when talking to Leonard ?",
+    "q": "What is Penny holding when talking to Leonard ?",
     "a0": "Purse .",
     "a3": "Book .",
     "a2": "Suitcase .",
@@ -36983,7 +36983,7 @@
       23.31,
       30.82
     ],
-    "q": "What holds Howard when Sheldon is talking ?",
+    "q": "What is Howard holding when Sheldon is talking ?",
     "a0": "Fat binder .",
     "a3": "Bag .",
     "a2": "Pen .",
@@ -39678,7 +39678,7 @@
       54.93,
       58.89
     ],
-    "q": "What holds Sheldon when entering in the restaurant .",
+    "q": "What is Sheldon holding when entering in the restaurant .",
     "a0": "A hat .",
     "a3": "A folder .",
     "a2": "Many bags of candy .",
@@ -45184,7 +45184,7 @@
       0,
       12.91
     ],
-    "q": "What holds Bernadette when stands next Penny ?",
+    "q": "What is Bernadette holding when standing next Penny ?",
     "a0": "Book .",
     "a3": "Briefcase .",
     "a2": "Bottle .",
@@ -45558,7 +45558,7 @@
       0,
       5.9
     ],
-    "q": "What holds Sheldon when talks to Amy ?",
+    "q": "What is Sheldon holding when talking to Amy ?",
     "a0": "Laptop .",
     "a3": "Book .",
     "a2": "White box .",
@@ -46419,7 +46419,7 @@
       28.8,
       31.65
     ],
-    "q": "What holds Leonard when talking to Howard ?",
+    "q": "What is Leonard holding when talking to Howard ?",
     "a0": "Phone .",
     "a3": "White cup .",
     "a2": "Pen .",
@@ -47618,7 +47618,7 @@
       15.56,
       24.11
     ],
-    "q": "What holds Penny when talking to Leonard and Sheldon ?",
+    "q": "What is Penny holding when talking to Leonard and Sheldon ?",
     "a0": "Pictures .",
     "a3": "Teapot .",
     "a2": "Chair .",
@@ -47743,7 +47743,7 @@
       0,
       10.07
     ],
-    "q": "What holds Penny and Leonard when they are eating ?",
+    "q": "What are Penny and Leonard holding when they are eating ?",
     "a0": "Spoons .",
     "a3": "Toys .",
     "a2": "Trays .",
@@ -48783,7 +48783,7 @@
       31.32,
       35.98
     ],
-    "q": "What holds Howard when talking ?",
+    "q": "What is Howard holding when talking ?",
     "a0": "Binder .",
     "a3": "Open a bottle .",
     "a2": "Closing the drawer .",
@@ -49017,7 +49017,7 @@
       25.56,
       37.97
     ],
-    "q": "What holds Peny when she sat next to Leonard ?",
+    "q": "What is Penny holding when she sat next to Leonard ?",
     "a0": "Cup of wine .",
     "a3": "Bottle .",
     "a2": "Book .",
@@ -49229,7 +49229,7 @@
       0,
       2.28
     ],
-    "q": "What holds Howard when Raj is on front the refrigerator ?",
+    "q": "What is Howard holding when Raj is on front the refrigerator ?",
     "a0": "Bucket .",
     "a3": "Bin .",
     "a2": "Box .",
@@ -51138,7 +51138,7 @@
       12.82,
       14.04
     ],
-    "q": "What holds Bernadette when sat with Penny ?",
+    "q": "What is Bernadette holding when sitting with Penny ?",
     "a0": "Cup .",
     "a3": "Fork .",
     "a2": "Dish .",
@@ -51341,7 +51341,7 @@
       22.13,
       25.68
     ],
-    "q": "What holds Leonard when speaking with Skippy ?",
+    "q": "What is Leonard holding when speaking with Skippy ?",
     "a0": "Black envelope .",
     "a3": "Black box .",
     "a2": "Green book .",
@@ -51998,7 +51998,7 @@
       33.35,
       37.78
     ],
-    "q": "What holds Penny when descend the stairs with Leonard ?",
+    "q": "What is Penny holding when descending the stairs with Leonard ?",
     "a0": "book .",
     "a3": "coat .",
     "a2": "Dog .",
@@ -52425,7 +52425,7 @@
       23.09,
       31.87
     ],
-    "q": "What holds Leonard when he said So I 'm gon na let you post a shame photo of me on Facebook ?",
+    "q": "What is Leonard holding when he said So I 'm gon na let you post a shame photo of me on Facebook ?",
     "a0": "iPhone .",
     "a3": "Toy .",
     "a2": "A sign .",
@@ -52854,7 +52854,7 @@
       4.27,
       8.54
     ],
-    "q": "What holds Sheldon when talking ?",
+    "q": "What is Sheldon holding when talking ?",
     "a0": "Fork .",
     "a3": "Phone .",
     "a2": "Ring .",
@@ -53247,7 +53247,7 @@
       54.93,
       57.06
     ],
-    "q": "What holds Penny when sat on the chair ?",
+    "q": "What is Penny holding when sitting on the chair ?",
     "a0": "Pop corn .",
     "a3": "Tequila .",
     "a2": "Bottle .",
@@ -56155,7 +56155,7 @@
       0,
       11.88
     ],
-    "q": "What holds Penny when Leonard is talking ?",
+    "q": "What is Penny holding when Leonard is talking ?",
     "a0": "Purse .",
     "a3": "Tennis ball .",
     "a2": "Doll .",
@@ -58838,7 +58838,7 @@
       4.64,
       19.44
     ],
-    "q": "What holds Leonard when entered in the apartment ?",
+    "q": "What is Leonard holding when entering the apartment ?",
     "a0": "Coat .",
     "a3": "Laptop .",
     "a2": "Book .",
@@ -67810,7 +67810,7 @@
       2.68,
       5.7
     ],
-    "q": "What holds Raj when pretending to be on a white sand beach in Rio ?",
+    "q": "What is Raj holding when pretending to be on a white sand beach in Rio ?",
     "a0": "Cup .",
     "a3": "Umbrella .",
     "a2": "Hat .",
@@ -67881,7 +67881,7 @@
       5.14,
       17.39
     ],
-    "q": "What holds Sheldon when standing in the kitchen ?",
+    "q": "What is Sheldon holding when standing in the kitchen ?",
     "a0": "Big bowl .",
     "a3": "Spoon .",
     "a2": "Yellow cup .",
@@ -67957,7 +67957,7 @@
       0,
       5.9
     ],
-    "q": "What Amy hold when stand next to Sheldon ?",
+    "q": "What is Amy holding when standing next to Sheldon ?",
     "a0": "Fork .",
     "a3": "Cup .",
     "a2": "Binder .",
@@ -68788,7 +68788,7 @@
       0,
       16.21
     ],
-    "q": "What holds Amy when walking behind Sheldon ?",
+    "q": "What is Amy holding when walking behind Sheldon ?",
     "a0": "Purse .",
     "a3": "Shoe box .",
     "a2": "Basket .",
