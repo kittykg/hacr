@@ -4,7 +4,7 @@ from nltk.corpus import wordnet as wn
 import spacy
 from pyinflect import getInflection
 
-from common import ActionPred
+from common import ActionPred, BBT_PEOPLE
 
 ROOT_TAG = 'ROOT'
 VERB_TAG = 'VERB'
@@ -14,6 +14,7 @@ PROPN_TAG = 'PROPN'
 
 N_SUBJ = 'nsubj'
 D_OBJ = 'dobj'
+NPADV_MOD = 'npadvmod'
 
 PLACE_HOLDER = 'place_holder'
 
@@ -76,6 +77,7 @@ def check_hypernyms(s1: str, s2: str, pos=None) -> bool:
                     return True
     return False
 
+
 def get_synset(s1: str, s2: str, pos: Union[str, None] = None):
     if pos is not None:
         pos_to_wn_pos = {
@@ -123,6 +125,9 @@ def valid_obj_word(t) -> bool:
 
 
 def valid_subj_word(t) -> bool:
+    if t.text.lower() in BBT_PEOPLE:
+        return True
+
     pos = t.pos_
     dep = t.dep_
     return pos in [PROPN_TAG] and dep == N_SUBJ
@@ -160,7 +165,7 @@ def get_action_preds(texts: List[str]) -> List[Union[ActionPred, None]]:
 def get_root_obj_token(text: str):
     doc = nlp(text)
     for token in doc:
-        if token.dep_ == ROOT_TAG and token.pos_ == NOUN_TAG:
+        if token.dep_ == ROOT_TAG and token.pos_ in [NOUN_TAG, PROPN_TAG]:
             return token
     return None
 
