@@ -71,14 +71,16 @@ class Parser:
 
         return obj
 
-    def get_pos_example(self, data: dict) -> List[PositiveExample]:
+    def get_pos_example(self, data: dict, log: bool = False) -> List[
+        PositiveExample]:
         question = data['q']
         action_pred = lp.get_action_pred(question)
 
         # Stop if we can't parse the question
         if action_pred is None:
-            logging.warning(
-                F'{data["qid"]}: Cannot parse question {question}')
+            if log:
+                logging.warning(
+                    F'{data["qid"]}: Cannot parse question {question}')
             return []
 
         action_subj = action_pred.subj
@@ -114,8 +116,9 @@ class Parser:
             # Cannot generate positive example if we can't get goal action
             # predicate, or there is no intersection
             if action_obj is None or len(intersections) == 0:
-                logging.warning(
-                    F'{data["qid"]}: Cannot get positive example at frame {id}')
+                if log:
+                    logging.warning(
+                        F'{data["qid"]}: Cannot get positive example at frame {id}')
                 continue
 
             action_pred.obj = action_obj
@@ -141,6 +144,7 @@ class Parser:
                                 exclusion))
 
         if len(pos_eg_list) == 0:
-            logging.warning(F'{data["qid"]}: No example from this question')
+            if log:
+                logging.warning(F'{data["qid"]}: No example from this question')
 
         return pos_eg_list

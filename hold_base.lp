@@ -20,4 +20,3 @@ next_time(T, T+1) :- time(T).
 holding_threshold(1..100).
 
 #show holdsAt/2.
-initiatedAt(holding(V1,V2),V3) :- happensAt(close(V1,V2,57),V3).

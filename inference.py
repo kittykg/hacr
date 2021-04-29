@@ -106,7 +106,8 @@ def get_gt_facts(test: dict, timestamp: int, file=sys.stdout):
     _get_facts_helper(bboxes, file)
 
 
-def inference(test: dict, gt_object: bool = False) -> List[int]:
+def inference(test: dict, gt_object: bool = False, log: bool = False) \
+        -> List[int]:
     search_results = []
 
     # Run clingo with learnt rules and facts from the object detection
@@ -137,8 +138,9 @@ def inference(test: dict, gt_object: bool = False) -> List[int]:
     # Get relevant object from the answer set predicates
     action_pred = lp.get_action_pred(test['q'])
     if action_pred is None:
-        print(F'qid: {test["qid"]} parsing error')
-        print()
+        if log:
+            print(F'qid: {test["qid"]} parsing error')
+            print()
         return [-1]
 
     possible_objects = set()
@@ -148,7 +150,8 @@ def inference(test: dict, gt_object: bool = False) -> List[int]:
                 'holdsAt\((?<action>.*)\((?<subj>.*),(?<obj>.*)\),[\d]+\)', h)
             if s.group(1).lower() == action_pred.action.lower() and \
                     s.group(2).lower() == action_pred.subj.lower():
-                obj = regex.sub('\d', '', s.group(3))
+                obj = regex.sub('_\d+', '', s.group(3))
+                obj = regex.sub('\d+$', '', obj)
                 possible_objects.add(regex.sub('_', ' ', obj))
 
     gt_ans_idx = test['answer_idx']
@@ -174,8 +177,10 @@ def inference(test: dict, gt_object: bool = False) -> List[int]:
                 if p_o in answer.lower():
                     answer_index.append(i)
 
-    print(F'qid: {test["qid"]}   ans_idx: {gt_ans_idx}    gt_ans: {gt_answer}')
-    print(F'poss_obj: {possible_objects}   pred_ans_idx: {answer_index}')
+    if log:
+        print(
+            F'qid: {test["qid"]}   ans_idx: {gt_ans_idx}    gt_ans: {gt_answer}')
+        print(F'poss_obj: {possible_objects}   pred_ans_idx: {answer_index}')
 
     return answer_index
 
