@@ -1,4 +1,3 @@
-import math
 import regex
 import subprocess
 import sys
