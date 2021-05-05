@@ -9,31 +9,20 @@ from sklearn.metrics import jaccard_score
 from sklearn.neighbors import KNeighborsClassifier
 import spacy
 
-from common import BBT_PEOPLE, BoundingBox
+from common import BBT_PEOPLE, BoundingBox, FRAME_FOLDER, FACE_COLLECTION_V2_NPZ
 from image_processing import ObjectDetector
 import language_processing as lp
 import utils
 
-frame_folder = '../TVQA_frames/frames_hq/bbt_frames/'
-face_collection_path = './face_collection_v2.npz'
-
 od = ObjectDetector()
 nlp = spacy.load('en_core_web_sm')
 
-arr = np.load(face_collection_path)
+arr = np.load(FACE_COLLECTION_V2_NPZ)
 faces = arr['encoded_faces']
 labels = arr['labels']
 
 neigh = KNeighborsClassifier(n_neighbors=5)
 neigh.fit(faces, labels)
-
-
-def time_span_to_timestamps_list(test: dict) -> List[int]:
-    start, end = test['ts']
-    s_ts = max(1, math.floor(start) * 3)
-    e_ts = math.ceil(end) * 3
-
-    return list(range(s_ts, e_ts + 1))
 
 
 def get_gt_timestamps_list(test: dict) -> List[int]:
@@ -76,7 +65,7 @@ def get_all_facts(test: dict, threshold: float, timestamp: int,
     print(F'time({timestamp}).', file=file)
     print(F'time({timestamp + 1}).', file=file)
 
-    vid_folder = frame_folder + test['vid_name'] + '/'
+    vid_folder = FRAME_FOLDER + test['vid_name'] + '/'
     qa_objects = od.get_frame_qa_objects(vid_folder, threshold, timestamp)
 
     human_faces, valid_idx = od.get_human_faces(qa_objects)
@@ -114,7 +103,7 @@ def inference(test: dict, gt_object: bool = False, log: bool = False) \
     with open('temp.lp', 'w') as f:
 
         timestamps_list = get_gt_timestamps_list(test) if gt_object \
-            else time_span_to_timestamps_list(test)
+            else utils.time_span_to_timestamps_list(test)
 
         for t in timestamps_list:
             f.seek(0)

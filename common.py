@@ -22,6 +22,16 @@ COCO_INSTANCE_CATEGORY_NAMES = [
 BBT_PEOPLE = {'penny', 'sheldon', 'leonard', 'howard', 'raj', 'amy',
               'bernadette', 'stuart', 'emily', 'barry', 'zack', 'wil'}
 
+# Some path values of folders and data file
+FRAME_FOLDER = '../TVQA_frames/frames_hq/bbt_frames/'
+TVQA_PLUS_TRAIN_JSON = '../tvqa_plus_train_prettified.json'
+
+ALL_HOLD_QUESTIONS = './hold_questions.json'
+OD_HOLD_QUESTIONS = './train_hold.json'
+
+FACE_COLLECTION_NPZ = './face_collection.npz'
+FACE_COLLECTION_V2_NPZ = './face_collection_v2.npz'
+
 
 @dataclass
 class BoundingBox:

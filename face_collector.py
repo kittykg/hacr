@@ -6,19 +6,17 @@ from tqdm import tqdm
 
 from image_processing import ObjectDetector, match_person_bounding_boxes
 from json_parser import get_img_ids
+from common import FRAME_FOLDER, TVQA_PLUS_TRAIN_JSON
 
 start_time = time.time()
 
 # Some parameters
 od_threshold = 0.7
-
-root_folder = '../TVQA_frames/frames_hq/bbt_frames/'
-train_json_file_path = '../tvqa_plus_train_prettified.json'
 npz_file_path = './face_collection_v3.npz'
 
 tqdm_enabled = True
 
-with open(train_json_file_path) as f:
+with open(TVQA_PLUS_TRAIN_JSON) as f:
     all_json_data = json.load(f)
 
 train_subset_size = 20  # len(all_json_data)
@@ -28,8 +26,8 @@ iterator = tqdm(range(train_subset_size)) if tqdm_enabled else \
 # Print parameters
 print(F'Object detection threshold: {od_threshold}')
 print(F'Training set size:          {train_subset_size}')
-print(F'Frames folder:              {root_folder}')
-print(F'Json file path:             {train_json_file_path}')
+print(F'Frames folder:              {FRAME_FOLDER}')
+print(F'Json file path:             {TVQA_PLUS_TRAIN_JSON}')
 print(F'NPZ file path:              {npz_file_path}')
 
 encoded_faces = None
@@ -39,7 +37,7 @@ od = ObjectDetector()
 
 for i in iterator:
     data = all_json_data[i]
-    vid_folder = root_folder + data['vid_name'] + '/'
+    vid_folder = FRAME_FOLDER + data['vid_name'] + '/'
 
     # Get specific images for this video
     specific_imgs = get_img_ids(data)

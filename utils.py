@@ -1,8 +1,17 @@
 import itertools
+import math
 import random
 from typing import List
 
 from common import BoundingBox, BBoxIntersectionPred
+
+
+def time_span_to_timestamps_list(data: dict) -> List[int]:
+    start, end = data['ts']
+    s_ts = max(1, math.floor(start) * 3)
+    e_ts = math.ceil(end) * 3
+
+    return list(range(s_ts, e_ts + 1))
 
 
 def get_all_intersections(boxes: List[BoundingBox]) \

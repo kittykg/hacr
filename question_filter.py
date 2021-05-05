@@ -2,15 +2,11 @@ import json
 import time
 import spacy
 
-from common import COCO_INSTANCE_CATEGORY_NAMES, BBT_PEOPLE
+from common import COCO_INSTANCE_CATEGORY_NAMES, BBT_PEOPLE, ALL_HOLD_QUESTIONS
 import language_processing as lp
 
 if __name__ == '__main__':
     # Some parameters
-    frame_folder = '../TVQA_frames/frames_hq/bbt_frames/'
-    hold_question_json_path = './hold_questions.json'
-    npz_file_path = './face_collection.npz'
-
     write_to_file = True
     json_ver = 4  # Used for labelling the output json file if write to file
 
@@ -33,7 +29,7 @@ if __name__ == '__main__':
     #     if lp.valid_hold_questions(question):
     #         valid_data.append(d)
 
-    with open(hold_question_json_path) as f:
+    with open(ALL_HOLD_QUESTIONS) as f:
         valid_data = json.load(f)
 
     # Step 2: Get all objects directly/indirectly in COCO dataset
