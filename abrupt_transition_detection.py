@@ -8,8 +8,58 @@ from sklearn.metrics import jaccard_score
 from common import FRAME_FOLDER
 from utils import time_span_to_timestamps_list
 
+MASK_WIDTH = 160
+MASK_HEIGHT = 180
 
-def gen_pixel_diff(data: dict, use_time_span: bool = False):
+
+def abs_diff(img_1: np.ndarray, img_2: np.ndarray) -> np.float64:
+    img_area = img_1.shape[0] * img_1.shape[1]
+    return np.sum(np.absolute(img_2 - img_1)) / img_area
+
+
+def hist_diff(img_1: np.ndarray, img_2: np.ndarray, region_diff=False) \
+        -> np.float64:
+    all_masks = []
+    for i in range(2):
+        for j in range(4):
+            mask = np.zeros(img_1.shape[:2], np.uint8)
+            top_left_x = (0 + j) * MASK_WIDTH
+            top_left_y = (0 + i) * MASK_HEIGHT
+            bot_right_x = top_left_x + MASK_WIDTH
+            bot_right_y = top_left_y + MASK_HEIGHT
+            mask[top_left_y:bot_right_y, top_left_x: bot_right_x] = 255
+            all_masks.append(mask)
+
+    def get_hist(img, mask_idx, chan_idx):
+        if mask_idx == -1:
+            return cv2.calcHist([img], [chan_idx], None, [256], [0, 256])
+        else:
+            return cv2.calcHist(
+                [img], [chan_idx], all_masks[mask_idx], [256], [0, 256]
+            )
+
+    def get_chan_hist_diff(mask_idx, chan_idx):
+        return np.abs(get_hist(img_1, mask_idx, chan_idx) -
+                      get_hist(img_2, mask_idx, chan_idx))
+
+    if region_diff:
+        score = np.float64(0)
+        for i in range(8):
+            b_diff = get_chan_hist_diff(i, 0)
+            g_diff = get_chan_hist_diff(i, 1)
+            r_diff = get_chan_hist_diff(i, 2)
+            score += np.sum(b_diff + g_diff + r_diff, dtype=np.float64)
+    else:
+        b_diff = get_chan_hist_diff(-1, 0)
+        g_diff = get_chan_hist_diff(-1, 1)
+        r_diff = get_chan_hist_diff(-1, 2)
+        score = np.sum(b_diff + g_diff + r_diff, dtype=np.float64)
+    return score
+
+
+def gen_pixel_diff(data: dict, use_time_span: bool = False, score_method='abs'):
+    assert score_method in ['abs', 'hist-all', 'hist-reg']
+
     vid_folder = FRAME_FOLDER + data['vid_name'] + '/'
     l = list(filter(lambda f: f.endswith('.jpg'), os.listdir(vid_folder)))
     l.sort(key=lambda f: int(re.sub('\D', '', f)))
@@ -22,13 +72,17 @@ def gen_pixel_diff(data: dict, use_time_span: bool = False):
     imgs = [cv2.cvtColor(cv2.imread(vid_folder + l[i]), cv2.COLOR_BGR2RGB)
             for i in range(len(l)) if (i + 1) in timestamps]
 
-    img_area = imgs[0].shape[0] * imgs[0].shape[1]
     scores = []
 
     for i in range(len(imgs) - 1):
         img_1 = imgs[i]
         img_2 = imgs[i + 1]
-        diff = np.sum(np.absolute(img_2 - img_1)) / img_area
+        if score_method == 'abs':
+            diff = abs_diff(img_1, img_2)
+        elif score_method == 'hist-all':
+            diff = hist_diff(img_1, img_2)
+        else:
+            diff = hist_diff(img_1, img_2, True)
         scores.append(diff)
 
     return {
