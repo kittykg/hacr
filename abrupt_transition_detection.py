@@ -3,6 +3,7 @@ import re
 
 import cv2
 import numpy as np
+from sklearn.metrics import jaccard_score
 
 from common import FRAME_FOLDER
 from utils import time_span_to_timestamps_list
@@ -57,3 +58,12 @@ def non_max_suppression(scores: list, preds: list, ignore_class_idx: int):
                 nms_compare(scores[i], scores[i - 1], scores[i + 1]))
 
     return new_scores
+
+
+def ab_change_jacc_score(pred_change: list, gt_change: list) -> float:
+    lower_bound = np.min(pred_change + gt_change)
+    upper_bound = np.max(pred_change + gt_change)
+    all_pairs = [[i, i + 1] for i in range(lower_bound, upper_bound)]
+    encoded_pred = [1 if pair in pred_change else 0 for pair in all_pairs]
+    encoded_gt = [1 if pair in gt_change else 0 for pair in all_pairs]
+    return jaccard_score(encoded_gt, encoded_pred)
