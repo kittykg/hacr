@@ -189,3 +189,13 @@ def valid_hold_questions(text: str):
         if token.dep_ == ROOT_TAG and token.lemma_ == 'hold':
             return True
     return False
+
+
+def get_all_people_in_ans(text: str) -> list:
+    doc = nlp(text)
+    people = []
+    for token in doc:
+        if token.pos_ == PROPN_TAG or token.pos_ == NOUN_TAG or \
+                token.lemma_.lower() in BBT_PEOPLE:
+            people.append(token.lemma_)
+    return people

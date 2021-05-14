@@ -16,7 +16,7 @@ if __name__ == '__main__':
     total_examples = 0
     with open('pos_eg_v1', 'w') as out:
         for t in train_set:
-            examples = parser.get_pos_example(t)
+            examples = parser.get_pos_example_h(t)
             total_examples += len(examples)
             for e in examples:
                 print(e.gen_example(), file=out)

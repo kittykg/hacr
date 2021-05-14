@@ -1,16 +1,21 @@
 import itertools
 import math
 import random
-from typing import List
+from typing import List, Tuple
 
 from common import BoundingBox, BBoxIntersectionPred
 
 
-def time_span_to_timestamps_list(data: dict) -> List[int]:
+def time_span_start_end(data: dict) -> Tuple[int, int]:
     start, end = data['ts']
-    s_ts = max(1, math.floor(start) * 3)
-    e_ts = math.ceil(end) * 3
+    s_ts = max(1, math.floor(start * 3))
+    e_ts = math.ceil(end * 3)
 
+    return s_ts, e_ts
+
+
+def time_span_to_timestamps_list(data: dict) -> List[int]:
+    s_ts, e_ts = time_span_start_end(data)
     return list(range(s_ts, e_ts + 1))
 
 

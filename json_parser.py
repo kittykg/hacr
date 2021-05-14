@@ -1,10 +1,9 @@
 import logging
 from typing import List, Union, Set
 
-from utils import get_all_intersections
-
-import language_processing as lp
 from common import PositiveExample, BoundingBox, ActionPred, BBT_PEOPLE
+import language_processing as lp
+from utils import get_all_intersections, time_span_start_end
 
 
 def get_img_ids(data: dict) -> Set[int]:
@@ -26,13 +25,8 @@ def get_answer_obj(ans_text: str) -> Union[str, None]:
 
 
 class Parser:
-    def __init__(self):
-        self.relational_object_pairs = {
-            'piece': 'clothing',
-            'remote': 'tv'
-        }
-
-    def match_ans_obj_with_bbox_obj(self, ans_obj: str,
+    @staticmethod
+    def match_ans_obj_with_bbox_obj(ans_obj: str,
                                     bbox_obj_set: Set[str]) -> Union[str, None]:
         for bbox_obj in bbox_obj_set:
             noun_tag = 'NOUN'
@@ -40,13 +34,10 @@ class Parser:
                     lp.check_hyponyms(ans_obj, bbox_obj, noun_tag) or \
                     lp.check_hypernyms(ans_obj, bbox_obj, noun_tag):
                 return bbox_obj
-            elif ans_obj in self.relational_object_pairs:
-                return self.relational_object_pairs[ans_obj]
-            elif bbox_obj in self.relational_object_pairs:
-                return self.relational_object_pairs[bbox_obj]
         return None
 
-    def get_goal_action_obj(self, data: dict, bbox_obj_set: Set[str],
+    @staticmethod
+    def get_goal_action_obj(data: dict, bbox_obj_set: Set[str],
                             log: bool = False) -> \
             Union[str, None]:
 
@@ -60,7 +51,7 @@ class Parser:
                 logging.warning(F'Cannot parse correct answer {ans_text}')
             return None
 
-        obj = self.match_ans_obj_with_bbox_obj(ans_obj, bbox_obj_set)
+        obj = Parser.match_ans_obj_with_bbox_obj(ans_obj, bbox_obj_set)
 
         # Stop if we can't match the object in the correct answer with
         # an object in our grounding box
@@ -71,8 +62,15 @@ class Parser:
 
         return obj
 
-    def get_pos_example(self, data: dict, log: bool = False) -> List[
-        PositiveExample]:
+    @staticmethod
+    def get_pos_example_h(data: dict, log: bool = False) -> \
+            List[PositiveExample]:
+        """
+        HACR-H get positive example
+        :param data: dict, json data
+        :param log: bool, whether or not to log errors etc.
+        :return: list of PositiveExamples
+        """
         question = data['q']
         action_pred = lp.get_action_pred(question)
 
@@ -110,7 +108,7 @@ class Parser:
                                   box['height'], label)
                 boxes.append(box)
 
-            action_obj = self.get_goal_action_obj(data, obj_set)
+            action_obj = Parser.get_goal_action_obj(data, obj_set)
             intersections = get_all_intersections(boxes)
 
             # Cannot generate positive example if we can't get goal action
@@ -148,3 +146,56 @@ class Parser:
                 logging.warning(F'{data["qid"]}: No example from this question')
 
         return pos_eg_list
+
+    @staticmethod
+    def get_pos_example_e(data: dict, log: bool = False) \
+            -> Union[None, PositiveExample]:
+        """
+        HACR-E get positive example
+        :param data: dict, json data
+        :param log: bool, whether or not to log errors etc.
+        :return: None if there's error, otherwise return PositiveExample
+        """
+        qid = data['qid']
+        vid_name = data['vid_name']
+
+        ans_idx = data['answer_idx']
+        answers = lp.get_all_people_in_ans(data[F'a{ans_idx}'])
+        if not answers:
+            if log:
+                logging.warning(F'{qid}: Cannot get names from answer')
+            return None
+
+        inclusion_list = []
+        gt_list = []
+        exclusion_list = []
+        s_t, e_t = time_span_start_end(data)
+
+        for answer in answers:
+            person = answer.lower()
+            enter_time = data['in_scene'][person][0][0]
+            inclusion_list.append(
+                F'initiates(enter({person}), at_curr_location({person}), '
+                F'{enter_time})')
+
+        gt_list.append(F'time({s_t}..{e_t}).')
+
+        for pair in data['scene_change_pairs']:
+            gt_list.append(F'abrupt_transition({pair[0]}, {pair[1]}).')
+        for person in data['in_scene']:
+            gt_list.append(F'person({person}).')
+            for pair in data['in_scene'][person]:
+                gt_list.append(
+                    F'holdsAt(in_scene({person}), {pair[0]}..{pair[1]}).')
+        for person in data['initial_in_scene']:
+            gt_list.append(F'holdsAt(at_curr_location({person}), {s_t}).')
+            exclusion_list.append(
+                F'initiates(enter({person}), at_curr_location({person}), {s_t}..{e_t})')
+
+        return PositiveExample(qid=qid,
+                               vid_name=vid_name,
+                               # don't need curr_time for enter learning
+                               curr_time=0,
+                               context=gt_list,
+                               inclusions=inclusion_list,
+                               exclusions=exclusion_list)
