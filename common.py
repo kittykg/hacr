@@ -26,15 +26,15 @@ BBT_PEOPLE = {'penny', 'sheldon', 'leonard', 'howard', 'raj', 'amy',
 FRAME_FOLDER = '../TVQA_frames/frames_hq/bbt_frames/'
 TVQA_PLUS_TRAIN_JSON = '../tvqa_plus_train_prettified.json'
 
-ALL_HOLD_QUESTIONS = './questions/hold_questions.json'
-OD_HOLD_QUESTIONS = './questions/train_hold.json'
+ALL_HOLD_QUESTIONS = 'questions/hold_questions.json'
+OD_HOLD_QUESTIONS = 'questions/train_hold.json'
 
-FACE_COLLECTION_NPZ = './collected_npz/face_collection.npz'
-FACE_COLLECTION_V2_NPZ = './collected_npz/face_collection_v2.npz'
+FACE_COLLECTION_NPZ = 'collected_npz/face_collection.npz'
+FACE_COLLECTION_V2_NPZ = 'collected_npz/face_collection_v2.npz'
 
-ENTER_QUESTIONS = './questions/enter.json'
-SCENE_TRANSITION_NPZ = './collected_npz/transition_collection_all.npz'
-ABRUPT_TRANSITION_TEST = './test_data/abrupt_transition.json'
+ENTER_QUESTIONS = 'questions/enter.json'
+SCENE_TRANSITION_NPZ = 'collected_npz/transition_collection_all.npz'
+ABRUPT_TRANSITION_TEST = 'test_data/abrupt_transition.json'
 
 @dataclass
 class BoundingBox:
