@@ -8,7 +8,7 @@ if __name__ == '__main__':
     start_time = time.time()
     parser = Parser()
 
-    with open('train_hold.json') as f:
+    with open('questions/train_hold.json') as f:
         all_data = json.load(f)
 
     train_set, test_set = split_data_set(0.8, all_data)

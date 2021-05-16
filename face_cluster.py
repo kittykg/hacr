@@ -9,7 +9,7 @@ from common import BBT_PEOPLE
 start_time = time.time()
 
 cluster_buffer = 2
-npz_file_path = './face_collection.npz'
+npz_file_path = 'collected_npz/face_collection.npz'
 n_cluster = len(BBT_PEOPLE) + cluster_buffer
 
 faces = np.load(npz_file_path)['faces']
