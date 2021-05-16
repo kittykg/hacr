@@ -36,6 +36,14 @@ ENTER_QUESTIONS = 'questions/enter.json'
 SCENE_TRANSITION_NPZ = 'collected_npz/transition_collection_all.npz'
 ABRUPT_TRANSITION_TEST = 'test_data/abrupt_transition.json'
 
+# ASP files
+HOLD_ASP_BASE = 'asp/hold_base.lp'
+HOLD_ILASP_BK = 'asp/hold_bk.las'
+ENTER_ASP_BASE = 'asp/enter_base.lp'
+ENTER_ILASP_BK = 'asp/enter_bk.las'
+ILASP_OVR = 'asp/ovr.las'
+
+
 @dataclass
 class BoundingBox:
     img_id: int
