@@ -32,6 +32,9 @@ OD_HOLD_QUESTIONS = './train_hold.json'
 FACE_COLLECTION_NPZ = './face_collection.npz'
 FACE_COLLECTION_V2_NPZ = './face_collection_v2.npz'
 
+ENTER_QUESTIONS = './enter.json'
+SCENE_TRANSITION_NPZ = './transition_collection_all.npz'
+ABRUPT_TRANSITION_TEST = './abrupt_transition.json'
 
 @dataclass
 class BoundingBox:

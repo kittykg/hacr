@@ -1,5 +1,6 @@
 import os
 import re
+from typing import Tuple
 
 import cv2
 import numpy as np
@@ -121,3 +122,17 @@ def ab_change_jacc_score(pred_change: list, gt_change: list) -> float:
     encoded_pred = [1 if pair in pred_change else 0 for pair in all_pairs]
     encoded_gt = [1 if pair in gt_change else 0 for pair in all_pairs]
     return jaccard_score(encoded_gt, encoded_pred)
+
+
+def ab_change_bin_acc(pred_change: list, gt_change: list) -> Tuple[int, int]:
+    num_pos = len(gt_change)
+    neg_pairs = [pair for pair in pred_change if pair not in gt_change]
+    num_neg = len(neg_pairs)
+
+    total = num_pos * 2
+    if num_pos <= num_neg:
+        correct = len([pair for pair in gt_change if pair in pred_change])
+    else:
+        correct = len([pair for pair in gt_change if pair in pred_change]) + \
+                  (num_pos - num_neg)
+    return correct, total
