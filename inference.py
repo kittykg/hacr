@@ -4,11 +4,14 @@ import sys
 from typing import List
 
 import numpy as np
+from sklearn.cluster import KMeans
 from sklearn.metrics import jaccard_score
 from sklearn.neighbors import KNeighborsClassifier
 import spacy
 
-from common import BBT_PEOPLE, BoundingBox, FRAME_FOLDER, FACE_COLLECTION_V2_NPZ
+import abrupt_transition_detection as atd
+from common import BBT_PEOPLE, BoundingBox, FRAME_FOLDER, \
+    FACE_COLLECTION_V2_NPZ, SCENE_TRANSITION_NPZ
 from image_processing import ObjectDetector
 import language_processing as lp
 import utils
@@ -16,6 +19,7 @@ import utils
 od = ObjectDetector()
 nlp = spacy.load('en_core_web_sm')
 
+# KNN classifier for face detection
 arr = np.load(FACE_COLLECTION_V2_NPZ)
 faces = arr['encoded_faces']
 labels = arr['labels']
@@ -23,12 +27,18 @@ labels = arr['labels']
 neigh = KNeighborsClassifier(n_neighbors=5)
 neigh.fit(faces, labels)
 
+# K-means cluster for abrupt transition detection
+arr = np.load(SCENE_TRANSITION_NPZ)
+all_diff = arr['hist_all']
+kmeans = KMeans(n_clusters=2, random_state=0).fit(
+    np.expand_dims(all_diff, axis=1))
+
 
 def get_gt_timestamps_list(test: dict) -> List[int]:
     return sorted([int(k) for k in test['bbox'].keys()])
 
 
-def _get_facts_helper(bboxes: List[BoundingBox], file):
+def __get_facts_helper_h(bboxes: List[BoundingBox], file):
     all_labels = dict()
     for box in bboxes:
         curr_l = box.label.lower()
@@ -59,8 +69,8 @@ def _get_facts_helper(bboxes: List[BoundingBox], file):
             print(F'object({label}).', file=file)
 
 
-def get_all_facts(test: dict, threshold: float, timestamp: int,
-                  file=sys.stdout):
+def get_all_facts_h(test: dict, threshold: float, timestamp: int,
+                    file=sys.stdout):
     print(F'time({timestamp}).', file=file)
     print(F'time({timestamp + 1}).', file=file)
 
@@ -78,10 +88,10 @@ def get_all_facts(test: dict, threshold: float, timestamp: int,
 
     bboxes = [o.bbox for o in qa_objects]
 
-    _get_facts_helper(bboxes, file)
+    __get_facts_helper_h(bboxes, file)
 
 
-def get_gt_facts(test: dict, timestamp: int, file=sys.stdout):
+def get_gt_facts_h(test: dict, timestamp: int, file=sys.stdout):
     print(F'time({timestamp}).', file=file)
     print(F'time({timestamp + 1}).', file=file)
 
@@ -91,11 +101,18 @@ def get_gt_facts(test: dict, timestamp: int, file=sys.stdout):
     for bbox in bboxes:
         bbox.label = bbox.label.lower()
 
-    _get_facts_helper(bboxes, file)
+    __get_facts_helper_h(bboxes, file)
 
 
-def inference(test: dict, gt_object: bool = False, log: bool = False) \
+def inference_h(test: dict, gt_object: bool = False, log: bool = False) \
         -> List[int]:
+    """
+    HACR-H inference
+    :param test: dict, json data
+    :param gt_object: bool, whether to use ground truth objects
+    :param log: bool, whether to log errors etc.
+    :return: List[int], index of answer(s)
+    """
     search_results = []
 
     # Run clingo with learnt rules and facts from the object detection
@@ -108,9 +125,9 @@ def inference(test: dict, gt_object: bool = False, log: bool = False) \
             f.seek(0)
 
             if gt_object:
-                get_gt_facts(test, t, file=f)
+                get_gt_facts_h(test, t, file=f)
             else:
-                get_all_facts(test, 0.7, t, file=f)
+                get_all_facts_h(test, 0.7, t, file=f)
 
             f.truncate()
 
@@ -169,6 +186,136 @@ def inference(test: dict, gt_object: bool = False, log: bool = False) \
         print(
             F'qid: {test["qid"]}   ans_idx: {gt_ans_idx}    gt_ans: {gt_answer}')
         print(F'poss_obj: {possible_objects}   pred_ans_idx: {answer_index}')
+
+    return answer_index
+
+
+def __get_subclause_people(text):
+    subclause_words = ['when', 'after', 'before']
+
+    for i, w in enumerate(text.split()):
+        if i != 0 and w.lower() in subclause_words:
+            subclause = ' '.join(text.split()[i + 1:])
+            return lp.get_all_people_in_ans(subclause)
+
+
+def get_facts_e(data: dict, gt_human_face: bool = False, gt_abt: bool = False,
+                diff_score_method: str = 'hist-all', file=sys.stdout):
+    vid_folder = FRAME_FOLDER + data['vid_name'] + '/'
+
+    # Get time and abrupt transition
+    if gt_abt:
+        times = utils.time_span_to_timestamps_list(data)
+
+        for pair in data['scene_change_pairs']:
+            print(F'abrupt_transition({pair[0]}, {pair[1]}).', file=file)
+    else:
+        res = atd.gen_pixel_diff(data, use_time_span=True,
+                                 score_method=diff_score_method)
+
+        times = res['timestamps']
+        print(F'time({min(times)}..{max(times)}).', file=file)
+
+        diff_score = res['pixel_diff_score']
+        no_change_class_index = kmeans.predict([[0]])[0]
+        preds = kmeans.predict(np.expand_dims(diff_score, axis=1))
+        new_score = atd.non_max_suppression(diff_score, preds,
+                                            no_change_class_index)
+        new_pred = kmeans.predict(np.expand_dims(new_score, axis=1))
+        pred_ab_change_list = [[times[j], times[j + 1]] for j, pred in
+                               enumerate(new_pred) if
+                               pred != no_change_class_index]
+        for t1, t2 in pred_ab_change_list:
+            print(F'abrupt_transition({t1}, {t2}).', file=file)
+
+    # Get in_scene
+    all_people = []
+    if gt_human_face:
+        for person in data['in_scene']:
+            all_people.append(person)
+            for pair in data['in_scene'][person]:
+                print(F'holdsAt(in_scene({person}), {pair[0]}..{pair[1]}).',
+                      file=file)
+    else:
+        for time in times:
+            qa_objects = od.get_frame_qa_objects(vid_folder, 0.7, time)
+            people = [o for o in qa_objects if o.obj_class == 'person']
+            human_faces, valid_idx = od.get_human_faces(people)
+            if len(human_faces) == 0:
+                continue
+            neigh_predictions = neigh.predict(od.encode_faces(human_faces))
+            for pred in neigh_predictions:
+                print(F'holdsAt(in_scene({pred.lower()}), {time}).', file=file)
+                if pred.lower() not in all_people:
+                    all_people.append(pred.lower())
+
+    for p in all_people:
+        print(F'person({p}).', file=file)
+
+    # Assume the people mentioned in the subclauses would be at the
+    # current scene at the start of the time span
+    for p in __get_subclause_people(data['q']):
+        p_name = p.lower()
+        print(F'holdsAt(at_curr_location({p_name}), {min(times)}).', file=file)
+        if p_name not in all_people:
+            print(F'person({p_name}).', file=file)
+            all_people.append(p_name)
+
+
+def inference_e(test: dict, gt_human_face: bool = False, gt_abt: bool = False,
+                log: bool = False) -> List[int]:
+    """
+    HACR-E inference
+    :param test: dict, json data
+    :param gt_human_face: bool, whether to use ground truth human in scene
+    :param gt_abt: bool, whether to use ground truth abrupt transition
+    :param log: bool, whether to log errors etc.
+    :return: List[int], index of answer(s)
+    """
+    search_results = []
+
+    # Run clingo with learnt rules and facts from the object detection
+    with open('temp.lp', 'w') as f:
+
+        f.seek(0)
+        get_facts_e(test, file=f, gt_human_face=gt_human_face, gt_abt=gt_abt)
+        f.truncate()
+
+        cp = subprocess.run(['clingo', 'base_enter.lp', 'temp.lp'],
+                            capture_output=True)
+
+        s = cp.stdout.decode('utf-8')
+        search_results.append(
+            regex.search(
+                '.*Answer: [\d]+\\n(?<enter>[^\n]*)\\nSATISFIABLE\\n.*',
+                s).group(1))
+
+    possible_people = set()
+    for r in list(filter(lambda x: x != '', search_results)):
+        for e in r.split(' '):
+            s = regex.search(
+                'initiates\(enter\((?<person>[a-z]+)\),.*,[\d]+\)', e)
+            possible_people.add(s.group(1).lower())
+
+    gt_ans_idx = test['answer_idx']
+    gt_answer = test[F'a{gt_ans_idx}']
+    # Match objects with multiple choices
+    answer_index = []
+    single_match = False
+    for i in range(5):
+        if not single_match:
+            answer = test[F'a{i}']
+            answer_people_list = set(lp.get_all_people_in_ans(answer))
+            if answer_people_list == possible_people:
+                single_match = True
+                answer_index = [i]
+            elif answer_people_list.intersection(possible_people):
+                answer_index.append(i)
+
+    if log:
+        print(
+            F'qid: {test["qid"]}   ans_idx: {gt_ans_idx}    gt_ans: {gt_answer}')
+        print(F'poss_people: {possible_people}   pred_ans_idx: {answer_index}')
 
     return answer_index
 

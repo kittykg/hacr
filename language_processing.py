@@ -197,5 +197,5 @@ def get_all_people_in_ans(text: str) -> list:
     for token in doc:
         if token.pos_ == PROPN_TAG or token.pos_ == NOUN_TAG or \
                 token.lemma_.lower() in BBT_PEOPLE:
-            people.append(token.lemma_)
+            people.append(token.lemma_.lower())
     return people
