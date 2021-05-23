@@ -1,4 +1,4 @@
-fluent(in_scene(P)) :- person(P).
+fluent(in_camera(P)) :- person(P).
 fluent(at_curr_location(P)) :- person(P).
 
 holdsAt(F, T + 1) :-

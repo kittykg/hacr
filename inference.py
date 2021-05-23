@@ -228,13 +228,13 @@ def get_facts_e(data: dict, gt_human_face: bool = False, gt_abt: bool = False,
         for t1, t2 in pred_ab_change_list:
             print(F'abrupt_transition({t1}, {t2}).', file=file)
 
-    # Get in_scene
+    # Get in_camera
     all_people = []
     if gt_human_face:
-        for person in data['in_scene']:
+        for person in data['in_camera']:
             all_people.append(person)
-            for pair in data['in_scene'][person]:
-                print(F'holdsAt(in_scene({person}), {pair[0]}..{pair[1]}).',
+            for pair in data['in_camera'][person]:
+                print(F'holdsAt(in_camera({person}), {pair[0]}..{pair[1]}).',
                       file=file)
     else:
         for time in times:
@@ -245,7 +245,7 @@ def get_facts_e(data: dict, gt_human_face: bool = False, gt_abt: bool = False,
                 continue
             neigh_predictions = neigh.predict(od.encode_faces(human_faces))
             for pred in neigh_predictions:
-                print(F'holdsAt(in_scene({pred.lower()}), {time}).', file=file)
+                print(F'holdsAt(in_camera({pred.lower()}), {time}).', file=file)
                 if pred.lower() not in all_people:
                     all_people.append(pred.lower())
 

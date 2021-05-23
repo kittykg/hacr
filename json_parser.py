@@ -173,7 +173,7 @@ class Parser:
 
         for answer in answers:
             person = answer.lower()
-            enter_time = data['in_scene'][person][0][0]
+            enter_time = data['in_camera'][person][0][0]
             inclusion_list.append(
                 F'initiates(enter({person}), at_curr_location({person}), '
                 F'{enter_time})')
@@ -182,12 +182,12 @@ class Parser:
 
         for pair in data['scene_change_pairs']:
             gt_list.append(F'abrupt_transition({pair[0]}, {pair[1]}).')
-        for person in data['in_scene']:
+        for person in data['in_camera']:
             gt_list.append(F'person({person}).')
-            for pair in data['in_scene'][person]:
+            for pair in data['in_camera'][person]:
                 gt_list.append(
-                    F'holdsAt(in_scene({person}), {pair[0]}..{pair[1]}).')
-        for person in data['initial_in_scene']:
+                    F'holdsAt(in_camera({person}), {pair[0]}..{pair[1]}).')
+        for person in data['initial_in_camera']:
             gt_list.append(F'holdsAt(at_curr_location({person}), {s_t}).')
             exclusion_list.append(
                 F'initiates(enter({person}), at_curr_location({person}), {s_t}..{e_t})')

@@ -16,7 +16,7 @@
                 96
             ]
         ],
-        "in_scene": {
+        "in_camera": {
             "leonard": [
                 [
                     71,
@@ -50,7 +50,7 @@
                 ]
             ]
         },
-        "initial_in_scene": [
+        "initial_in_camera": [
             "leonard",
             "raj"
         ],
@@ -75,7 +75,7 @@
                 3
             ]
         ],
-        "in_scene": {
+        "in_camera": {
             "amy": [
                 [
                     1,
@@ -95,7 +95,7 @@
                 ]
             ]
         },
-        "initial_in_scene": [
+        "initial_in_camera": [
             "amy"
         ],
         "q": "Who enters the scene first when Amy is working ?",
@@ -143,7 +143,7 @@
                 124
             ]
         ],
-        "in_scene": {
+        "in_camera": {
             "leonard": [
                 [
                     68,
@@ -205,7 +205,7 @@
                 ]
             ]
         },
-        "initial_in_scene": [
+        "initial_in_camera": [
             "leonard",
             "raj",
             "howard"
@@ -226,7 +226,7 @@
         "a4": "Mickey Mouse",
         "answer_idx": "0",
         "scene_change_pairs": [],
-        "in_scene": {
+        "in_camera": {
             "leonard": [
                 [
                     3,
@@ -246,7 +246,7 @@
                 ]
             ]
         },
-        "initial_in_scene": [
+        "initial_in_camera": [
             "leonard"
         ],
         "q": "Who entered the kitchen before Leonard placed his bag on the table ?",
@@ -270,7 +270,7 @@
                 72
             ]
         ],
-        "in_scene": {
+        "in_camera": {
             "amy": [
                 [
                     67,
@@ -290,7 +290,7 @@
                 ]
             ]
         },
-        "initial_in_scene": [
+        "initial_in_camera": [
             "amy",
             "sheldon"
         ],
@@ -315,7 +315,7 @@
                 181
             ]
         ],
-        "in_scene": {
+        "in_camera": {
             "howard": [
                 [
                     177,
@@ -341,7 +341,7 @@
                 ]
             ]
         },
-        "initial_in_scene": [
+        "initial_in_camera": [
             "sheldon",
             "raj",
             "howard"
@@ -367,7 +367,7 @@
                 20
             ]
         ],
-        "in_scene": {
+        "in_camera": {
             "howard": [
                 [
                     20,
@@ -387,7 +387,7 @@
                 ]
             ]
         },
-        "initial_in_scene": [
+        "initial_in_camera": [
             "raj",
             "howard"
         ],
@@ -412,7 +412,7 @@
                 8
             ]
         ],
-        "in_scene": {
+        "in_camera": {
             "penny": [
                 [
                     1,
@@ -438,7 +438,7 @@
                 ]
             ]
         },
-        "initial_in_scene": [
+        "initial_in_camera": [
             "amy",
             "leonard"
         ],
@@ -471,7 +471,7 @@
                 93
             ]
         ],
-        "in_scene": {
+        "in_camera": {
             "howard": [
                 [
                     71,
@@ -533,7 +533,7 @@
                 ]
             ]
         },
-        "initial_in_scene": [
+        "initial_in_camera": [
             "howard",
             "bernadette"
         ],
@@ -562,7 +562,7 @@
                 95
             ]
         ],
-        "in_scene": {
+        "in_camera": {
             "howard": [
                 [
                     78,
@@ -586,7 +586,7 @@
                 ]
             ]
         },
-        "initial_in_scene": [
+        "initial_in_camera": [
             "howard",
             "leonard"
         ],
