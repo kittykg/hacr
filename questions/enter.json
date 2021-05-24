@@ -63,11 +63,11 @@
         "vid_name": "s05e08_seg02_clip_07"
     },
     {
-        "a0": "Howard",
-        "a1": "Bernadette",
-        "a2": "Raj",
-        "a3": "Penny",
-        "a4": "Leonard",
+        "a0": "Howard and Bernadette",
+        "a1": "Raj and Bernadette",
+        "a2": "Raj and Sheldon",
+        "a3": "Penny and Bernadette",
+        "a4": "Leonard and Sheldon",
         "answer_idx": "3",
         "scene_change_pairs": [
             [
@@ -88,7 +88,7 @@
                     9
                 ]
             ],
-            "bernadete": [
+            "bernadette": [
                 [
                     6,
                     9
@@ -98,7 +98,7 @@
         "initial_in_camera": [
             "amy"
         ],
-        "q": "Who enters the scene first when Amy is working ?",
+        "q": "Who enters the scene when Amy is working ?",
         "qid": 25625602,
         "ts": [
             0,
@@ -537,7 +537,7 @@
             "howard",
             "bernadette"
         ],
-        "q": "Who enter the scen when Howard is complaining about the way his mother treats Stuart ?",
+        "q": "Who enter the scene when Howard is complaining about the way his mother treats Stuart ?",
         "qid": 25625609,
         "ts": [
             23.81,
