@@ -41,6 +41,17 @@ def draw_bounding_box(img_path, bboxes: List[BoundingBox]):
     for bbox in bboxes:
         x0, y0, x1, y1 = bbox.get_coords()
         image = cv2.rectangle(image, (x0, y0), (x1, y1), (0, 255, 0), 2)
+        label = re.sub('\d', '', bbox.label)
+        label_size = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)
+        l_x0 = x0
+        l_y0 = y0
+        l_x1 = l_x0 + label_size[0][0]
+        l_y1 = l_y0 - int(label_size[0][1])
+        image = cv2.rectangle(image, (l_x0, l_y0), (l_x1, l_y1),
+                              (0, 255, 0), cv2.FILLED)
+        image = cv2.putText(image, label, (l_x0, l_y0),
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 1)
+
     return image
 
 

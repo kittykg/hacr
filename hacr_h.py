@@ -125,4 +125,12 @@ def kfold_hold_test(gt_od=False):
 
 
 if __name__ == '__main__':
-    kfold_hold_test()
+    print('od')
+    kfold_hold_test(gt_od=False)
+
+    print()
+    print('========================')
+    print()
+
+    print('gt_obj')
+    kfold_hold_test(gt_od=True)

@@ -1,0 +1,188 @@
+[
+    {
+        "a0": "Gablehouser and Dennis .",
+        "a1": "Raj .",
+        "a2": "Howard .",
+        "a3": "A dog .",
+        "a4": "A boy .",
+        "answer_idx": "0",
+        "in_camera": {
+            "leonard": [
+                [
+                    164,
+                    181
+                ]
+            ],
+            "sheldon": [
+                [
+                    164,
+                    181
+                ]
+            ],
+            "gablehouser": [
+                [
+                    165,
+                    169
+                ],
+                [
+                    175,
+                    181
+                ]
+            ],
+            "dennis": [
+                [
+                    165,
+                    169
+                ],
+                [
+                    175,
+                    181
+                ]
+            ]
+        },
+        "initial_in_scene": [
+            "leonard",
+            "sheldon"
+        ],
+        "q": "Who enters the scene when Sheldon and Leonard are eating ?",
+        "qid": 129818,
+        "scene_change_pairs": [
+            [
+                164,
+                165
+            ],
+            [
+                169,
+                170
+            ],
+            [
+                174,
+                175
+            ]
+        ],
+        "ts": [
+            54.84,
+            60.19
+        ],
+        "vid_name": "s01e12_seg01_clip_00"
+    },
+    {
+        "a0": "Sheldon .",
+        "a1": "Raj .",
+        "a2": "Bernadette .",
+        "a3": "Amy .",
+        "a4": "Leonard 's mother .",
+        "answer_idx": "1",
+        "in_camera": {
+            "leonard": [
+                [
+                    54,
+                    58
+                ],
+                [
+                    62,
+                    69
+                ],
+                [
+                    72,
+                    76
+                ]
+            ],
+            "vet": [
+                [
+                    54,
+                    69
+                ],
+                [
+                    74,
+                    76
+                ]
+            ],
+            "penny": [
+                [
+                    54,
+                    58
+                ],
+                [
+                    62,
+                    69
+                ],
+                [
+                    73,
+                    76
+                ]
+            ],
+            "raj": [
+                [
+                    70,
+                    76
+                ]
+            ]
+        },
+        "initial_in_scene": [
+            "leonard",
+            "penny",
+            "vet"
+        ],
+        "q": "Who enters the scene after Penny asked Leonard , Do you know how much gas is ?",
+        "qid": 122701,
+        "scene_change_pairs": [
+            [
+                58,
+                59
+            ],
+            [
+                61,
+                62
+            ],
+            [
+                69,
+                70
+            ]
+        ],
+        "ts": [
+            18,
+            25.08
+        ],
+        "vid_name": "s07e15_seg02_clip_07"
+    },
+    {
+        "a0": "Amy",
+        "a1": "Howard",
+        "a2": "Leonard",
+        "a3": "Barry",
+        "a4": "Bernadette",
+        "answer_idx": "3",
+        "in_camera": {
+            "raj": [
+                [
+                    136,
+                    137
+                ]
+            ],
+            "barry": [
+                [
+                    138,
+                    144
+                ]
+            ]
+        },
+        "initial_in_scene": [
+            "raj",
+            "sheldon"
+        ],
+        "q": "Who enters the scene after Sheldon has talked to Raj about his new dating style ?",
+        "qid": 127131,
+        "scene_change_pairs": [
+            [
+                137,
+                138
+            ]
+        ],
+        "ts": [
+            45.4,
+            47.79
+        ],
+        "vid_name": "s05e14_seg02_clip_08"
+    }
+]

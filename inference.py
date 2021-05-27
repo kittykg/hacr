@@ -135,10 +135,12 @@ def inference_h(test: dict, gt_object: bool = False, log: bool = False) \
                                 capture_output=True)
 
             s = cp.stdout.decode('utf-8')
-            search_results.append(
-                regex.search(
-                    '.*Answer: [\d]+\\n(?<hold>[^\n]*)\\nSATISFIABLE\\n.*',
-                    s).group(1))
+            search_re = regex.search(
+                '.*Answer: [\d]+\\n(?<hold>[^\n]*)\\nSATISFIABLE\\n.*', s)
+            if search_re is None:
+                continue
+            else:
+                search_results.append(search_re.group(1))
 
     # Get relevant object from the answer set predicates
     action_pred = lp.get_action_pred(test['q'])
@@ -177,7 +179,8 @@ def inference_h(test: dict, gt_object: bool = False, log: bool = False) \
             for p_o in possible_objects:
                 if lp.check_synonyms(p_o, action_ans.text):
                     answer_index.append(i)
-        else:
+
+        if (not root_ans and not action_ans) or answer_index == []:
             for p_o in possible_objects:
                 if p_o in answer.lower():
                     answer_index.append(i)
@@ -206,6 +209,7 @@ def get_facts_e(data: dict, gt_human_face: bool = False, gt_abt: bool = False,
     # Get time and abrupt transition
     if gt_abt:
         times = utils.time_span_to_timestamps_list(data)
+        print(F'time({min(times)}..{max(times)}).', file=file)
 
         for pair in data['scene_change_pairs']:
             print(F'abrupt_transition({pair[0]}, {pair[1]}).', file=file)

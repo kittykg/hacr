@@ -187,7 +187,7 @@ class Parser:
             for pair in data['in_camera'][person]:
                 gt_list.append(
                     F'holdsAt(in_camera({person}), {pair[0]}..{pair[1]}).')
-        for person in data['initial_in_camera']:
+        for person in data['initial_in_scene']:
             gt_list.append(F'holdsAt(at_curr_location({person}), {s_t}).')
             exclusion_list.append(
                 F'initiates(enter({person}), at_curr_location({person}), {s_t}..{e_t})')
