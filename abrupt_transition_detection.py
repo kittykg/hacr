@@ -115,24 +115,30 @@ def non_max_suppression(scores: list, preds: list, ignore_class_idx: int):
     return new_scores
 
 
-def ab_change_jacc_score(pred_change: list, gt_change: list) -> float:
+def ab_change_jacc_score(pred_change: list, gt_change: list,
+                         no_change_class_index: int) -> float:
+    change_class_index = int(not bool(no_change_class_index))
     lower_bound = np.min(pred_change + gt_change)
     upper_bound = np.max(pred_change + gt_change)
     all_pairs = [[i, i + 1] for i in range(lower_bound, upper_bound)]
-    encoded_pred = [1 if pair in pred_change else 0 for pair in all_pairs]
-    encoded_gt = [1 if pair in gt_change else 0 for pair in all_pairs]
+    encoded_pred = [
+        change_class_index if pair in pred_change else no_change_class_index for
+        pair in all_pairs]
+    encoded_gt = [
+        change_class_index if pair in gt_change else no_change_class_index for
+        pair in all_pairs]
     return jaccard_score(encoded_gt, encoded_pred)
 
 
 def ab_change_bin_acc(pred_change: list, gt_change: list) -> Tuple[int, int]:
     num_pos = len(gt_change)
-    neg_pairs = [pair for pair in pred_change if pair not in gt_change]
-    num_neg = len(neg_pairs)
+    pred_neg_pairs = [pair for pair in pred_change if pair not in gt_change]
+    pred_pos_pairs = [pair for pair in gt_change if pair in pred_change]
+    num_neg = len(pred_neg_pairs)
 
     total = num_pos * 2
     if num_pos <= num_neg:
-        correct = len([pair for pair in gt_change if pair in pred_change])
+        correct = len(pred_pos_pairs)
     else:
-        correct = len([pair for pair in gt_change if pair in pred_change]) + \
-                  (num_pos - num_neg)
+        correct = len(pred_pos_pairs) + (num_pos - num_neg)
     return correct, total
