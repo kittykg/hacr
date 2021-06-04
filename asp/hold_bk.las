@@ -8,14 +8,13 @@ happensAt(close(P, O, Threshold), Time) :-
     holding_threshold(Threshold),
     Intersection >= Threshold.
 
-holdsAt(F,T) :-
-    fluent(F), time(Ts), time(T),
-    initiatedAt(F,Ts), next_time(Ts, T).
-holdsAt(F,T) :-
-    fluent(F), time(Ts), time(T),
-    holdsAt(F,Ts), not terminatedAt(F,Ts), next_time(Ts, T).
+holdsAt(F,T + 1) :-
+    fluent(F), time(T), time(T + 1),
+    initiatedAt(F,T), not terminatedAt(F, T).
 
-next_time(T, T+1) :- time(T).
+holdsAt(F,T + 1) :-
+    fluent(F), time(T), time(T + 1),
+    holdsAt(F,T), not terminatedAt(F,T).
 
 time(0..200).
 
