@@ -129,16 +129,17 @@ def ab_change_jacc_score(pred_change: list, gt_change: list,
         pair in all_pairs]
     return jaccard_score(encoded_gt, encoded_pred)
 
-
-def ab_change_bin_acc(pred_change: list, gt_change: list) -> Tuple[int, int]:
-    num_pos = len(gt_change)
-    pred_neg_pairs = [pair for pair in pred_change if pair not in gt_change]
-    pred_pos_pairs = [pair for pair in gt_change if pair in pred_change]
-    num_neg = len(pred_neg_pairs)
-
-    total = num_pos * 2
-    if num_pos <= num_neg:
-        correct = len(pred_pos_pairs)
-    else:
-        correct = len(pred_pos_pairs) + (num_pos - num_neg)
-    return correct, total
+# Binary classification evaluation is replaced with random sampling of negative
+# pairs instead of this method of deterministic mathematical computation
+# def ab_change_bin_acc(pred_change: list, gt_change: list) -> Tuple[int, int]:
+#     num_pos = len(gt_change)
+#     pred_neg_pairs = [pair for pair in pred_change if pair not in gt_change]
+#     pred_pos_pairs = [pair for pair in gt_change if pair in pred_change]
+#     num_neg = len(pred_neg_pairs)
+#
+#     total = num_pos * 2
+#     if num_pos <= num_neg:
+#         correct = len(pred_pos_pairs)
+#     else:
+#         correct = len(pred_pos_pairs) + (num_pos - num_neg)
+#     return correct, total

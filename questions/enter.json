@@ -401,7 +401,7 @@
     },
     {
         "a0": "Howard and Bernadette",
-        "a1": "Amy 's parents",
+        "a1": "Penny 's parents",
         "a2": "Sheldon and Amy",
         "a3": "Two strangers",
         "a4": "Raj and Emily",
@@ -416,7 +416,7 @@
             "leonard": [
                 [
                     1,
-                    153
+                    13
                 ]
             ],
             "penny": [
@@ -433,10 +433,10 @@
             ]
         },
         "initial_in_scene": [
-            "amy",
+            "penny",
             "leonard"
         ],
-        "q": "Who enter the scene when Amy and Leonard are sitting on the sofa ?",
+        "q": "Who enter the scene when Penny and Leonard are sitting on the sofa ?",
         "qid": 25625608,
         "scene_change_pairs": [
             [
