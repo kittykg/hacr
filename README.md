@@ -1,58 +1,64 @@
 # HACR -- Hybrid Architecture for Concept Reasoning
 
-4th year individual project
+A hypbrid architecture for learning and reasoning about the concepts of 'holding' and 'entering' from the TVQA+ dataset. Combines power of statistical learning (pre-trained neural models) with symoblic learning and reasoning (Inductive Learning system ILASP and reasoning model ASP).
 
-Dataset: TVQA+
+4th year individual project at Imperial College London.
 
-Tool stack:
-
-- Object detection: `torch`, `torchvision`
-
-- Face recognition: `dlib`, `face-recognition-models`, `opencv-python`,
-  `scikit-learn`
-
-- Language processing: `nltk`, `spacy`, `pyinflect`
-
-- Logic based learning: `ILASP`
-
-- ASP: `clingo`
 
 ## Pipeline
 
-Base:
+Pre-processing
 
-- Question parser
+- Object detection: pre-trained Faster R-CNN (`torch`, `torchvision`)
 
-- ILASP Learner
+- Face detection + classification: pre-trained Haar cascade model + face-recognition encoding + KNN classifier (`dlib`, `face-recognition-models`, `opencv-python`, `scikit-learn`)
 
-- ASP solver
+- Abrupt transition detection: K-means cluster (`scikit-learn`) + non-maximum supression
 
-----
+- Dependency parsing: `en_core_sm` from `spacy`
 
-Add-on components:
+- Synonym, hyponym, hypernym check: `wordnet` from `nltk`
 
-- Object detection
+- Unused component - human pose estimation (`human-pose-estimation.pytorch`)
 
-- Face identifier
+Symbolic learning - `ILASP` version 4
 
+Symbolic reasoning - ASP (`clingo`)
 
-## Collected data
+![pipeline](img/pipeline.png)
 
-- `face_collection.npz`: Collected faces from all video frames. Includes 2
-  arrays. This file is a lot smaller, so good for re-train face k-means cluster.
-    * `faces`: Face encoding of all faces.
-    * `labels`: Label for each face.
+## Running instructions
 
-- `face_collection_v2.npz`: Collected faces from all video frames. Includes 3
-  arrays. This file is 3GB and will take a long time to load. But it includes
-  all the faces so it's useful to see the faces and their corresponding labels.
-    * `faces`: All faces in 150 x 150. Could be plotted.
-    * `encoded_faces`: Face encoding of all faces. This is equivalent to `faces`
-      in `face_collection.npz`, although there's numerical difference.
-    * `labels`: Label for each face.
+This project uses CUDA in the neural models. If not having GPU, please change the device in `image_processing.py` to CPU.
 
-- `train_hold.json`: Questions that could be learned and answered with the full
-  pipeline
+You would need all the packages mentioned with the commponents in the **Pipeline** section, except `human-pose-estimation.pytorch`. We do not use the human pose estimator. However, we do provide the code in `human_pos_est`, and if you want to run the module you the git repo cloned in this repo's parent directory, like this:
 
-- `hold_questions.json`: All hold questions that could be learned and answered
-  with ground truth bounding boxes.
+```
+|_ human-pose-estimation.pytorch/
+|
+|_ hacr/
+```
+
+Before running the system, please change the path in `common.py` according to your setup. In particular, the `FRAME_FOLDER` variable, which specifies the location of the TVQA+ dataset.
+
+In `hacr_h.py` and `hacr_e.py`, we have the demonstructions of running 5-fold cross-validation. To run the experiments, simply run the commond:
+
+```
+python hacr_h.py
+```
+
+or
+
+```
+python hacr_e.py
+```
+
+## Evaluation result
+
+The evaluation of the pipeline and rule learning is as follows:
+
+![eval-table](img/eval-table.png)
+
+Note that when running [iPerceive Video Q&A](https://github.com/amanchadha/iPerceive/tree/master/iPerceiveVideoQA) model, we could not the common-sense reasoning component. According to the evaluation in their original paper, with extra common-sense component enabled, the performance increase around 1%. Thus, the performance of iPerceive without common-sense reasoning component on our dataset should be not be influenced much.
+
+Overall we can see that if using accurate feature extraction our model outperforms the iPerceive Video Q&A.

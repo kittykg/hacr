@@ -8,3 +8,4 @@ This folder contains ASP and ILASP scripts for learning and answering.
 | `enter_bk.lp` | Background knowledge and mode declarations for 'enter' learning task |
 | `hold_base.lp` | Base ASP program from answer 'hold' questions |
 | `hold_bk.lp` | Background knowledge and mode declarations for 'hold' learning task |
+| `ovr.las` | Bias overwrite file for holding concept |
