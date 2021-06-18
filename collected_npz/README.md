@@ -11,7 +11,7 @@ to be uploaded onto GitHub, is only store locally.
 
 - `face_collection_v2.npz`: Collected faces from all video frames. Includes 3
   arrays. This file is 3GB and will take a long time to load. But it includes
-  all the faces so it's useful to see the faces and their corresponding labels.
+  all the faces, so it's useful to see the faces and their corresponding labels.
   This file is saved on GoogleDrive for size reason. Please download it from
   [here](https://drive.google.com/file/d/1ft6-4_uZ5SNS_KJSKahxO2zhy-v34yx6/view?usp=sharing).
     * `faces`: All faces in 150 x 150. Could be plotted.
